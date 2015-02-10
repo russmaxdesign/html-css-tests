@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>HTML: validation tests</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	strong { color: red; }
+	
+	em
+	{
+		color: green;
+		font-weight: bold;
+		font-style: normal;
+	}
+	
+	.width50 { width: 50%; }
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		HTML: validation tests
+	</h1>
+	<h2>
+		Empty FORM element
+	</h2>
+	<table>
+		<tr>
+			<th class="width50">HTML4.01</th>
+			<th>HTML5</th>
+		</tr>
+		<tr>
+			<td>
+				<a href="01-01.htm">FORM empty</a> - <strong>FAIL</strong><br>
+				(block level element required inside FORM)
+			</td>
+			<td><a href="01-01a.htm">FORM empty</a> - <em>PASS</em></td>
+		</tr>
+		<tr>
+			<td>
+				<a href="01-02.htm">FORM with content</a> - <strong>FAIL</strong><br>
+				(block level element required inside FORM)
+			</td>
+			<td><a href="01-02a.htm">FORM with content</a> - <em>PASS</em></td>
+		</tr>
+		<tr>
+			<td><a href="01-03.htm">FORM with DIV</a> - <em>PASS</em></td>
+			<td><a href="01-03a.htm">FORM with DIV</a> - <em>PASS</em></td>
+		</tr>
+		<tr>
+			<td>
+				<a href="01-04.htm">FORM with LABEL</a> - <strong>FAIL</strong><br>
+				(block level element required inside FORM)
+			</td>
+			<td><a href="01-04a.htm">FORM with LABEL</a> - <em>PASS</em></td>
+		</tr>
+	</table>
+	<h2>
+		FIELDSET and LEGEND
+	</h2>
+	<table>
+		<tr>
+			<th class="width50">HTML4.01</th>
+			<th>HTML5</th>
+		</tr>
+		<tr>
+			<td>
+				<a href="02-01.htm">FORM with FIELDSET and no LEGEND</a> - <strong>FAIL</strong><br>
+				(LEGEND required if FIELDSET is used)
+			</td>
+			<td><a href="02-01a.htm">FORM with FIELDSET and no LEGEND</a> - <em>PASS</em></td>
+		</tr>
+		<tr>
+			<td><a href="02-02.htm">FORM with FIELDSET and LEGEND</a> - <em>PASS</em></td>
+			<td><a href="02-02a.htm">FORM with FIELDSET and LEGEND</a> - <em>PASS</em></td>
+		</tr>
+		<tr>
+			<td>
+				<a href="02-03.htm">FORM with FIELDSET and 2 x LEGEND</a> - <strong>FAIL</strong><br>
+				(FIELDSET requires only one LEGEND)
+			</td>
+			<td>
+				<a href="02-03a.htm">FORM with FIELDSET and 2 x LEGEND</a> - <strong>FAIL</strong><br>
+				(FIELDSET requires only one LEGEND)
+			</td>
+		</tr>
+		<tr>
+			<td><a href="02-04.htm">FORM with nested FIELDSET</a> - <em>PASS</em></td>
+			<td><a href="02-04a.htm">FORM with nested FIELDSET</a> - <em>PASS</em></td>
+		</tr>
+	</table>
+	<h2>
+		Empty BLOCKQUOTE element
+	</h2>
+	<table>
+		<tr>
+			<th class="width50">HTML4.01</th>
+			<th>HTML5</th>
+		</tr>
+		<tr>
+			<td>
+				<a href="03-01.htm">BLOCKQUOTE empty</a> - <strong>FAIL</strong><br>
+				(block level element required inside BLOCKQUOTE)
+			</td>
+			<td><a href="03-01a.htm">BLOCKQUOTE empty</a> - <em>PASS</em></td>
+		</tr>
+		<tr>
+			<td><a href="03-02.htm">BLOCKQUOTE with DIV inside</a> - <em>PASS</em></td>
+			<td><a href="03-02a.htm">BLOCKQUOTE with DIV inside</a> - <em>PASS</em></td>
+		</tr>
+	</table>
+	<h2>
+		Empty BODY element
+	</h2>
+	<table>
+		<tr>
+			<th class="width50">HTML4.01</th>
+			<th>HTML5</th>
+		</tr>
+		<tr>
+			<td>
+				<a href="04-01.htm">BODY empty</a> - <strong>FAIL</strong><br>
+				(block level element required inside BODY)
+			</td>
+			<td><a href="04-01a.htm">BODY empty</a> - <em>PASS</em></td>
+		</tr>
+		<tr>
+			<td><a href="04-02.htm">BODY element with DIV and text</a> - <em>PASS</em></td>
+			<td><a href="04-02a.htm">BODY element with DIV and text</a> - <em>PASS</em></td>
+		</tr>
+	</table>
+	<h2>
+		CAPTION element
+	</h2>
+	<table>
+		<tr>
+			<th class="width50">HTML4.01</th>
+			<th>HTML5</th>
+		</tr>
+		<tr>
+			<td>
+				<a href="05-01.htm">CAPTION with H3</a> - <strong>FAIL</strong><br>
+				(only inline content allowed inside CAPTION)
+			</td>
+			<td><a href="05-01a.htm">CAPTION with H3</a> - <em>PASS</em></td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>

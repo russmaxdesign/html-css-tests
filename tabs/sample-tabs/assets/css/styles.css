@@ -1,0 +1,71 @@
+/* -----------------------------------
+base
+----------------------------------- */
+
+body
+{
+	margin: 0;
+	padding: 20px;
+	color: #000;
+	background: #fff;
+	font: 1em/1.2 helvetica, arial, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+	margin-top: 0;
+	line-height: 1.1;
+}
+
+p
+{
+	margin: 0 0 1.5em;
+	line-height: 1.5;
+}
+
+a:link { color: blue; }
+a:visited { color: purple; }
+
+a:focus
+{
+	color: #fff;
+	background: #000;
+}
+
+a:hover { color: green; }
+a:active { color: red; }
+
+/* -----------------------------------
+container
+----------------------------------- */
+
+.container
+{
+	margin: 0 auto;
+	max-width: 40em;
+}
+
+.ui-widget
+{
+	font-family: helvetica, arial, sans-serif;
+	font-size: 1em;
+}
+
+.ui-widget-content
+{
+	color: #000;
+	margin: 1em 0 2em;
+}
+
+.ui-widget-content p { margin-bottom: 0; }
+
+/* -----------------------------------
+tab panels
+----------------------------------- */
+
+.tab-panel
+{
+	margin: 0 0 1em;
+	padding: 1em;
+	background: #ddd;
+}

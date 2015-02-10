@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS: stack order and absolute positioning</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style type="text/css">
+	.parent
+	{
+		position: relative;
+		height: 250px;
+		margin: 1em 0;
+		border: 1px solid red;
+	}
+	
+	.one,.one-a,.two,.two-a
+	{
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		border: 1px solid #000;
+	}
+	
+	.one
+	{
+		left: 30px;
+		top: 30px;
+		background: lime;
+	}
+	
+	.one-a
+	{
+		left: 30px;
+		top: 30px;
+		background: pink;
+	}
+	
+	.two
+	{
+		left: 90px;
+		top: 90px;
+		background: yellow;
+	}
+	
+	.two-a
+	{
+		left: 50px;
+		top: -20px;
+		background: orange;
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		CSS: stack order and absolute positioning
+	</h1>
+	<div class="parent">
+		<div class="one">
+			one
+			<div class="one-a">one-a</div>
+		</div>
+		<div class="two">
+			two
+			<div class="two-a">two-a</div>
+		</div>
+	</div>
+
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"one"</span><span class="e">&gt;</span>
+	one
+	<span class="e">&lt;div</span> <span class="att">class</span>="<span class="val">one-a</span>"&gt;one-a<span class="e">&lt;/div&gt;</span>
+<span class="e">&lt;/div&gt;</span>
+<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"two"</span><span class="e">&gt;</span>
+	two
+	<span class="e">&lt;div</span> <span class="att">class</span>="<span class="val">two-a</span>"&gt;one-a<span class="e">&lt;/div&gt;</span>
+<span class="e">&lt;/div&gt;</span></code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.one,.one-a,.two,.two-a</span>
+{
+	<span class="prop">position</span>: <span class="val">absolute</span>;
+	<span class="prop">width</span>: <span class="val">100px</span>;
+	<span class="prop">height</span>: <span class="val">100px</span>;
+	<span class="prop">border</span>: <span class="val">1px solid #000</span>;
+}
+
+<span class="sel">.one</span>
+{
+	<span class="prop">left</span>: <span class="val">30px</span>;
+	<span class="prop">top</span>: <span class="val">30px</span>;
+	<span class="prop">background</span>: <span class="val">lime</span>;
+}
+
+<span class="sel">.one-a</span>
+{
+	<span class="prop">left</span>: <span class="val">30px</span>;
+	<span class="prop">top</span>: <span class="val">30px</span>;
+	<span class="prop">background</span>: <span class="val">pink</span>;
+}
+
+<span class="sel">.two</span>
+{
+	<span class="prop">left</span>: <span class="val">90px</span>;
+	<span class="prop">top</span>: <span class="val">90px</span>;
+	<span class="prop">background</span>: <span class="val">yellow</span>;
+}
+
+<span class="sel">.two-a</span>
+{
+	<span class="prop">left</span>: <span class="val">50px</span>;
+	<span class="prop">top</span>: <span class="val">-20px</span>;
+	<span class="prop">background</span>: <span class="val">orange</span>;
+}</code></pre>
+<!-- code end -->
+	</figure>
+</div>
+</body>
+</html>

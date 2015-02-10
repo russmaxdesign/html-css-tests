@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>FORM with nested FIELDSET </title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	form
+	{
+		padding: 1em;
+		background-color: pink;
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		FORM with nested FIELDSET 
+	</h1>
+	<form action="#">
+		<fieldset>
+			<legend>Legend info</legend>
+			blah
+			<fieldset>
+				<legend>Legend info</legend>
+				blah
+			</fieldset>
+		</fieldset>
+	</form>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;form</span> <span class="att">action</span>=<span class="val">"#"</span><span class="e">&gt;</span>
+	<span class="e">&lt;fieldset&gt;</span>
+		<span class="e">&lt;legend&gt;</span>Legend info<span class="e">&lt;/legend&gt;</span>
+		blah
+		<span class="e">&lt;fieldset&gt;</span>
+			<span class="e">&lt;legend&gt;</span>Legend info<span class="e">&lt;/legend&gt;</span>
+			blah
+		<span class="e">&lt;/fieldset&gt;</span>
+	<span class="e">&lt;/fieldset&gt;</span>
+<span class="e">&lt;/form&gt;</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+</div>
+</body>
+</html>

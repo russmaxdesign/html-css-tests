@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>HTML - alternatives to using the summary attribute</title>
+	<link rel="stylesheet" href="../x-assets/master.css">	
+<style>
+	section
+	{
+		border: 1px solid red;
+		margin: 1em 0;
+		padding: 1em;
+	}
+	
+	figure { margin: 0; }
+	
+	table
+	{
+		margin-top: 0;
+		border-collapse: collapse;
+	}
+	
+	caption
+	{
+		font-size: 120%;
+		margin: 0 0 .5em;
+	}
+	
+	th,td
+	{
+		border: 1px solid #ddd;
+		padding: .5em 1em;
+		text-align: left;
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		HTML - alternatives to using the summary attribute
+	</h1>
+	<h2>
+		The "summary" attribute
+	</h2>
+	<p>
+		The “summary” attribute is used to provide additional information about the &lt;table&gt; element. Unfortunately, this element is not allowed in HTML5. So, how can we provide this additional summary information? 
+	</p>
+	<p>
+		The simplest solution is to provide the additonal information directly above or below the table element. 
+	</p>
+	<p>
+		You could get a bit fancier and place all relevant content inside a &lt;figure&gt; element and the additional content inside a &lt;figcaption&gt; element. 
+	</p>
+	<p>
+		<a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-figure-element">The spec states:</a> 
+	</p>
+	<blockquote>
+		"The element can thus be used to annotate illustrations, diagrams, photos, code listings, etc." 
+	</blockquote>
+	<p>
+		If you run an HTML5 page through the W3C validator and the page contains a table with the summary attribute, the following warning appears: 
+	</p>
+	<blockquote>
+		"The summary attribute is obsolete. Consider describing the structure of the table in a caption element or in a figure element containing the table; or, simplify the structure of the table so that no description is needed." 
+	</blockquote>
+	<!-- example 1 -->
+	<h2>
+		Example 1 - using the summary attribute
+	</h2>
+	<section>
+		<table summary="Summary describing Rainfall in Eastern Australia">
+			<caption>Rainfall in Eastern Australia</caption>
+			<thead>
+				<tr>
+					<th></th>
+					<th>Sydney</th>
+					<th>Canberra</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>January</th>
+					<td>18mm</td>
+					<td>20mm</td>
+				</tr>
+				<tr>
+					<th>February</th>
+					<td>7mm</td>
+					<td>9mm</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;table&gt;</span> <span class="att">summary</span>=<span class="val">"Summary describing Rainfall in Eastern Australia"</span><span class="e">&gt;</span>
+	...
+<span class="e">&lt;/table&gt;</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+	
+	<!-- example 2 -->
+	<h2>
+		Example 2 - using a simple paragraph below the table
+	</h2>
+	<section>
+		<table>
+			<caption>Snowfall in Southern Australia</caption>
+			<thead>
+				<tr>
+					<th></th>
+					<th>Wagga</th>
+					<th>Eden</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>May</th>
+					<td>10mm</td>
+					<td>0mm</td>
+				</tr>
+				<tr>
+					<th>June</th>
+					<td>20mm</td>
+					<td>0mm</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			Summary describing Snowfall in Southern Australia
+		</p>
+	</section>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;table&gt;</span>
+	...
+<span class="e">&lt;/table&gt;
+&lt;p&gt;</span>
+	Summary describing Snowfall in Southern Australia
+<span class="e">&lt;/p&gt;</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+
+	<!-- example 3 -->
+	<h2>
+		Example 3 - using a figure and figcaption
+	</h2>
+	<section>
+		<figure>
+			<table>
+				<caption>Hail in Western Australia</caption>
+				<thead>
+					<tr>
+						<th></th>
+						<th>Perth</th>
+						<th>Bunbury</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>October</th>
+						<td>2mm</td>
+						<td>0mm</td>
+					</tr>
+					<tr>
+						<th>November</th>
+						<td>0mm</td>
+						<td>5mm</td>
+					</tr>
+				</tbody>
+			</table>
+			<figcaption>
+				Summary describing Hail in Western Australia
+			</figcaption>
+		</figure>
+	</section>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;figure&gt;
+	&lt;table&gt;</span>
+		...
+	<span class="e">&lt;/table&gt;
+	&lt;figcaption&gt;</span>
+		Summary describing Hail in Western Australia
+	<span class="e">&lt;/figcaption&gt;
+&lt;/figure&gt;</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+	
+	<!-- example 4 -->
+	<h2>
+		Example 4 - using a figure, figcaption and aria-labelledby
+	</h2>
+	<section>
+		<figure>
+			<table aria-labelledby="summary4">
+				<caption>Sleet in Northern Australia</caption>
+				<thead>
+					<tr>
+						<th></th>
+						<th>Alice Springs</th>
+						<th>Darwin</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>March</th>
+						<td>20mm</td>
+						<td>15mm</td>
+					</tr>
+					<tr>
+						<th>April</th>
+						<td>14mm</td>
+						<td>9mm</td>
+					</tr>
+				</tbody>
+			</table>
+			<figcaption id="summary4">
+				Summary describing Sleet in Northern Australia
+			</figcaption>
+		</figure>
+	</section>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;figure&gt;
+	&lt;table</span> <span class="att">aria-labelledby</span>=<span class="val">"summary4"</span><span class="e">&gt;</span>
+		...
+	<span class="e">&lt;/table&gt;
+	&lt;figcaption</span> <span class="att">id</span>=<span class="val">"summary4"</span><span class="e">&gt;</span>
+		Summary describing Sleet in Northern Australia
+	<span class="e">&lt;/figcaption&gt;
+&lt;/figure&gt;</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+
+</div>
+</body>
+</html>

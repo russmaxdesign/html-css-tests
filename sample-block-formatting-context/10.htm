@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Wrapping a parent around margins - display: table-cell</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	.example
+	{
+		background: yellow;
+		display: table-cell;
+	}
+	
+	p
+	{
+		margin: 1em 0;
+		background: pink;
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		Wrapping a parent around margins - display: table-cell
+	</h1>
+	<div class="example">
+		<p>
+			This is a paragraph
+		</p>
+	</div>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.example</span> { <span class="prop">display</span>: <span class="val">table-cell</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+</div>
+</body>
+</html>

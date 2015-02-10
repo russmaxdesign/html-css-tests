@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Form test</title>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="forms.css">
+</head>
+<body>
+<h1>
+	Form test
+</h1>
+<form class="form" action="#" method="get">
+	<fieldset>
+		<legend><span class="legend">Your details</span></legend>
+		<input type="hidden" value=""> 
+
+		<label class="formbox" for="firstname">	
+			<span class="formbox__label">Name <span class="formbox__required">Required</span></span>
+			<span class="formbox__control">
+				<input type="text" id="firstname" name="firstname" required aria-required="true">
+				<span class="formbox__instructions">Make sure you spell your name correctly</span>
+				<span class="formbox__error">Error - Your name must be spelled correctly</span>
+			</span>
+		</label>
+		<label class="formbox formbox--narrow" for="email">
+			<span class="formbox__label">Email address <span class="formbox__required">Required</span></span>
+			<span class="formbox__control">
+				<input type="email" id="email" name="email" required aria-required="true">
+				<span class="formbox__instructions">Type your full email address</span>
+				<span class="formbox__error">Error - Invalid email address</span>
+			</span>
+		</label>
+		<label class="formbox" for="tel">
+			<span class="formbox__label">Phone number <span class="formbox__required">Required</span></span>
+			<span class="formbox__control">
+				<input type="tel" id="tel" name="tel" required aria-required="true">
+				<span class="formbox__instructions">Include country and area codes</span>
+				<span class="formbox__error">Error - Invalid phone number</span>
+			</span>
+		</label>
+		<label class="formbox" for="url">
+			<span class="formbox__label">Website address <span class="formbox__required">Required</span></span>
+			<span class="formbox__control">
+				<input type="url" id="url" name="url" required aria-required="true">
+				<span class="formbox__instructions">Include "http://"</span>
+				<span class="formbox__error">Error - Invalid web address</span>
+			</span>
+		</label>
+		<label class="formbox formbox--medium" for="password">
+			<span class="formbox__label">Password <span class="formbox__required">Required</span></span>
+			<span class="formbox__control">
+				<input type="password" id="password" name="password" required aria-required="true">
+				<span class="formbox__instructions">Use only a four digit password</span>
+				<span class="formbox__error">Error - password exceeded four digits</span>
+			</span>
+		</label>
+		<label class="formbox" for="file">
+			<span class="formbox__label">Upload document <span class="formbox__required">Required</span></span>
+			<span class="formbox__control">
+				<input class="formbox__file" type="file" id="file" name="file" required aria-required="true">
+				<span class="formbox__instructions">Maximum file size 500k</span>
+				<span class="formbox__error">Error - file exceeds 500k</span>
+			</span>
+		</label>
+		<label class="formbox" for="number">
+			<span class="formbox__label">Choose a rating <span class="formbox__required">Required</span></span>
+			<span class="formbox__control">
+				<input type="number" id="number" name="number" required aria-required="true">
+				<span class="formbox__instructions">Choose a number between 1 and 10</span>
+				<span class="formbox__error">Error - Invalid number</span>
+			</span>
+		</label>
+		<label class="formbox" for="textarea">	
+			<span class="formbox__label">Add a comment <span class="formbox__required">Required</span></span>
+			<span class="formbox__control">
+				<textarea id="textarea" name="textarea" required aria-required="true"></textarea>
+				<span class="formbox__instructions">Maximum of 500 characters</span>
+				<span class="formbox__error">Error - Comment exceeds 500 characters</span>
+			</span>
+		</label>
+		<label class="formbox">
+			<span class="formbox__label">Choose payment method <span class="formbox__required">Required</span></span>
+			<span class="formbox__control">
+				<select class="formbox__select" id="select" name="select" required aria-required="true"> 
+					<option value="" selected>Choose an option</option>
+					<option value="Firect pay">Direct pay</option>
+					<option value="Checque">Cheque</option>
+					<option value="BPay">BPay</option>
+				</select> 
+				<span class="formbox__error">Error - You must choose a payment method</span>
+			</span>
+		</label>
+		<div class="formbox--list" role="radiogroup" aria-labelledby="apples-choices">
+			<p class="formbox__label" id="apples-choices">
+				Do you like apples?
+			</p>
+			<div class="formbox__control">
+				<ul>
+					<li><input type="radio" id="apples-y" name="apples" required aria-required="true"><label for="apples-y">Yes</label></li>
+					<li><input type="radio" id="apples-n" name="apples" required aria-required="true"><label for="apples-n">No</label></li>
+				</ul>
+				<span class="formbox__error">You must choose one option</span>
+			</div>
+		</div>
+		<div class="formbox--list" role="radiogroup" aria-labelledby="subscription">
+			<p class="formbox__label" id="subscription">
+				Pick a subscription
+			</p>
+			<div class="formbox__control">
+				<ul class="formbox__control list-unstyled m-n">
+					<li><input type="checkbox" id="daily" name="daily"><label for="daily">Daily</label></li>
+					<li><input type="checkbox" id="weekly" name="weekly"><label for="weekly">Weekly</label></li>
+					<li><input type="checkbox" id="monthly" name="monthly"><label for="monthly">Monthly</label></li>
+				</ul>
+			</div>
+		</div>
+
+		<label class="formbox" for="search">	
+			<span class="formbox__label">Search <span class="formbox__required">Required</span></span>
+			<span class="formbox__control">
+				<input type="search" placeholder="Search the site" id="search" name="search" required aria-required="true">
+				<span class="formbox__instructions">Make sure you spell your name correctly</span>
+				<span class="formbox__error">Error - Your name must be spelled correctly</span>
+			</span>
+		</label>
+		<label class="formbox" for="range">
+			<span class="formbox__label">Choose a range <span class="formbox__required">Required</span></span>
+			<span class="formbox__control">
+				<input type="range" id="range" name="range">
+				<span class="formbox__instructions">Make sure you spell your name correctly</span>
+				<span class="formbox__error">Error - Your name must be spelled correctly</span>
+			</span>
+		</label>
+		<label class="formbox" for="color">
+			<span class="formbox__label">Color Label here <span class="formbox__required">Required</span></span>
+			<span class="formbox__control">
+				<input type="color" id="color" name="color">
+				<span class="formbox__instructions">Make sure you spell your name correctly</span>
+				<span class="formbox__error">Error - Your name must be spelled correctly</span>
+			</span>
+		</label>
+		<label class="formbox" for="date">
+			<span class="formbox__label">Date Label here <span class="formbox__required">Required</span></span>
+			<span class="formbox__control">
+				<input type="date" id="date" name="date" required aria-required="true">
+				<span class="formbox__instructions">Make sure you spell your name correctly</span>
+				<span class="formbox__error">Error - Your name must be spelled correctly</span>
+			</span>
+		</label>
+		<label class="formbox" for="month">
+			<span class="formbox__label">Month Label here <span class="formbox__required">Required</span></span>
+			<span class="formbox__control">
+				<input type="month" id="month" name="month" required aria-required="true">
+				<span class="formbox__instructions">Make sure you spell your name correctly</span>
+				<span class="formbox__error">Error - Your name must be spelled correctly</span>
+			</span>
+		</label>
+		<label class="formbox" for="week">
+			<span class="formbox__label">Week Label here <span class="formbox__required">Required</span></span>
+			<span class="formbox__control">
+				<input type="week" id="week" name="week" required aria-required="true">
+				<span class="formbox__instructions">Make sure you spell your name correctly</span>
+				<span class="formbox__error">Error - Your name must be spelled correctly</span>
+			</span>
+		</label>
+		<label class="formbox" for="time">
+			<span class="formbox__label">Time Label here <span class="formbox__required">Required</span></span>
+			<span class="formbox__control">
+				<input type="time" id="time" name="time" required aria-required="true">
+				<span class="formbox__instructions">Make sure you spell your name correctly</span>
+				<span class="formbox__error">Error - Your name must be spelled correctly</span>
+			</span>
+		</label>
+		<label class="formbox" for="datetime">
+			<span class="formbox__label">Datetime Label here <span class="formbox__required">Required</span></span>
+			<span class="formbox__control">
+				<input type="datetime" id="datetime" name="datetime" required aria-required="true">
+				<span class="formbox__instructions">Make sure you spell your name correctly</span>
+				<span class="formbox__error">Error - Your name must be spelled correctly</span>
+			</span>
+		</label>
+		<label class="formbox" for="datetime-local">
+			<span class="formbox__label">Datetime-local Label here <span class="formbox__required">Required</span></span>
+			<span class="formbox__control">
+				<input type="datetime-local" id="datetime-local" name="datetime-local" required aria-required="true">
+				<span class="formbox__instructions">Make sure you spell your name correctly</span>
+				<span class="formbox__error">Error - Your name must be spelled correctly</span>
+			</span>
+		</label>
+		<div class="formbox--indent">
+			<input class="button" type="reset" value="Reset"> 
+		</div>
+		<div class="formbox--indent">
+			<button class="button" type="submit">Submit</button>
+		</div>
+		<div class="formbox--indent">
+			<input class="button" type="submit" value="Submit"> 
+		</div>
+
+	</fieldset>	
+</form>
+</body>
+</html>

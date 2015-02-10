@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS property: line-height</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	.two,.three,.four
+	{
+		margin: 1em 0;
+		font-size: 30px;
+		background: pink;
+	}
+	
+	.five,.six,.seven,.eight,.nine { background: pink; }
+	.two { line-height: 1; }
+	.three { line-height: 2; }
+	.four { line-height: 10px; }
+	.five { line-height: normal; }
+	.six { line-height: inherit; }
+	.seven { line-height: 120%; }
+	.eight { line-height: 19.2px; }
+	.nine { line-height: 1.2; }
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		CSS property: line-height
+	</h1>
+	<h2>
+		normal (approx 1.2 x 16px = 19.2px)
+	</h2>
+	<p class="five">
+		Lorem ipsum dolor sit amet consect etuer adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.five</span> { <span class="prop">line-height</span>: <span class="val">normal</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+	<h2>
+		inherit (1.5 x 16px = 24px)
+	</h2>
+	<p class="six">
+		Lorem ipsum dolor sit amet consect etuer adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.six</span> { <span class="prop">line-height</span>: <span class="val">inherit</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		percent (120% x 16 = 19.2px)
+	</h2>
+	<p class="seven">
+		Lorem ipsum dolor sit amet consect etuer adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.seven</span> { <span class="prop">line-height</span>: <span class="val">120%</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		length (19.2px)
+	</h2>
+	<p class="eight">
+		Lorem ipsum dolor sit amet consect etuer adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.eight</span> { <span class="prop">line-height</span>: <span class="val">19.2px</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		number (1.2 x 16px = 19.2px)
+	</h2>
+	<p class="nine">
+		Lorem ipsum dolor sit amet consect etuer adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.nine</span> { <span class="prop">line-height</span>: <span class="val">1.2</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		Line-height collapsing
+	</h2>
+	<div class="two">
+		&Ntilde; abfghijkqrstyz ABCJKOPQRTYZ
+	</div>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.two</span> { <span class="prop">line-height</span>: <span class="val">1</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<div class="three">
+		&Ntilde; abfghijkqrstyz ABCJKOPQRTYZ
+	</div>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.three</span> { <span class="prop">line-height</span>: <span class="val">2</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+	
+	<div class="four">
+		&Ntilde; abfghijkqrstyz ABCJKOPQRTYZ
+	</div>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.four</span> { <span class="prop">line-height</span>: <span class="val">10px</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+
+</div>
+</body>
+</html>

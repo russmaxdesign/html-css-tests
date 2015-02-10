@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>HTML attribute: pubdate</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	article
+	{
+		border: 1px solid red;
+		padding: 1em;
+	}
+	
+	article h3 { margin: 0 0 .5em; }
+	
+	time
+	{
+		background-color: pink;
+		font-size: 90%;
+		text-transform: uppercase;
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		HTML attribute: pubdate
+	</h1>
+	<div style="margin: 1em 0; padding:1em; background: yellow; ">
+		<p>
+			<b>Note</b>: W3C and WHATWG groups have dropped pubdate attribute from specification of time element. It should be removed from this module too. See official pages:
+		</p>
+		<ul>
+			<li><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-time-element">http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-time-element</a></li>
+			<li><a href="http://www.w3.org/TR/html-markup/time.html">http://www.w3.org/TR/html-markup/time.html</a></li>
+		</ul>
+	</div>
+	<p>
+		The pubdate attribute allows authors to define that the date being used is the date of publish.
+	</p>
+<article>
+	<header>
+		<h3>
+			Article heading
+		</h3>
+		<time pubdate="pubdate" datetime="2012-05-19T08:30+10:00">19 May 2012</time>
+	</header>
+	<section>
+		<p>
+			Article content
+		</p>
+	</section>
+	<footer>
+		Article footer
+	</footer>
+</article>
+
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;article&gt;
+	&lt;header&gt;
+		&lt;h1&gt;</span>
+			Article heading
+		<span class="e">&lt;/h1&gt;
+		&lt;time</span> <span class="att">pubdate</span>=<span class="val">"pubdate"</span> <span class="att">datetime</span>=<span class="val">"2012-05-19T08:30+10:00"</span><span class="e">&gt;</span>19 May 2012<span class="e">&lt;/time&gt;</span>
+	<span class="e">&lt;/header&gt;
+	&lt;section&gt;
+		&lt;p&gt;</span>
+			Article content
+		<span class="e">&lt;/p&gt;
+	&lt;/section&gt;
+	&lt;footer&gt;</span>
+		Article footer
+	<span class="e">&lt;/footer&gt;
+&lt;/article&gt;</span></code></pre>
+<!-- code end -->
+	</figure>
+
+</div>
+</body>
+</html>

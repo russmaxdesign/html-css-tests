@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Counter test</title>
+	<meta name="generator" content="BBEdit 9.5" />
+<style type="text/css">
+	body
+	{
+		margin: 2em;
+		width: 40em;
+		padding: 0;
+		font: 130%/1.5 helvetica, arial, frutiger, sans-serif;
+	}
+	
+	h1 { font-size: 200%; }
+	h2 { font-size: 130%; }
+	h3 { font-size: 100%; }
+
+	body
+	{
+		counter-reset: section 0;
+		/* Create a chapter counter scope */
+	}
+	
+	h1:before
+	{
+		content: counter(section) ". ";
+		counter-increment: section;
+		/* Add 1 to chapter */
+	}
+	
+	h1
+	{
+		counter-reset: subsection 0;
+		/* Set section to 0 */
+	}
+	
+	h2
+	{
+		counter-reset: subsubsection 0;
+		/* Set subsection to 0 */
+	}
+	
+	h2:before
+	{
+		content: counter(section) "." counter(subsection) " ";
+		counter-increment: subsection;
+	}
+
+
+	h3:before
+	{
+		content: counter(section) "." counter(subsection) "." counter(subsubsection) " ";
+		counter-increment: subsubsection;
+	}
+</style>
+</head>
+<body>
+<h1>
+	Heading
+</h1>
+<h2>
+	Sub-Heading
+</h2>
+<h3>
+	Sub-Sub-Heading
+</h3>
+<h3>
+	Sub-Sub-Heading
+</h3>
+<h2>
+	Sub-Heading
+</h2>
+<h3>
+	Sub-Sub-Heading
+</h3>
+<h3>
+	Sub-Sub-Heading
+</h3>
+<h2>
+	Sub-Heading
+</h2>
+<h3>
+	Sub-Sub-Heading
+</h3>
+<h3>
+	Sub-Sub-Heading
+</h3>
+<h2>
+	Sub-Heading
+</h2>
+<h3>
+	Sub-Sub-Heading
+</h3>
+<h3>
+	Sub-Sub-Heading
+</h3>
+<h1>
+	Heading
+</h1>
+<h2>
+	Sub-Heading
+</h2>
+<h3>
+	Sub-Sub-Heading
+</h3>
+<h3>
+	Sub-Sub-Heading
+</h3>
+<h2>
+	Sub-Heading
+</h2>
+<h3>
+	Sub-Sub-Heading
+</h3>
+<h3>
+	Sub-Sub-Heading
+</h3>
+<h2>
+	Sub-Heading
+</h2>
+<h3>
+	Sub-Sub-Heading
+</h3>
+<h3>
+	Sub-Sub-Heading
+</h3>
+<h2>
+	Sub-Heading
+</h2>
+<h3>
+	Sub-Sub-Heading
+</h3>
+<h3>
+	Sub-Sub-Heading
+</h3>
+
+</body>
+</html>

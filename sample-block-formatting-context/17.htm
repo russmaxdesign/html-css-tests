@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Sitting a box beside a float - float: right</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	.example { overflow: hidden; }
+	
+	.one
+	{
+		float: left;
+		width: 100px;
+		margin: 0 10px 0 0;
+		background: yellow;
+	}
+	
+	.two
+	{
+		background: pink;
+		float: right;
+		width: 500px;
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		Sitting a box beside a float - float: right
+	</h1>
+	<div class="example">
+		<div class="one">
+			Float
+		</div>
+		<div class="two">
+			Lorem ipsum dolor sit amet consect etuer adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut.
+		</div>
+	</div>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.two</span>
+{
+	<span class="prop">float</span>: <span class="val">right</span>;
+	<span class="prop">width</span>: <span class="val">500px</span>;
+}</code></pre>
+<!-- code end -->
+	</figure>
+
+</div>
+</body>
+</html>

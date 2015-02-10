@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>HTML attribute: seamless</title>
+	<link rel="stylesheet" href="../x-assets/master.css">	
+<style>
+	iframe { margin: 0 0 1em;}
+	
+	.noborder
+	{
+		border: 0;
+		overflow: hidden;
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		HTML attribute: seamless
+	</h1>
+	<p>
+		<strong>Example 0</strong>: Default
+	</p>
+	<iframe src="seamless02.htm" width="500" height="100"></iframe>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;iframe</span> <span class="att">src</span>=<span class="val">"seamless02.htm"</span> <span class="att">width</span>=<span class="val">"500"</span> <span class="att">height</span>=<span class="val">"100"</span><span class="e">&gt;&lt;/iframe&gt;</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+
+	<p>
+		<strong>Example 1</strong>: If your browser supports the seamless attribute, you should see no border or scrollbars on the &lt;iframe&gt; below:
+	</p>
+	<iframe src="seamless02.htm" width="500" height="100" seamless></iframe>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;iframe</span> <span class="att">src</span>=<span class="val">"seamless02.htm"</span> <span class="att">width</span>=<span class="val">"500"</span> <span class="att">height</span>=<span class="val">"100"</span> <span class="att">seamless</span><span class="e">&gt;&lt;/iframe&gt;</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<p>
+		<strong>Example 2</strong>: This &lt;iframe&gt; uses the obsolete frameborder attribute:
+	</p>
+	<iframe src="seamless02.htm" width="500" height="100" frameborder="0"></iframe>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;iframe</span> <span class="att">src</span>=<span class="val">"seamless02.htm"</span> <span class="att">width</span>=<span class="val">"500"</span> <span class="att">height</span>=<span class="val">"100"</span> <span class="att">frameborder</span>=<span class="val">"0"</span><span class="e">&gt;&lt;/iframe&gt;</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<p>
+		<strong>Example 3</strong>: This &lt;iframe&gt; uses the obsolete frameborder and scrolling attributes:
+	</p>
+	<iframe src="seamless02.htm" width="500" height="100" frameborder="0" scrolling="no"></iframe>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;iframe</span> <span class="att">src</span>=<span class="val">"seamless02.htm"</span> <span class="att">width</span>=<span class="val">"500"</span> <span class="att">height</span>=<span class="val">"100"</span> <span class="att">frameborder</span>=<span class="val">"0"</span> <span class="att">scrolling</span>=<span class="val">"no"</span><span class="e">&gt;&lt;/iframe&gt;</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<p>
+		<strong>Example 4</strong>: This &lt;iframe&gt; has borders styled with border="0" and overflow="hidden":
+	</p>
+	<iframe class="noborder" src="seamless02.htm" width="500" height="100"></iframe>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;iframe</span> <span class="att">class</span>=<span class="val">"noborder"</span> <span class="att">src</span>=<span class="val">"seamless02.htm"</span> <span class="att">width</span>=<span class="val">"500"</span> <span class="att">height</span>=<span class="val">"100"</span><span class="e">&gt;&lt;/iframe&gt;</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+</div>
+
+</body>
+</html>

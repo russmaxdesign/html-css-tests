@@ -1,0 +1,4186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS selectors</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css">
+	<link rel="stylesheet" href="selectors.css">
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script> 
+	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script> 
+</head>
+<body>
+<div data-role="page" id="home" class="type-index" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li class="back inactive" href="#home">Back</a></li>
+			<li  class="home2 live" href="#home">Home</a></li>
+			<li><a class="next" href="#group00">Next</a></li>
+		</ul>
+	</div>
+<!-- /header -->
+	<div data-role="content">
+		<ul class="index" data-role="listview" data-filter="true">
+			<li data-role="list-divider">Introduction</li>
+			<li><a href="#group00" data-transition="fade">What are selectors?</a></li>
+			<li data-role="list-divider">Basic selectors</li>
+			<li><a href="#group01" data-transition="fade">About basic selectors</a></li>
+			<li><a href="#page01" data-transition="fade" class="css1">Type <span class="css1">CSS1</span></a></li>
+			<li><a href="#page02" data-transition="fade" class="css1">Class <span class="css1">CSS1</span></a></li>
+			<li><a href="#page03" data-transition="fade" class="css1">ID <span class="css1">CSS1</span></a></li>
+			<li><a href="#page04" data-transition="fade" class="css2">Universal <span class="css2">CSS2</span></a></li>
+			<li data-role="list-divider">Combinators</li>
+			<li><a href="#group02" data-transition="fade">About combinators</a></li>
+			<li><a href="#page05" data-transition="fade" class="css1">Descendant <span class="css1">CSS1</span></a></li>
+			<li><a href="#page06" data-transition="fade" class="css2">Child <span class="css2">CSS2</span></a></li>
+			<li><a href="#page07" data-transition="fade" class="css2">Adjacent sibling <span class="css2">CSS2</span></a></li>
+			<li><a href="#page08" data-transition="fade" class="css3">General sibling <span class="css3">CSS3</span></a></li>
+			<li data-role="list-divider">Link pseudo-classes</li>
+			<li><a href="#group03" data-transition="fade">About link pseudo-classes</a></li>
+			<li><a href="#page09" data-transition="fade" class="css1">:link <span class="css1">CSS1</span></a></li>
+			<li><a href="#page10" data-transition="fade" class="css1">:visited <span class="css1">CSS1</span></a></li>
+			<li data-role="list-divider">User-action pseudo-classes</li>
+			<li><a href="#group04" data-transition="fade">About user-action pseudo-classes</a></li>
+			<li><a href="#page11" data-transition="fade" class="css1">:active <span class="css1">CSS1</span></a></li>
+			<li><a href="#page12" data-transition="fade" class="css2">:focus <span class="css2">CSS2</span></a></li>
+			<li><a href="#page13" data-transition="fade" class="css2">:hover <span class="css2">CSS2</span></a></li>
+			<li data-role="list-divider">Lang pseudo-class</li>
+			<li><a href="#group05" data-transition="fade">About lang pseudo-classes</a></li>
+			<li><a href="#page14" data-transition="fade" class="css2">:lang(c) <span class="css2">CSS2</span></a></li>
+			<li data-role="list-divider">Negation pseudo-class</li>
+			<li><a href="#group06" data-transition="fade">About negation pseudo-classes</a></li>
+			<li><a href="#page15" data-transition="fade" class="css3">:not <span class="css3">CSS3</span></a></li>
+			<li data-role="list-divider">Structural pseudo-classes</li>
+			<li><a href="#group07" data-transition="fade">About structural pseudo-classes</a></li>
+			<li><a href="#page16" data-transition="fade" class="css2">:first-child <span class="css2">CSS2</span></a></li>
+			<li><a href="#page17" data-transition="fade" class="css3">:last-child <span class="css3">CSS3</span></a></li>
+			<li><a href="#page18" data-transition="fade" class="css3">:only-child <span class="css3">CSS3</span></a></li>
+			<li><a href="#page19" data-transition="fade" class="css3">:first-of-type <span class="css3">CSS3</span></a></li>
+			<li><a href="#page20" data-transition="fade" class="css3">:last-of-type <span class="css3">CSS3</span></a></li>
+			<li><a href="#page21" data-transition="fade" class="css3">:only-of-type <span class="css3">CSS3</span></a></li>
+			<li><a href="#page22" data-transition="fade" class="css3">:nth-child(n) <span class="css3">CSS3</span></a></li>
+			<li><a href="#page23" data-transition="fade" class="css3">:nth-last-child(n) <span class="css3">CSS3</span></a></li>
+			<li><a href="#page24" data-transition="fade" class="css3">:nth-of-type(n) <span class="css3">CSS3</span></a></li>
+			<li><a href="#page25" data-transition="fade" class="css3">:nth-last-of-type(n) <span class="css3">CSS3</span></a></li>
+			<li><a href="#page26" data-transition="fade" class="css3">:root <span class="css3">CSS3</span></a></li>
+			<li><a href="#page27" data-transition="fade" class="css3">:empty <span class="css3">CSS3</span></a></li>
+			<li data-role="list-divider">User-interface pseudo-classes</li>
+			<li><a href="#group08" data-transition="fade">About  user-interface pseudo-classes </a></li>
+			<li><a href="#page28" data-transition="fade" class="css3">:disabled <span class="css3">CSS3</span></a></li>
+			<li><a href="#page29" data-transition="fade" class="css3">:enabled <span class="css3">CSS3</span></a></li>
+			<li><a href="#page30" data-transition="fade" class="css3">:checked <span class="css3">CSS3</span></a></li>
+			<li><a href="#page31" data-transition="fade" class="css3">:intermediate <span class="css3">CSS3</span></a></li>
+			<li><a href="#page32" data-transition="fade" class="css3">:default <span class="css3">CSS3</span></a></li>
+			<li><a href="#page33" data-transition="fade" class="css3">:valid <span class="css3">CSS3</span></a></li>
+			<li><a href="#page34" data-transition="fade" class="css3">:invalid <span class="css3">CSS3</span></a></li>
+			<li><a href="#page35" data-transition="fade" class="css3">:in-range <span class="css3">CSS3</span></a></li>
+			<li><a href="#page36" data-transition="fade" class="css3">:out-of-range <span class="css3">CSS3</span></a></li>
+			<li><a href="#page37" data-transition="fade" class="css3">:required <span class="css3">CSS3</span></a></li>
+			<li><a href="#page38" data-transition="fade" class="css3">:optional <span class="css3">CSS3</span></a></li>
+			<li><a href="#page39" data-transition="fade" class="css3">:read-only <span class="css3">CSS3</span></a></li>
+			<li><a href="#page40" data-transition="fade" class="css3">:read-write <span class="css3">CSS3</span></a></li>
+			<li><a href="#page41" data-transition="fade" class="css3">:target <span class="css3">CSS3</span></a></li>
+			<li data-role="list-divider">Pseudo-elements</li>
+			<li><a href="#group09" data-transition="fade">About pseudo-elements</a></li>
+			<li><a href="#page42" data-transition="fade" class="css1">:first-line <span class="css1">CSS1</span></a></li>
+			<li><a href="#page43" data-transition="fade" class="css1">:first-letter <span class="css1">CSS1</span></a></li>
+			<li><a href="#page44" data-transition="fade" class="css2">:before <span class="css2">CSS2</span></a></li>
+			<li><a href="#page45" data-transition="fade" class="css2">:after <span class="css2">CSS2</span></a></li>
+			<li><a href="#page46" data-transition="fade" class="css3">::selection <span class="css3">CSS3</span></a></li>
+			<li><a href="#page47" data-transition="fade" class="css3">::value <span class="css3">CSS3</span></a></li>
+			<li><a href="#page48" data-transition="fade" class="css3">::choices <span class="css3">CSS3</span></a></li>
+			<li><a href="#page49" data-transition="fade" class="css3">::repeat-item <span class="css3">CSS3</span></a></li>
+			<li><a href="#page50" data-transition="fade" class="css3">::repeat-index <span class="css3">CSS3</span></a></li>
+			<li data-role="list-divider">Attribute selectors</li>
+			<li><a href="#group10" data-transition="fade">About attribute selectors</a></li>
+			<li><a href="#page51" data-transition="fade" class="css2">[att] <span class="css2">CSS2</span></a></li>
+			<li><a href="#page52" data-transition="fade" class="css2">[att=val] <span class="css2">CSS2</span></a></li>
+			<li><a href="#page53" data-transition="fade" class="css2">[att~=val] <span class="css2">CSS2</span></a></li>
+			<li><a href="#page54" data-transition="fade" class="css2">[att|=val] <span class="css2">CSS2</span></a></li>
+			<li><a href="#page55" data-transition="fade" class="css3">[att^=val] <span class="css3">CSS3</span></a></li>
+			<li><a href="#page56" data-transition="fade" class="css3">[att$=val] <span class="css3">CSS3</span></a></li>
+			<li><a href="#page57" data-transition="fade" class="css3">[att*=val] <span class="css3">CSS3</span></a></li>
+			<li data-role="list-divider">About this app</li>
+			<li><a href="#page58" data-transition="fade">About this app</a></li>
+		</ul>
+	</div>
+</div>
+<!-- /page one -->
+<!-- Start of second page: #group00 -->
+<div data-role="page" id="group00" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#home">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#group01">Next</a></li>
+		</ul>
+	</div>
+<!-- /header -->
+	<div data-role="content">
+		<h1>
+			What are selectors? 
+		</h1>
+		<h2>
+			CSS rules or rulesets
+		</h2>
+		<p>
+			CSS rules tell browsers how to render specific elements on an HTML page. CSS rules are made up of five components. 
+		</p>
+		<p>
+			The <strong>selector</strong> "selects" the elements on an HTML page that are affected by the rule. 
+		</p>
+<pre><code><strong>p</strong> { color: red; }</code></pre> 
+		<p>
+			The <strong>declaration block</strong> is a container that consists of anything between (and including) the brackets. 
+		</p>
+<pre><code>p <strong>{ color: red; }</strong></code></pre> 
+		<p>
+			The <strong>declaration</strong> tells a browser how to render any element on a page that is selected. 
+		</p>
+<pre><code>p { <strong>color: red;</strong> }</code></pre> 
+		<p>
+			The <strong>property</strong> is the aspect of that element that you are choosing to style. 
+		</p>
+<pre><code>p { <strong>color</strong>: red; }</code></pre> 
+		<p>
+			The <strong>value</strong> is the exact style you wish to set for the property. 
+		</p>
+<pre><code>p { color: <strong>red</strong>; }</code></pre> 
+		<h2>
+			Multiple selectors
+		</h2>
+		<p>
+			When several selectors share the same declarations, they may be grouped together. Each selector must be separated by a comma. There must be no comma after the last selector. Whitespace between the comma-separated selectors is optional.
+		</p>
+<pre><code><strong>h1, h2, h3</strong> { color: red; }<br /><strong>h1,h2,h3</strong> { color: red; }</code></pre> 
+		<h2>
+			How many selectors are there?
+		</h2>
+		<ul class="simple-list">
+			<li class="css1">CSS1 - 9 selectors</li>
+			<li class="css2">CSS2 - 13 selectors</li>
+			<li class="css3">CSS3 - 35 selectors</li>
+		</ul>
+		<h2>
+			How will we break them up?
+		</h2>
+		<ul class="simple-list">
+			<li><a href="#group01">Basic selectors</a></li>
+			<li><a href="#group02">Combinators</a></li>
+			<li><a href="#group03">Link pseudo-classes</a></li>
+			<li><a href="#group04">User-action pseudo-classes</a></li>
+			<li><a href="#group05">Lang pseudo-class</a></li>
+			<li><a href="#group06">Negation pseudo-class</a></li>
+			<li><a href="#group07">Structural pseudo-classes</a></li>
+			<li><a href="#group08">User-interface pseudo-classes</a></li>
+			<li><a href="#group09">Pseudo-elements</a></li>
+			<li><a href="#group10">Attribute selectors</a></li>
+		</ul>
+	</div>
+<!-- /content -->
+</div>
+<!-- /page two -->
+<!-- Start of second page: group01 -->
+<div data-role="page" id="group01" data-theme="a">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#group00">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page01">Next</a></li>
+		</ul>
+	</div>
+<!-- /header -->
+	<div data-role="content" class="group">
+		<h1>
+			Basic selectors 
+		</h1>
+		<p>
+			Basic selectors allow you to target basic HTML elements, as well as elements that contain classes and IDs. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>a</strong> { }<br /><strong>.intro</strong> {} <br /><strong>#nav</strong> {}<br /><strong>*</strong> {}</code></pre> 
+	</div>
+<!-- /content -->
+</div>
+<!-- /page group01 -->
+<!-- Start of second page: #01 -->
+<div data-role="page" id="page01" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#group01">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page02">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css1">
+			Type 
+		</h1>
+		<p>
+			<span class="css1-bg">CSS1</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The type selector is written using an element type. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>h1</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The type selector targets every instance of the element type regardless of their position in the document tree. 
+		</p>
+		<p>
+			In the example below, the "a" selector targets any instance of the &lt;a&gt; element. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>a</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code><strong>&lt;a href="#"&gt;Link&lt;/a&gt;</strong></code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The type selector is well supported across all modern browsers. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page three -->
+<!-- Start of second page: #02 -->
+<div data-role="page" id="page02" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page01">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page03">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css1">
+			Class 
+		</h1>
+		<p>
+			<span class="css1-bg">CSS1</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The class selector is written an optional element, followed by a ".", followed by the class name. Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>.intro</strong> { }<br /><strong>p.intro</strong> { }</code></pre> 
+		<p>
+			Class values are case-sensitive. In the example below, browsers interpret ".intro" and ".Intro" as different classes. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>.Intro</strong> { }<br /><strong>.intro</strong> { }</code></pre> 
+		<p>
+			Classes can begin with letters, digits, hyphens, underscores. They can also include colons and periods. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>.480wide</strong> { }<br /><strong>._classname</strong> { }<br /><strong>.-classname</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The class selector targets any HTML element that has the relevant class value regardless of their position in the document tree. 
+		</p>
+		<p>
+			In the example below, the ".intro" selector targets any instance of the an element that contains a class of "intro". 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>.intro</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p class="<strong>intro</strong>"&gt;  <br />   Content <br />&lt;/p&gt;<br />&lt;div class="<strong>intro</strong>"&gt; <br />  Content <br />&lt;/div&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The class selector is well supported across all modern browsers. 
+		</p>
+		<h1 class="css1">
+			Making classes more specific 
+		</h1>
+		<p>
+			Elements can be added before the "." to make a selector more specific. In the example below, the ".intro" selector targets the &lt;p&gt; and &lt;div&gt; elements as they both contain a class of "intro". 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>.intro</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p class="<strong>intro</strong>"&gt;  <br />   Content <br />&lt;/p&gt;<br />&lt;div class="<strong>intro</strong>"&gt; <br />  Content <br />&lt;/div&gt;</code></pre> 
+		<p>
+			In the example below, the "p.intro" selector targets only &lt;p&gt; elements that contain a class of "intro". The &lt;div&gt; is not targeted. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p.intro</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p class="<strong>intro</strong>"&gt;<br />Content<br />&lt;/p&gt;<br />&lt;div class="intro"&gt;<br />  Content <br />&lt;/div&gt;</code></pre> 
+		<h1 class="css1">
+			Multiple classes 
+		</h1>
+		<p>
+			Multiple classes can be added together to make a selector more specific. They must be written with an optional element, followed by a ".", followed by a class name, followed by another ".", followed by another class name. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>.one.two</strong> { }<br /><strong>p.one.two</strong> { }<br /></code></pre> 
+		<p>
+			In the example below, the ".one.two" selector targets any element that has a class of both "one" and "two". 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code>.one { }<br />.two { }<br /><strong><strong>.one.two</strong></strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p class="one"&gt;<br />   Content<br /> &lt;/p&gt;<br /> &lt;div class="two"&gt;<br />    Content<br /> &lt;/div&gt;<br />&lt;div class="<strong>one two</strong>"&gt;<br />   Content<br />&lt;/div&gt;</code></pre> 
+		<p>
+			Multiple class values can be written in any order. The selector ".one.two" is the same as ".two.one". 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>.two.one</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;div class="<strong>one two</strong>"&gt;<br />   Content<br />&lt;/div&gt;</code></pre> 
+		<p>
+			The class attribute values within the HTML document can also be written in any order. The attribute values "one two" are the same as "two one". 
+		</p>
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;div class="<strong>one two</strong>"&gt;<br />   Content<br />&lt;/div&gt; <br />&lt;div class="<strong>two one</strong>"&gt;<br />   Content<br />&lt;/div&gt;</code></pre> 
+		<h2>
+			Support for multiple classes
+		</h2>
+		<p>
+			Multiple classes are not supported in IE6.
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page 02 -->
+<!-- Start of second page: 03 -->
+<div data-role="page" id="page03" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page02">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page04">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css1">
+			ID 
+		</h1>
+		<p>
+			<span class="css1-bg">CSS1</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The ID selector is written using a "#", followed by the ID name. Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>#nav </strong>{ }</code></pre> 
+		<p>
+			ID names are case-sensitive. Browsers will interpret "#nav" and "#Nav" as different IDs. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>#nav</strong> { } <br /><strong>#Nav</strong> { }</code></pre> 
+		<p>
+			Before HTML5, ID names had to begin with a letter. ID names are now allowed to have any characters or strings, as long as it is unique, is not the empty string, and does not contain whitespace characters. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>#480wide</strong> { }<br /><strong>#_classname</strong> { }<br /><strong>#-classname</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The ID selector targets any HTML element that has the relevant ID value regardless of its position in the document tree. 
+		</p>
+		<p>
+			In the example below, the "#nav" selector targets any instance of the an element that contains a class of "nav". 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>#nav</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p id="<strong>nav</strong>"&gt;<br />   Content<br />&lt;/p&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The ID selector is well supported across all modern browsers. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page Page 03 -->
+<!-- Start of second page: Page 04 -->
+<div data-role="page" id="page04" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page03">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#group02">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css2">
+			Universal 
+		</h1>
+		<p>
+			<span class="css2-bg">CSS2</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The universal selector is written using a "*". 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>*</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The universal selector targets any elements within the document. 
+		</p>
+		<p>
+			In the example below, the selector targets every element in the document. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>*</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code><strong>&lt;body&gt;<br />  &lt;div&gt;<br />   Content<br /> &lt;/div&gt; <br />&lt;/body&gt;</strong></code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The universal selector is well supported across all modern browsers. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page Page 04 -->
+<!-- Start of second page: Group02 -->
+<div data-role="page" id="group02" data-theme="a">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page04">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page05">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content" class="group">
+		<h1>
+			Combinators 
+		</h1>
+		<p>
+			"Combinators" allow you to combine basic selectors into new types of selectors. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p a</strong> { } <br /><strong>p > a</strong> { }<br /><strong>h2 + h3</strong> { }<br /><strong>ul ~ p</strong> { }</code></pre> 
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page group02 -->
+<!-- Start of second page: page05 -->
+<div data-role="page" id="page05" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#group02">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page06">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css1">
+			Descendant 
+		</h1>
+		<p>
+			<span class="css1-bg">CSS1</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The descendant selector is written using two or more selectors separated by whitespace. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p a</strong> { }<br /><strong>div .intro</strong> { }<br /><strong>#nav li a</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The descendant selector targets only elements that are descendants of other elements. 
+		</p>
+		<p>
+			In the example below, the &lt;a&gt; element that is a descendant of the &lt;p&gt; will be selected, but not the &lt;a&gt; element that is a descendant of the &lt;div&gt; element. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p a</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p&gt;<br />   <strong>&lt;a href="#"&gt;link&lt;/a&gt;</strong><br />&lt;/p&gt; <br />&lt;div&gt; <br />   &lt;a href="#"&gt;link&lt;/a&gt; <br />&lt;/div&gt;</code></pre> 
+		<h2>
+			Descendant selector paths 
+		</h2>
+		<p>
+			The key to descendant selectors is understanding pathways to elements. There is a path to every element starting with the HTML element. 
+		</p>
+		<p>
+			Paths can be written in full or in part, depending on your need. Paths can also skip one or more levels. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code>html body ul li <strong>a</strong> { }<br />body ul li <strong>a</strong> { }<br />ul li <strong>a</strong> { }<br />li <strong>a</strong> { }<br /><strong>a</strong> { }</code></pre> 
+		<p>
+			Try to keep your selectors as short as possible. Each selector should only be as specific as needed. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>.nav</strong> {}<br /><strong>.nav li</strong> { }<br /><strong>.nav a</strong> { }</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The descendant selector is well supported across all modern browsers. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page05 -->
+<!-- Start of second page: page06 -->
+<div data-role="page" id="page06" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page05">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page07">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css2">
+			Child 
+		</h1>
+		<p>
+			<span class="css2-bg">CSS2</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The child selector is written using two selectors separated by a "&gt;". Whitespace within the selector is optional. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p > a</strong> { }<br /><strong>p>a</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The child selector targets any element that is a direct child of another element. Only child elements, rather than descendant elements, will be selected. 
+		</p>
+		<p>
+			In the example below, the &lt;a&gt; that is a child of the &lt;div&gt; will be selected, but not the &lt;a&gt; that is a child of the &lt;p&gt;. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>div > a</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;div&gt;<br />  <strong> &lt;a href="#"&gt;link&lt;/a&gt;<br /></strong>&lt;/div&gt;<br />&lt;div&gt;<br />  &lt;p&gt;<br />     &lt;a href="#"&gt;link&lt;/a&gt;<br />  &lt;/p&gt;<br />&lt;/div&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The child selector is not supported by IE6. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page06 -->
+<!-- Start of second page: 07 -->
+<div data-role="page" id="page07" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page06">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page08">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css2">
+			Adjacent sibling 
+		</h1>
+		<p>
+			<span class="css2-bg">CSS2</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The adjacent sibling selector is written using two selectors separated by a "+". Whitespace within the selector is optional. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>h2 + h3</strong> { }<br /><strong>h2+h3</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The Adjacent sibling selector targets the sibling (element that shares the same parent) immediately following a defined element. 
+		</p>
+		<p>
+			In the example below, only the &lt;h3&gt; that is adjacent to the &lt;h2&gt; will be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>h2 + h3</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;h2&gt;<br />   Content<br />&lt;/h2&gt;<br /><strong>&lt;h3&gt;<br />   Content<br />&lt;/h3&gt;</strong><br />&lt;h3&gt;<br />   Content<br />&lt;/h3&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The adjacent sibling selectors is not supported by IE6. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page 07 -->
+<!-- Start of second page: page08 -->
+<div data-role="page" id="page08" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page07">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#group03">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			General sibling 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The general sibling selector is written using two selectors separated by a "~". Whitespace within the selector is optional. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>h2 ~ h3</strong> { }<br /><strong>h2~h3</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The General sibling selector targets any sibling (element that shares the same parent) that follows a defined element. 
+		</p>
+		<p>
+			In the example below, any &lt;h3&gt; after the &lt;h2&gt; will be selected - as long as they share the same parent. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>h2 ~ h3</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;h2&gt;<br />   Content<br />&lt;/h2&gt;<br /><strong>&lt;h3&gt;<br />   Content<br />&lt;/h3&gt;</strong><br />&lt;p&gt;<br />   Content<br />&lt;/p&gt;<br /><strong>&lt;h3&gt;<br />   Content<br />&lt;/h3&gt;</strong></code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The general sibling selector is not supported by IE6 or IE7. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page08 -->
+<!-- Start of second page: group03 -->
+<div data-role="page" id="group03" data-theme="a">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page08">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page09">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content" class="group">
+		<h1>
+			Link pseudo-classes 
+		</h1>
+		<p>
+			Pseudo-classes (or "fake" classes) allow you to style specific attributes or states that do not exist in the document tree. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>a:link</strong> { }<br /><strong>a:visited</strong> { }</code></pre> 
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page group03 -->
+<!-- Start of second page: page09 -->
+<div data-role="page" id="page09" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#group03">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page10">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css1">
+			:link 
+		</h1>
+		<p>
+			<span class="css1-bg">CSS1</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :link pseudo-class selector is written using an &lt;a&gt; element, followed by ":", followed by "link". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>a:link</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :link pseudo-class selector targets any link that is defined as "unvisited". 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>a:link</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p&gt;<br />   <strong>&lt;a href="#"&gt;link&lt;/a&gt;</strong><br />&lt;/p&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :link pseudo-class selector is well supported across all modern browsers. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page09 -->
+<!-- Start of second page: page10 -->
+<div data-role="page" id="page10" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page09">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#group04">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css1">
+			:visited 
+		</h1>
+		<p>
+			<span class="css1-bg">CSS1</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :visited pseudo-class selector is written using an &lt;a&gt; element, followed by ":", followed by "visited". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>a:visited</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :visited pseudo-class selector targets any link that is defined as "visited". 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>a:visited</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p&gt;<br />   <strong>&lt;a href="#"&gt;link&lt;/a&gt;</strong><br />&lt;/p&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :visited pseudo-class selector is well supported across all modern browsers. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page10 -->
+<!-- Start of second page: group04 -->
+<div data-role="page" id="group04" data-theme="a">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page10">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page11">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content" class="group">
+		<h1>
+			User-action pseudo-classes 
+		</h1>
+		<p>
+			The user-action pseudo-classes allow you to style elements based on the way that users interact with these elements. 
+		</p>
+<pre><code><strong>a:active</strong> { }<br /><strong>a:focus</strong> { }<br /><strong>a:hover</strong> { }</code></pre> 
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page group04 -->
+<!-- Start of second page: page11 -->
+<div data-role="page" id="page11" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#group04">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page12">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css1">
+			:active 
+		</h1>
+		<p>
+			<span class="css1-bg">CSS1</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :active pseudo-class selector is written using an &lt;a&gt; element, followed by ":", followed by "active". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>a:active</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :active pseudo-class selector targets any element that is currently being activated by the user. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>a:active</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p&gt;<br />   <strong>&lt;a href="#"&gt;link&lt;/a&gt;</strong><br />&lt;/p&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			Issue 1: IE6 and IE7 only support :active on elements with the HREF attribute. 
+		</p>
+		<p>
+			Issue 2: IE6 incorrectly applies this pseudo-class to links that have input focus (incorrectly applies :active for :focus). 
+		</p>
+		<p>
+			Issue 3: IE6 has a "sticky active state" (active state remains active when user returns to page via the back button). 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page11 -->
+<!-- Start of second page: page12 -->
+<div data-role="page" id="page12" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page11">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page13">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css2">
+			:focus 
+		</h1>
+		<p>
+			<span class="css2-bg">CSS2</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :focus pseudo-class selector is written using an element, followed by ":", followed by "focus". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>a:focus</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :focus pseudo-class selector targets elements that have focus (ones that accept keyboard events). 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>a:focus</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p&gt;<br />   <strong>&lt;a href="#"&gt;link&lt;/a&gt;</strong><br />&lt;/p&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :focus pseudo-class selector is not supported by IE6 or IE7. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page12 -->
+<!-- Start of second page: page13 -->
+<div data-role="page" id="page13" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page12">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#group05">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css2">
+			:hover 
+		</h1>
+		<p>
+			<span class="css2-bg">CSS2</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :hover pseudo-class selector is written using an element, followed by ":", followed by "hover". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>a:hover</strong> { }<br /><strong>tr:hover</strong> { }<br /><strong>div:hover</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :hover pseudo-class selector targets any element when the user’s cursor is over the element - but the user has not activated it. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>a:hover</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p&gt;<br />   <strong>&lt;a href="#"&gt;link&lt;/a&gt;</strong><br />&lt;/p&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			IE6 only supports :hover on elements with the HREF attribute. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page13 -->
+<!-- Start of second page: group05 -->
+<div data-role="page" id="group05" data-theme="a">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page13">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page14">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content" class="group">
+		<h1>
+			The lang pseudo-class 
+		</h1>
+		<p>
+			The :lang pseudo-class allows you to style content that has been defined using the "lang" attribute. 
+		</p>
+<pre><code><strong>p:lang(fr)</strong> { }</code></pre> 
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page group05 -->
+<!-- Start of second page: page14 -->
+<div data-role="page" id="page14" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#group05">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#group06">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css2">
+			:lang(c) 
+		</h1>
+		<p>
+			<span class="css2-bg">CSS2</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :lang(c) pseudo-class selector is written using an option element, followed by ":", followed by "lang", followed by a "language subtag" placed inside brackets. Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>:lang(bs)</strong> { }<br /><strong>p:lang(hu)</strong> { }</code></pre> 
+		<h2>
+			Language subtags 
+		</h2>
+		<p>
+			The language subtags are defined in the <a href="http://www.iana.org/assignments/language-subtag-registry">IANA Language Subtag Registry</a>. 
+		</p>
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :lang(c) pseudo-class selector targets any element that contains the "lang" attribute and the relevant language subtag value. 
+		</p>
+		<p>
+			In the example below, only the &lt;p&gt; element with the (fr) lang subtag will be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>:lang(fr)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p<strong>lang="fr"</strong>&gt;<br />   Adieu<br />&lt;/p&gt;<br />&lt;p lang="jw"&gt;<br />   Sugeng rawuh<br />&lt;/p&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :lang(c) pseudo-class selector is not supported in IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page14 -->
+<!-- Start of second page: group06 -->
+<div data-role="page" id="group06" data-theme="a">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page14">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page15">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content" class="group">
+		<h1>
+			The negation pseudo-class 
+		</h1>
+		<p>
+			The :not pseudo-class allows you to style every element except the element that has been defined using the selector. 
+		</p>
+<pre><code><strong>p:not(.intro)</strong> { }</code></pre> 
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page group06 -->
+<!-- Start of second page: page15 -->
+<div data-role="page" id="page15" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#group06">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#group07">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			:not 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :not pseudo-class selector is written using an element, followed by ":not", followed by a simple selector placed inside brackets. Whitespace is not permitted within the selector. Simple selectors only are allowed inside the brackets. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p:not(.intro)</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :not pseudo-class selector targets all elements except those defined by the selector. The :not selector can be defined using a variety of simple selectors. 
+		</p>
+		<h2>
+			Option 1
+		</h2>
+		<p>
+			Type selectors are allowed inside the brackets. In the example below, every element that is not a &lt;p&gt; element will be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>:not(p)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p&gt;<br />   Content<br />&lt;/p&gt;<br /><strong>&lt;div&gt;<br />   Content<br />&lt;/div&gt;<br />&lt;blockquote&gt;<br />   Content<br />&lt;/blockquot&gt;</strong></code></pre> 
+		<h2>
+			Option 2
+		</h2>
+		<p>			
+			Class selectors are allowed inside the brackets. In the example below, every element that does not have a class of "intro" will be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>:not(.intro)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p class="intro"&gt;<br />   Content<br />&lt;/p&gt;<br /><strong>&lt;p&gt;<br />   Content<br />&lt;/p&gt;<br />&lt;div&gt;<br />   Content<br />&lt;/div&gt;</strong></code></pre> 
+		<h2>
+			Option 3
+		</h2>
+		<p>
+			ID selectors are allowed inside the brackets. In the example below, every element that does not have an ID of "news" will be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>:not(#news)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p id="news"&gt;<br />   Content<br />&lt;/p&gt;<br /><strong>&lt;p&gt;<br />   Content<br />&lt;/p&gt;<br />&lt;div&gt;<br />   Content<br />&lt;/div&gt;</strong></code></pre> 
+		<h2>
+			Option 4
+		</h2>
+		<p>
+			Pseudo-class selectors are allowed inside the brackets. In the example below, every element that does not have a pseudo-class of "lang(fr)" will be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>:not(:lang(fr))</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p lang="fr"&gt;<br />   Content<br />&lt;/p&gt;<br /><strong>&lt;p lang="br"&gt;<br />   Content<br />&lt;/p&gt;<br />&lt;p&gt;<br />   Content<br />&lt;/p&gt;</strong></code></pre> 
+		<h2>
+			Option 5
+		</h2>
+		<p>
+			Attribute selectors are allowed inside the brackets. In the example below, every element that does not have an "disabled" attribute will be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>:not([disabled])</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;input disabled&gt;<br /><strong>&lt;input&gt;</strong></code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :not pseudo-class selector is not supported in IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page15 -->
+<!-- Start of second page: group07 -->
+<div data-role="page" id="group07" data-theme="a">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page15">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page16">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content" class="group">
+		<h1>
+			Structural pseudo-classes 
+		</h1>
+		<p>
+			Structural pseudo-classes allow you to select elements based on their position within the overall document structure. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>:first-child</strong> { }<br /><strong>:only-child</strong> { }<br /><strong>:nth-child(3n)</strong> { }</code></pre> 
+		<h2>
+			Unstable 
+		</h2>
+		<p>
+			Be aware that many of these structural pseudo-classes are considered "unstable". If the document structure changes, the structural pseudo-selector may be applied to a different element, or no element at all. 
+		</p>
+		<h2>
+			Confusion 
+		</h2>
+		<p>
+			It is very easy to get confused when styling structural selectors as to which element is actually being styled. 
+		</p>
+		<p>
+			In the example below, the &lt;p&gt; element that is an only child is being styled, NOT the only child of the &lt;p&gt; element. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p:only-child</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;div&gt;<br />   <strong>&lt;p&gt;<br />      Content<br />   &lt;/p&gt;</strong><br />&lt;/div&gt;<br />&lt;div&gt;<br />   &lt;p&gt;<br />      Content<br />   &lt;/p&gt;<br />   &lt;p&gt;<br />      Content<br />   &lt;/p&gt;<br />&lt;/div&gt;</code></pre> 
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page group07 -->
+<!-- Start of second page: page16 -->
+<div data-role="page" id="page16" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#group07">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page17">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css2">
+			:first-child 
+		</h1>
+		<p>
+			<span class="css2-bg">CSS2</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :first-child pseudo-class selector is written using an element followed by ":", followed by "first-child". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>em:first-child</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :first-child pseudo-class selector targets elements that are the first child of some other element. 
+		</p>
+		<p>
+			In the example below, the first &lt;em&gt; element will be selected but not the second. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>em:first-child</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p&gt;<br />   <strong>&lt;em&gt;1&lt;/em&gt;</strong> &lt;em&gt;2&lt;/em&gt;<br />&lt;/p&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :first-child selector is not supported in IE6. IE7 has buggy support. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page16 -->
+<!-- Start of second page: page17 -->
+<div data-role="page" id="page17" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page16">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page18">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			:last-child 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :last-child pseudo-class selector is written using an element followed by ":", followed by "last-child". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>em:last-child</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :last-child pseudo-class selector targets elements that are the last child of some other element. 
+		</p>
+		<p>
+			In the example below, the last &lt;em&gt; element will be selected but not the first. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>em:last-child</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p&gt;<br />   &lt;em&gt;1&lt;/em&gt; <strong>&lt;em&gt;2&lt;/em&gt;</strong><br />&lt;/p&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :last-child pseudo-class selector is not supported by IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page17 -->
+<!-- Start of second page: page18 -->
+<div data-role="page" id="page18" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page17">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page19">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			:only-child 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :only-child pseudo-class selector is written using an element followed by ":", followed by "only-child". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p:only-child</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :only-child pseudo-class selector targets elements that are the only child of some other element. 
+		</p>
+		<p>
+			In the example below, any &lt;em&gt; that is an only child will be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>em:only-child</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p&gt;<br />   <strong>&lt;em&gt;1&lt;/em&gt;</strong><br />&lt;/p&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :only-child pseudo-class selector is not supported by IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page18 -->
+<!-- Start of second page: page19 -->
+<div data-role="page" id="page19" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page18">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page20">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			:first-of-type 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :first-of-type pseudo-class selector is written using an element followed by ":", followed by "first-of-type". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p:first-of-type</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :first-of-type pseudo-class selector targets elements that are the first of its type within a parent. 
+		</p>
+		<p>
+			In the example below, only the first &lt;p&gt; element will be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p:first-of-type</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code><strong>&lt;p&gt;<br />   Content<br />&lt;/p&gt;</strong><br />&lt;p&gt;<br />   Content<br />&lt;/p&gt;<br />&lt;p&gt;<br />   Content<br />&lt;/p&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :first-of-type pseudo-class selector is not supported by IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page19 -->
+<!-- Start of second page: page20 -->
+<div data-role="page" id="page20" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page19">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page21">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			:last-of-type 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :last-of-type pseudo-class selector is written using an element followed by ":", followed by "last-of-type". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p:last-of-type</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :last-of-type pseudo-class selector targets elements that are the last of its type within a parent. 
+		</p>
+		<p>
+			In the example below, only the last &lt;p&gt; element will be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p:last-of-type</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p&gt;<br />   Content<br />&lt;/p&gt;<br />&lt;p&gt;<br />   Content<br />&lt;/p&gt;<br /><strong>&lt;p&gt;<br />   Content<br />&lt;/p&gt;</strong></code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :last-of-type pseudo-class selector is not supported by IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page20 -->
+<!-- Start of second page: page21 -->
+<div data-role="page" id="page21" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page20">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page22">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			:only-of-type 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :only-of-type pseudo-class selector is written using an element followed by ":", followed by "onlyof-type". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p:only-of-type</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :only-of-type pseudo-class selector targets elements that are the only element of that type within the parent. 
+		</p>
+		<p>
+			In the example below, the &lt;p&gt; that is the only element of its type within a parent be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p:only-of-type</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;div&gt;<br />   <strong>&lt;p&gt;<br />      Content<br />   &lt;/p&gt;</strong><br />   &lt;div&gt;<br />      Content<br />   &lt;/div&gt;<br />&lt;/div&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :only-of-type pseudo-class selector is not supported by IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page21 -->
+<!-- Start of second page: page22 -->
+<div data-role="page" id="page22" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page21">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page23">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			:nth-child(n) 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :nth-child pseudo-class selector is written using an element followed by ":", followed by "nth-child", followed by brackets. The brackets can contain six different types of values. Whitespace is not permitted within the selector. 
+		</p>
+<pre><code><strong>li:nth-child(3)</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :nth-child pseudo-class selector targets specific child elements within the parent. The six different types of values used inside the brackets dictate which child elements will be targeted. 
+		</p>
+		<h2>
+			Option 1
+		</h2>
+		<p>
+			The brackets can contain an integer value. In the example below, the selector targets only the third &lt;li&gt; child element. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>li:nth-child(3)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;ul&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />&lt;/ul&gt;</code></pre> 
+		<h2>
+			Option 2
+		</h2>
+		<p>
+			The brackets can contain an integer value and the letter "n". The value "3n" means "every third". In the example below, the selector targets every third &lt;li&gt; child element. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>li:nth-child(3n)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;ul&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />&lt;/ul&gt;</code></pre> 
+		<h2>
+			Option 3
+		</h2>
+		<p>
+			The brackets can contain an integer value, the letter "n", a plus (+) symbol and another integer value. In the example below, the selector targets every third &lt;li&gt; child element, starting one number forward (eg. 1st, 4th, 7th, 10th...). 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>li:nth-child(3n+1)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;ul&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />&lt;/ul&gt;</code></pre> 
+		<h2>
+			Option 4
+		</h2>
+		<p>
+			The brackets can contain an integer value, the letter "n", a minus (-) symbol and another integer value. The example below targets every third &lt;li&gt; child element, starting one number backward (eg. 2nd, 5th, 8th...). 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>li:nth-child(3n-1)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;ul&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />&lt;/ul&gt;</code></pre> 
+		<h2>
+			Option 5
+		</h2>
+		<p>
+			The brackets can contain the "even" keyword. The example below targets every "even" &lt;li&gt; child element. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>li:nth-child(even)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;ul&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />&lt;/ul&gt;</code></pre> 
+		<h2>
+			Option 6
+		</h2>
+		<p>
+			The brackets can contain the "odd" keyword. The example below targets every "odd" &lt;li&gt; child element. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>li:nth-child(odd)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;ul&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />&lt;/ul&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :nth-child pseudo-class selector is not supported by IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page22 -->
+<!-- Start of second page: page23 -->
+<div data-role="page" id="page23" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page22">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page24">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			:nth-last-child(n) 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :nth-last-child pseudo-class selector is written using an element followed by ":", followed by "nth-last-child", followed by brackets. The brackets can contain six different types of values. Whitespace is not permitted within the selector. 
+		</p>
+<pre><code><strong>li:nth-last-child(3n)</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :nth-last-child pseudo-class selector targets specific child elements within the parent. The six different types of values used inside the brackets dictate which child elements will be targeted. 
+		</p>
+		<h2>
+			Option 1
+		</h2>
+		<p>
+			The brackets can contain an integer value. In the example below, the selector targets only the third last &lt;li&gt; child element. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>li:nth-last-child(3)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;ul&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />&lt;/ul&gt;</code></pre> 
+		<h2>
+			Option 2
+		</h2>
+		<p>
+			The brackets can contain an integer value and the letter "n". The value "3n" means "every third". In the example below, the selector targets every third &lt;li&gt; child element, starting from the last child (eg. 3rd last, 6th last...). 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>li:nth-last-child(3n)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;ul&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />&lt;/ul&gt;</code></pre> 
+		<h2>
+			Option 3
+		</h2>
+		<p>
+			The brackets can contain an integer value, the letter "n", a plus (+) symbol and another integer value. The example below targets every third &lt;li&gt; child element, starting one number backward (eg. last, 4th last...). 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>li:nth-last-child(3n+1)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;ul&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />&lt;/ul&gt;</code></pre> 
+		<h2>
+			Option 4
+		</h2>
+		<p>
+			The brackets can contain an integer value, the letter "n", a minus (-) symbol and another integer value. The example below targets every third &lt;li&gt; child element, starting one number forward (eg. 2nd last, 5th last...). 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>li:nth-last-child(3n-1)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;ul&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />&lt;/ul&gt;</code></pre> 
+		<h2>
+			Option 5
+		</h2>
+		<p>
+			The brackets can contain the "even" keyword. The example below targets every "even" &lt;li&gt; child element starting from the end. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>li:nth-last-child(even)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;ul&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />&lt;/ul&gt;</code></pre> 
+		<h2>
+			Option 6
+		</h2>
+		<p>
+			The brackets can contain the "odd" keyword. The example below targets every "odd" &lt;li&gt; child element starting from the end. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>li:nth-last-child(odd)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;ul&gt;<br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />  &lt;li&gt;Content&lt;/li&gt;<br />  <strong>&lt;li&gt;Content&lt;/li&gt;</strong><br />&lt;/ul&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :nth-last-child pseudo-class selector is not supported by IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page23 -->
+<!-- Start of second page: page24 -->
+<div data-role="page" id="page24" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page23">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page25">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			:nth-of-type(n) 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :nth-of-type pseudo-class selector is written using an element followed by ":", followed by "nth-of-type", followed by brackets. The brackets can contain six different types of values. Whitespace is not permitted within the selector. 
+		</p>
+<pre><code><strong>p:nth-of-type(3)</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :nth-of-type pseudo-class selector targets specific child elements within the parent. The six different types of values used inside the brackets dictate which child elements will be targeted. 
+		</p>
+		<h2>
+			Option 1
+		</h2>
+		<p>
+			The brackets can contain an integer value. The example below targets only the third &lt;p&gt; element. Other element types will be ignored. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p:nth-of-type(3)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;div&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;div&gt;&lt;/div&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;div&gt;&lt;/div&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />&lt;/div&gt;</code></pre> 
+		<h2>
+			Option 2
+		</h2>
+		<p>
+			The brackets can contain an integer value and the letter "n". The value "3n" means "every third". The example below targets every third &lt;p&gt; child element. Other element types will be ignored. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p:nth-of-type(3n)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;div&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;div&gt;&lt;/div&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;div&gt;&lt;/div&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />&lt;/div&gt;</code></pre> 
+		<h2>
+			Option 3
+		</h2>
+		<p>
+			The brackets can contain an integer value, the letter "n", a plus (+) symbol and another integer value. The example below targets every third &lt;p&gt; child element, starting one number forward (eg. 1st, 4th, 7th, 10th...). 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p:nth-of-type(3n+1)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;div&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;div&gt;&lt;/div&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;div&gt;&lt;/div&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />&lt;/div&gt;</code></pre> 
+		<h2>
+			Option 4
+		</h2>
+		<p>
+			The brackets can contain an integer value, the letter "n", a minus (-) symbol and another integer value. The example below targets every third &lt;p&gt; child element, starting one number backward (eg. 2nd, 5th, 8th...). 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p:nth-of-type(3n-1)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;div&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;div&gt;&lt;/div&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;div&gt;&lt;/div&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />&lt;/div&gt;</code></pre> 
+		<h2>
+			Option 5
+		</h2>
+		<p>
+			The brackets can contain the "even" keyword. The example below targets every "even" &lt;p&gt; child element starting from the end. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p:nth-of-type(even)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;div&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;div&gt;&lt;/div&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;div&gt;&lt;/div&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />&lt;/div&gt;</code></pre> 
+		<h2>
+			Option 6
+		</h2>
+		<p>
+			The brackets can contain the "odd" keyword. The example below targets every "odd" &lt;p&gt; child element starting from the end. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p:nth-of-type(odd)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;div&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;div&gt;&lt;/div&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;div&gt;&lt;/div&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />   &lt;p&gt;Content&lt;/p&gt;<br />&lt;/div&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :nth-of-type pseudo-class selector is not supported by IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page24 -->
+<!-- Start of second page: page25 -->
+<div data-role="page" id="page25" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page24">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page26">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			:nth-last-of-type(n) 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :nth-last-of-type pseudo-class selector is written using an element followed by ":", followed by "nth-last-of-type", followed by brackets. The brackets can contain six different types of values. Whitespace is not permitted within the selector. 
+		</p>
+<pre><code><strong>p:nth-last-of-type(3)</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :nth-last-of-type pseudo-class selector targets specific child elements within the parent. The six different types of values used inside the brackets dictate which child elements will be targeted. 
+		</p>
+		<h2>
+			Option 1
+		</h2>
+		<p>
+			The brackets can contain an integer value. The example below targets only the third last &lt;p&gt; child element. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p:nth-last-of-type(3)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;div&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;div&gt;&lt;/div&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;div&gt;&lt;/div&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />&lt;/div&gt;</code></pre> 
+		<h2>
+			Option 2
+		</h2>
+		<p>
+			The brackets can contain an integer value and the letter "n". The value "3n" means "every third". The example below targets every third last &lt;p&gt; child element, starting from the last child (eg. 3rd last, 6th last...). 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p:nth-last-of-type(3n)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;div&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;div&gt;&lt;/div&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;div&gt;&lt;/div&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />&lt;/div&gt;</code></pre> 
+		<h2>
+			Option 3
+		</h2>
+		<p>
+			The brackets can contain an integer value, the letter "n", a plus (+) symbol and another integer value. The example below targets every third &lt;p&gt; child element, starting one number backward (eg. last, 4th last...). 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p:nth-last-of-type(3n+1)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;div&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;div&gt;&lt;/div&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;div&gt;&lt;/div&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />&lt;/div&gt;</code></pre> 
+		<h2>
+			Option 4
+		</h2>
+		<p>
+			The brackets can contain an integer value, the letter "n", a minus (-) symbol and another integer value. The example below targets every third &lt;p&gt; child element, starting one number forward (eg. 2nd last, 5th last...). 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p:nth-last-of-type(3n-1)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;div&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;div&gt;&lt;/div&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;div&gt;&lt;/div&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />&lt;/div&gt;</code></pre> 
+		<h2>
+			Option 5
+		</h2>
+		<p>
+			The brackets can contain the "even" keyword. The example below targets every "even" &lt;p&gt; child element starting from the end. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p:nth-last-of-type(even)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;div&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;div&gt;&lt;/div&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;div&gt;&lt;/div&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />&lt;/div&gt;</code></pre> 
+		<h2>
+			Option 6
+		</h2>
+		<p>
+			The brackets can contain the "odd" keyword. The example below targets every "odd" &lt;p&gt; child element starting from the end. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p:nth-last-of-type(odd)</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;div&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;div&gt;&lt;/div&gt;<br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />  &lt;div&gt;&lt;/div&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />  &lt;p&gt;Content&lt;/p&gt;<br />  <strong>&lt;p&gt;Content&lt;/p&gt;</strong><br />&lt;/div&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :nth-last-of-type pseudo-class selector is not supported by IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page25 -->
+<!-- Start of second page: page26 -->
+<div data-role="page" id="page26" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page25">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page27">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			:root 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :root pseudo-class selector is written using a ":", followed by "root". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>:root</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :root pseudo-class selector targets the document root element. In HTML documents, the root element is the HTML element. 
+		</p>
+		<p>
+			In the example below, (the &lt;html&gt; element) will be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>:root</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code><strong>&lt;html&gt;</strong><br />   &lt;body&gt;<br />      Content<br />   &lt;/body&gt;<br /><strong>&lt;/html&gt;</strong></code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :root pseudo-class selector is not supported by IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page26 -->
+<!-- Start of second page: page27 -->
+<div data-role="page" id="page27" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page26">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#group08">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			:empty 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :empty pseudo-class selector is written using an optional element followed by ":", followed by "empty". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p:empty</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :empty pseudo-class selector targets elements that have no children (no element, text nodes or even character spaces). 
+		</p>
+		<p>
+			In the example below, only the empty &lt;p&gt; element will be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p:empty</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p&gt;<br />   Content<br />&lt;/p&gt;<br />&lt;p&gt;<br />   Content<br />&lt;/p&gt;<br />&lt;p&gt; &lt;/p&gt;<br /><strong>&lt;p&gt;&lt;/p&gt;</strong></code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :empty pseudo-class selector is not supported by IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page27 -->
+<!-- Start of second page: group08 -->
+<div data-role="page" id="group08" data-theme="a">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page27">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page28">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content" class="group">
+		<h1>
+			User interface pseudo-class selectors 
+		</h1>
+		<p>
+			User interface pseudo-classes allow you to style various aspects of form-related elements. 
+		</p>
+<pre><code><strong>:disabled</strong> { }<br /><strong>:checked</strong> { }<br /><strong>:valid</strong> { }</code></pre> 
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page group08 -->
+<!-- Start of second page: page28 -->
+<div data-role="page" id="page28" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#group08">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page29">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			:disabled 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :disabled pseudo-class selector is written using an element followed by ":", followed by "disabled". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>input:disabled</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :disabled pseudo-class selector targets form elements that use the "disabled" attribute. 
+		</p>
+		<p>
+			In the example below, only the input element that has a "disabled" attribute will be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>input:disabled</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code><strong>&lt;input disabled&gt;</strong><br />&lt;input&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :disabled pseudo-class selector is not supported by IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page28 -->
+<!-- Start of second page: page29 -->
+<div data-role="page" id="page29" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page28">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page30">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			:enabled 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :enabled pseudo-class selector is written using an element followed by ":", followed by "enabled". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>input:enabled</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :enabled pseudo-class selector targets form elements that do not have a "disabled" attribute. 
+		</p>
+		<p>
+			In the example below, the input element that does not have a "disabled" attribute will be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>input:enabled</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;input disabled&gt;<br /><strong>&lt;input&gt;</strong></code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :enabled pseudo-class selector is not supported by IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page29 -->
+<!-- Start of second page: page30 -->
+<div data-role="page" id="page30" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page29">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page31">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			:checked 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :checked pseudo-class selector is written using an element followed by ":", followed by "checked". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>input:checked</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :checked pseudo-class selector targets form elements (such as radio buttons or checkboxes) that have been "checked" by the user. 
+		</p>
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :checked pseudo-class selector is not supported by IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page30 -->
+<!-- Start of second page: page31 -->
+<div data-role="page" id="page31" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page30">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page32">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			:intermediate 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :intermediate pseudo-class selector is written using an optional element followed by ":", followed by "intermediate". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>input:intermediate</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :intermediate pseudo-class selector targets form elements that are neither checked nor unchecked. 
+		</p>
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :intermediate pseudo-class selector is not supported by IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page31 -->
+<!-- Start of second page: page32 -->
+<div data-role="page" id="page32" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page31">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page33">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			:default 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :default pseudo-class selector is written using an element followed by ":", followed by "default". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>input:default</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :default pseudo-class selector targets form elements that are the default among a set of similar elements. 
+		</p>
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :default pseudo-class selector is not supported by IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page32 -->
+<!-- Start of second page: page33 -->
+<div data-role="page" id="page33" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page32">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page34">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			:valid 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :valid pseudo-class selector is written using an optional element followed by ":", followed by "valid". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>input:valid</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :valid pseudo-class selector targets elements that are determined to be valid (user inputs match the relevant pattern attributes). 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>input:valid</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;input <strong>pattern="[0-9]{2}"</strong>&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :valid pseudo-class selector is not supported by IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page33 -->
+<!-- Start of second page: page34 -->
+<div data-role="page" id="page34" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page33">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page35">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			:invalid 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :invalid pseudo-class selector is written using an optional element followed by ":", followed by "invalid". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>input:invalid</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :invalid pseudo-class selector targets form elements that are required but not filled in, or are determined to be invalid (user inputs match the relevant pattern attributes). 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>input:invalid</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;input <strong>pattern="[0-9]{2}"</strong>&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :invalid pseudo-class selector is not supported by IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page34 -->
+<!-- Start of second page: page35 -->
+<div data-role="page" id="page35" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page34">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page36">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			:in-range 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :in-range pseudo-class selector is written using an element followed by ":", followed by "in-range". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>input:in-range</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :in-range pseudo-class selector targets form elements with range limitations, where the value is within the defined limitations. 
+		</p>
+		<p>
+			In the example below, the :in-range pseudo-class selector would be applied if the user chooses a number between 1 and 10. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>input:in-range</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;input <strong>min="1" max="10"</strong>&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :in-range pseudo-class selector is not supported by IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page35 -->
+<!-- Start of second page: page36 -->
+<div data-role="page" id="page36" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page35">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page37">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			:out-of-range 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :out-of-range pseudo-class selector is written using an element followed by ":", followed by "out-of-range". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>input:out-of-range</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :out-of-range pseudo-class selector targets elements with range limitations, where the value is not within the defined limitations. 
+		</p>
+		<p>
+			In the example below, the :out-of-range pseudo-class selector would be applied if the user chooses a number less than 1 or greater than 10. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>input:in-range</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;input <strong>min="1" max="10"</strong>&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :out-of-range pseudo-class selector is not supported by IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page36 -->
+<!-- Start of second page: page37 -->
+<div data-role="page" id="page37" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page36">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page38">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			:required 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :required pseudo-class selector is written using an element followed by ":", followed by "required". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>input:required</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :required pseudo-class selector targets form elements that use the "required" attribute. 
+		</p>
+		<p>
+			In the example below, only the input element that has a "required" attribute will be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>input:required</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code><strong>&lt;input required&gt;</strong><br />&lt;input&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :required pseudo-class selector is not supported by IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page37 -->
+<!-- Start of second page: page38 -->
+<div data-role="page" id="page38" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page37">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page39">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			:optional 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :optional pseudo-class selector is written using an element followed by ":", followed by "optional". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>input:optional</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :optional pseudo-class selector targets form elements that do not use the "required" attribute. 
+		</p>
+		<p>
+			In the example below, only the input element that does not have a "required" attribute will be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>input:optional</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;input required&gt;<br /><strong>&lt;input&gt;</strong></code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :optional pseudo-class selector is not supported by IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page38 -->
+<!-- Start of second page: page39 -->
+<div data-role="page" id="page39" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page38">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page40">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			:read-only 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :read-only pseudo-class selector is written using an element followed by ":", followed by "read-only". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>input:read-only</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :read-only pseudo-class selector targets form elements that use the "readonly" attribute. 
+		</p>
+		<p>
+			In the example below, only the input element that has a "readonly" attribute will be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>input:read-only</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code><strong>&lt;input readonly&gt;</strong><br />&lt;input &gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :read-only pseudo-class selector is not supported by IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page39 -->
+<!-- Start of second page: page40 -->
+<div data-role="page" id="page40" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page39">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page41">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			:read-write 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :read-write pseudo-class selector is written using an element followed by ":", followed by "read-write". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>input:read-write</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :read-write pseudo-class selector targets form elements that can be altered by users and elements that do not use the "readonly" attribute. 
+		</p>
+		<p>
+			In the example below, only the input element that has a "readonly" attribute will be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>input:read-write</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;input readonly&gt;<br /><strong>&lt;input&gt;</strong></code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :read-write pseudo-class selector is not supported by IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page40 -->
+<!-- Start of second page: page41 -->
+<div data-role="page" id="page41" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page40">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#group09">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			:target 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :target pseudo-class selector is written using an optional element followed by ":", followed by "target". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>:target</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			Some links point to a location within a web document. These links include the "number sign" (#) followed by an anchor identifier. These links are called "fragment identifiers". 
+		</p>
+		<h3>
+			HTML 
+		</h3>
+<pre><code>http://abc.com/a.htm<strong>#go</strong></code></pre> 
+		<p>
+			Fragment identifiers link to a specific element within a web document, known as the target element. 
+		</p>
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p&gt;<br />   &lt;a <strong>href="#one"</strong>&gt;Link&lt;/a&gt;<br />&lt;/p&gt;<br /> ...<br />&lt;h2 <strong>id="one"</strong>&gt;<br />   Target element<br />&lt;/h2&gt;</code></pre> 
+		<p>
+			The :target pseudo-class selector allows us to select these "target elements". 
+		</p>
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :target pseudo-class selector is not supported by IE6, IE7 or IE8. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page41 -->
+<!-- Start of second page: group09 -->
+<div data-role="page" id="group09" data-theme="a">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page41">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page42">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content" class="group">
+		<h1>
+			Pseudo-element  selectors 
+		</h1>
+		<p>
+			Pseudo-elements (or "fake" elements) allow you to style elements that are not in the document tree. 
+		</p>
+<pre><code><strong>p:first-line</strong> { }
+<strong>p:before</strong> { }
+<strong>p:after</strong> { }</code></pre> 
+		<h2>
+			Single vs double colons 
+		</h2>
+		<p>
+			In CSS1 and CSS2, pseudo-elements were defined using a single ":". In CSS3, pseudo-elements are defined using "::". 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code>p<strong>:</strong>first-line { }
+p<strong>::</strong>first-line { }</code></pre> 
+		<p>
+			The "::" notation was introduced to make a discrimination between pseudo-classes and pseudo-elements. 
+		</p>
+		<p>
+			Most browsers support both variations. However, if you need to support IE6-8, it may be best to continue using ":" notation. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page group09 -->
+<!-- Start of second page: page42 -->
+<div data-role="page" id="page42" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#group09">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page43">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css1">
+			:first-line 
+		</h1>
+		<p>
+			<span class="css1-bg">CSS1</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :first-line pseudo-element selector is written using an optional element, followed by ":", followed by "first-line". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>:first-line</strong> { }
+<strong>p:first-line</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :first-line pseudo-element selector targets the first line of the relevant element. 
+		</p>
+		<p>
+			In the example below, the first line of the paragraph will be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p:first-line</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p&gt;
+   <strong>This is the first line</strong>
+   of a paragraph of text
+&lt;/p&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :first-line pseudo-element selector is buggy in IE6 and IE7. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page42 -->
+<!-- Start of second page: page43 -->
+<div data-role="page" id="page43" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page42">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page44">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css1">
+			:first-letter 
+		</h1>
+		<p>
+			<span class="css1-bg">CSS1</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :first-letter pseudo-element selector is written using an optional element, followed by ":", followed by "first-letter". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>:first-letter</strong> { }
+<strong>p:first-letter</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :first-line pseudo-element selector targets the first letter of the relevant element. 
+		</p>
+		<p>
+			In the example below, the first letter of the paragraph will be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p:first-letter</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p&gt;
+   <strong>T</strong>his is the first line
+   of a paragraph of text
+&lt;/p&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :first-letter pseudo-element selector is buggy in IE6 and IE7. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page43 -->
+<!-- Start of second page: page44 -->
+<div data-role="page" id="page44" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page43">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page45">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css2">
+			:before 
+		</h1>
+		<p>
+			<span class="css2-bg">CSS2</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :before pseudo-element selector is written using an optional element, followed by ":", followed by "before". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>:before</strong> { }
+<strong>p:before</strong> { }</code></pre> 
+		<p>
+			The :before pseudo-element selector is used in conjunction with the "content" property. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code>p:before
+{ 
+   <strong>content</strong>: "hello";
+}</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :before pseudo-element selector is used to generate content. This "generated content" is rendered within the specified element - before the elements real content. 
+		</p>
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p&gt;
+   <strong>hello</strong> content
+&lt;/p&gt;</code></pre> 
+		<h2>
+			Option 1
+		</h2>
+		<p>
+			Generated content can include text. This will place the generated text before the element's content. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code>p:before { <strong>content: "hello";</strong> }</code></pre> 
+		<h2>
+			Option 2
+		</h2>
+		<p>
+			Generated content can include an image. This will place the generated image before the element's content. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code>p:before { content: <strong>url(a.gif)</strong>; }</code></pre> 
+		<h2>
+			Option 3
+		</h2>
+		<p>
+			Generated content can include an attribute. This will place the value of the attribute as text before the element's content. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code>p:before { content: <strong>attr(cite)</strong>; }</code></pre> 
+		<h2>
+			Option 4
+		</h2>
+		<p>
+			Generated content can include a counter. This allows authors to change the number order and numbering method of ordered lists. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code>p:before { content: <strong>counter(list-order)</strong>; }</code></pre> 
+		<h2>
+			Option 5
+		</h2>
+		<p>
+			Generated content can include nothing. This allows authors to position and style a new generated element. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code>p:before { content: <strong>""</strong>; }</code></pre> 
+		<p>
+			Generated content can include combinations of any of these options. The example below will render the generated text "class: " and then render any class names applied to the element. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code>p:before { content: <strong>"class: " attr(class)</strong>; }</code></pre> 
+		<p>
+			Generated content cannot include HTML. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code>p:before { content: <strong><span class="deleted">&lt;p&gt;test&lt;p&gt;</span></strong>; }</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :before pseudo-element selector is not supported by IE6 or IE7. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page44 -->
+<!-- Start of second page: page45 -->
+<div data-role="page" id="page45" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page44">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page46">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css2">
+			:after 
+		</h1>
+		<p>
+			<span class="css2-bg">CSS2</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The :after pseudo-element selector is written using an optional element, followed by ":", followed by "after". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>:after</strong> { }
+<strong>p:after</strong> { }</code></pre> 
+		<p>
+			The :after pseudo-element selector is used in conjunction with the "content" property. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code>p:after
+{ 
+   <strong>content</strong>: "hello";
+}</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The :after pseudo-element selector is used to generate content. This "generated content" is rendered within the specified element - after the elements real content. 
+		</p>
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p&gt;
+   content <strong>hello</strong>
+&lt;/p&gt;</code></pre> 
+		<h2>
+			Option 1
+		</h2>
+		<p>
+			Generated content can include text. This will place the generated text after the element's content. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code>p:after { <strong>content: "hello";</strong> }</code></pre> 
+		<h2>
+			Option 2
+		</h2>
+		<p>
+			Generated content can include an image. This will place the generated image after the element's content. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code>p:after { content: <strong>url(a.gif)</strong>; }</code></pre> 
+		<h2>
+			Option 3
+		</h2>
+		<p>
+			Generated content can include an attribute. This will place the attribute's value as text after the element's content. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code>p:after { content: <strong>attr(cite)</strong>; }</code></pre> 
+		<h2>
+			Option 4
+		</h2>
+		<p>
+			Generated content can include nothing. This allows authors to position and style a new generated element. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code>p:after { content: <strong>""</strong>; }</code></pre> 
+		<p>
+			Generated content can include combinations of any of these options. The example below will render the generated text "class: " and then render any class names applied to the element. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code>p:after { content: <strong>"class: " attr(class)</strong>; }</code></pre> 
+		<p>
+			Generated content cannot include HTML. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code>p:after { content: <strong><span class="deleted">&lt;p&gt;test&lt;p&gt;</span></strong>; }</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The :after pseudo-element selector is not supported by IE6 or IE7. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page45 -->
+<!-- Start of second page: page46 -->
+<div data-role="page" id="page46" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page45">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page47">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			::selection 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<p>
+			The ::selection pseudo-element selector has been dropped from the latest W3C Basic User Interface specification: 
+		</p>
+		<blockquote>
+			<p>
+				The ::selection pseudo-element selector has been dropped since it was dropped from Selectors after testing found interoperability problems and further details to explore/define. 
+			</p>
+			<p>
+			<a href="http://www.w3.org/TR/css3-ui/">http://www.w3.org/TR/css3-ui/</a> 
+			</p>
+		</blockquote>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page46 -->
+<!-- Start of second page: page47 -->
+<div data-role="page" id="page47" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page46">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page48">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			::value 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<p>
+			The ::value pseudo-element selector is currently considered "at risk" of bering dropped. 
+		</p>
+		<blockquote>
+			<p>
+				Note: The ::value, ::choices, ::repeat-item, and ::repeat-index pseudo-elements are all at risk. 
+			</p>
+			<p>
+			<a href="http://www.w3.org/TR/css3-ui/">http://www.w3.org/TR/css3-ui/</a> 
+			</p>
+		</blockquote>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page47 -->
+<!-- Start of second page: page48 -->
+<div data-role="page" id="page48" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page47">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page49">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			::choices 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<p>
+			The ::choices pseudo-element selector is currently considered "at risk" of bering dropped. 
+		</p>
+		<blockquote>
+			<p>
+				Note: The ::value, ::choices, ::repeat-item, and ::repeat-index pseudo-elements are all at risk. 
+			</p>
+			<p>
+			<a href="http://www.w3.org/TR/css3-ui/">http://www.w3.org/TR/css3-ui/</a> 
+			</p>
+		</blockquote>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page48 -->
+<!-- Start of second page: page49 -->
+<div data-role="page" id="page49" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page48">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page50">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			::repeat-item 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<p>
+			The ::repeat-item pseudo-element selector is currently considered "at risk" of bering dropped. 
+		</p>
+		<blockquote>
+			<p>
+				Note: The ::value, ::choices, ::repeat-item, and ::repeat-index pseudo-elements are all at risk. 
+			</p>
+			<p>
+			<a href="http://www.w3.org/TR/css3-ui/">http://www.w3.org/TR/css3-ui/</a> 
+			</p>
+		</blockquote>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page49 -->
+<!-- Start of second page: page50 -->
+<div data-role="page" id="page50" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page49">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#group10">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			::repeat-index 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<p>
+			The ::repeat-index pseudo-element selector is currently considered "at risk" of bering dropped. 
+		</p>
+		<blockquote>
+			<p>
+				Note: The ::value, ::choices, ::repeat-item, and ::repeat-index pseudo-elements are all at risk. 
+			</p>
+			<p>
+			<a href="http://www.w3.org/TR/css3-ui/">http://www.w3.org/TR/css3-ui/</a> 
+			</p>
+		</blockquote>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page50 -->
+<!-- Start of second page: group10 -->
+<div data-role="page" id="group10" data-theme="a">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page50">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page51">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content" class="group">
+		<h1>
+			Attribute selectors 
+		</h1>
+		<p>
+			Attribute selectors are used to select elements based on their attributes or attribute values. 
+		</p>
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p <strong>class="intro"</strong>&gt;
+   Content
+&lt;/p&gt;</code></pre> 
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page group10 -->
+<!-- Start of second page: page51 -->
+<div data-role="page" id="page51" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#group10">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page52">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css2">
+			[att] 
+		</h1>
+		<p>
+			<span class="css2-bg">CSS2</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The [att] attribute selector is written using an element followed by "[", followed by the relevant attribute, followed by "]". Whitespace is not permitted within the selector. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p[class]</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The [att] attribute selector targets any element with the relevant attribute. 
+		</p>
+		<p>
+			In the example below, any &lt;p&gt; element with a class will be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p[class]</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p <strong>class</strong>="blue"&gt;
+   Content
+&lt;/p&gt;
+&lt;p <strong>class</strong>="blue red"&gt;
+   Content
+&lt;/p&gt;
+&lt;p <strong>class</strong>="blue-new"&gt;
+   Content
+&lt;/p&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The [att] attribute selector is not supported by IE6 or IE7. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page51 -->
+<!-- Start of second page: page52 -->
+<div data-role="page" id="page52" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page51">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page53">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css2">
+			[att=val] 
+		</h1>
+		<p>
+			<span class="css2-bg">CSS2</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The [att=val] attribute selector is written using an element followed by "[", followed by the relevant attribute, followed by "=", followed by the relevant value (within no quotes, single quotes or double quotes), followed by "]". 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p[class="blue"]</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The [att=val] attribute selector targets any element with the relevant attribute value. 
+		</p>
+		<p>
+			In the example below, any &lt;p&gt; element with a class that has an entire value of "blue" will be selected. Multiple class values and hyphen-separated values that include "blue" will not be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p[class="blue"]</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p class="<strong>blue</strong>"&gt;
+   Content
+&lt;/p&gt;
+&lt;p class="blue red"&gt;
+   Content
+&lt;/p&gt;
+&lt;p class="blue-new"&gt;
+   Content
+&lt;/p&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The [att=val] attribute selector is not supported by IE6 or IE7. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page52 -->
+<!-- Start of second page: page53 -->
+<div data-role="page" id="page53" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page52">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page54">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css2">
+			[att~=val] 
+		</h1>
+		<p>
+			<span class="css2-bg">CSS2</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The [att~=val] attribute selector is written using an element followed by "[", followed by the relevant attribute, followed by "~", followed by "=", followed by the relevant value (within no quotes, single quotes or double quotes), followed by "]". 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p[class~="blue"]</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The [att~=val] attribute selector targets any space-separated instances of a value. 
+		</p>
+		<p>
+			In the example below, any &lt;p&gt; element with a class of "blue", including space separated instances, will be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p[class~="blue"]</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p class="<strong>blue</strong>"&gt;
+   Content
+&lt;/p&gt;
+&lt;p class="<strong>blue</strong> red"&gt;
+   Content
+&lt;/p&gt;
+&lt;p class="blue-new"&gt;
+   Content
+&lt;/p&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The [att~=val] attribute selector is not supported by IE6 or IE7. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page53 -->
+<!-- Start of second page: page54 -->
+<div data-role="page" id="page54" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page53">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page55">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css2">
+			[att|=val] 
+		</h1>
+		<p>
+			<span class="css2-bg">CSS2</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The [att|=val] attribute selector is written using an element followed by "[", followed by the relevant attribute, followed by "|", followed by "=", followed by the relevant value (within no quotes, single quotes or double quotes), followed by "]". 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p[class|="blue"]</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The [att|=value] attribute selector targets any hyphen-separated instances of a value. 
+		</p>
+		<p>
+			In the example below, any &lt;p&gt; element with a class of "blue", including hyphen-separated instances, will be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>p[class|="blue"]</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;p class="<strong>blue</strong>"&gt;
+   Content
+&lt;/p&gt;
+&lt;p class="blue red"&gt;
+   Content
+&lt;/p&gt;
+&lt;p class="<strong>blue</strong>-new"&gt;
+   Content
+&lt;/p&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The [att|=val] attribute selector is not supported by IE6 or IE7. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page54 -->
+<!-- Start of second page: page55 -->
+<div data-role="page" id="page55" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page54">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page56">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			[att^=val] 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The [att^=val] attribute selector is written using an element followed by "[", followed by the relevant attribute, followed by "^", followed by "=", followed by the relevant value (within no quotes, single quotes or double quotes), followed by "]". 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>a[class^="http"]</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The [att^=val] attribute selector targets any element whose attribute starts with the value. 
+		</p>
+		<p>
+			In the example below, any &lt;a&gt; element with a class that starts with "http" will be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>a[class^="http"]</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;a href="<strong>http</strong>://abc.com"&gt;Link&lt;/a&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The [att^=val] attribute selector is not supported by IE6 or IE7. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page55 -->
+<!-- Start of second page: page56 -->
+<div data-role="page" id="page56" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page55">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page57">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			[att$=val] 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The [att$=val] attribute selector is written using an element followed by "[", followed by the relevant attribute, followed by "$", followed by "=" followed by the relevant value (within no quotes, single quotes or double quotes), followed by "]". 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>a[class$="pdf"]</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The [att$=val] attribute selector targets any element whose attribute ends with the value. 
+		</p>
+		<p>
+			In the example below, any &lt;a&gt; element with a class that ends with "pdf" will be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>a[class$="pdf"]</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;a href="form.<strong>pdf</strong>"&gt;Link&lt;/a&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The [att$=val] attribute selector is not supported by IE6 or IE7. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page56 -->
+<!-- Start of second page: page57 -->
+<div data-role="page" id="page57" data-theme="c">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page56">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li><a class="next" href="#page58">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1 class="css3">
+			[att*=val] 
+		</h1>
+		<p>
+			<span class="css3-bg">CSS3</span> 
+		</p>
+		<h2>
+			Syntax 
+		</h2>
+		<p>
+			The [att*=val] attribute selector is written using an element followed by "[", followed by the relevant attribute, followed by "*", followed by "=" followed by the relevant value (within no quotes, single quotes or double quotes), followed by "]". 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>a[class*="abc.com"]</strong> { }</code></pre> 
+		<h2>
+			How does it work? 
+		</h2>
+		<p>
+			The [att*=val] attribute selector target any element whose attribute value matches a string. 
+		</p>
+		<p>
+			In the example below, any &lt;a&gt; element with a class that contains the string of "abc.com" will be selected. 
+		</p>
+		<h3>
+			CSS 
+		</h3>
+<pre><code><strong>a[class*="abc.com"]</strong> { }</code></pre> 
+		<h3>
+			HTML 
+		</h3>
+<pre><code>&lt;a href="http//<strong>abc.com</strong>"&gt;Link&lt;/a&gt;</code></pre> 
+		<h2>
+			Support 
+		</h2>
+		<p>
+			The [att*=val] attribute selector is not supported by IE6 or IE7. 
+		</p>
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page57 -->
+<!-- Start of second page: page58 -->
+<div data-role="page" id="page58" data-theme="a">
+	<div data-role="header" data-theme="a">
+		<ul class="navigation">
+			<li><a class="back" href="#page57">Back</a></li>
+			<li class="home"><a class="home2" href="#home">Home</a></li>
+			<li class="next inactive" href="#page58">Next</a></li>
+		</ul>
+	</div>
+
+<!-- /header -->
+	<div data-role="content">
+		<h1>
+			About this app 
+		</h1>
+		<p>
+			<strong>CSS Selector Index written by Russ Weakley</strong>
+		</p>
+		<ul class="simple-list">
+			<li>http://maxdesign.com.au</li>
+			<li>http://twitter.com/russmaxdesign</li>
+		</ul>
+		<p>
+			<strong>App dev by Jen Cork</strong>
+		</p>
+		<ul class="simple-list">
+			<li>http://makememedia.net</li>
+			<li>http://twitter.com/jencork</li>
+		</ul>
+		
+	</div>
+
+<!-- /content -->
+</div>
+<!-- /page page58 -->
+</body>
+</html>

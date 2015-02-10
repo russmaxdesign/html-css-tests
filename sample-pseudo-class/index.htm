@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS: IE7/8 and using classes with CSS3 pseudo-classes</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	.one,.two
+	{
+		margin: 0 0 1em;
+		padding: 1em;
+		background-color: lightgreen;
+	}
+	
+	.one em:nth-of-type(3),.one-sample { color: red; }
+	.two em:nth-of-type(3),.two-sample { color: red; }
+	.two-sample { color: blue; }
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		IE7/8 and using classes with CSS3 pseudo-classes
+	</h1>
+	<p>
+		I was recently writing a selector to apply a background-color to ever "even" row in a table. The CSS rule was:
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">tr:nth-child(even)</span> { <span class="prop">background-color</span>: <span class="val">#E6E6E6</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+	<p>
+		As this didn't work for IE7 and 8, I decided to add a class called "even" to every even row - just as an experiment. I then added this class to the selector.
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">tr:nth-child(even)</span>,<span class="sel">.even</span> { <span class="prop">background-color</span>: <span class="val">#E6E6E6</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+	<p>
+		However, I noticed that IE8 did not apply this rule at all. However, when I moved it to a new rule, IE8 applied the styles.
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">tr:nth-child(even)</span> { <span class="prop">background-color</span>: <span class="val">#E6E6E6</span>; }
+<span class="sel">.even</span> { <span class="prop">background-color</span>: <span class="val">#E6E6E6</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+	<p>
+		It turns out that as IE8 does not support CSS3 pseudo-class selectors, it will ignore the entire rule if a one of these CSS3 pseudo-classes is used.
+	</p>
+	<p>
+		Here is a quick demo:
+	</p>
+
+	<h2>
+		Test 1
+	</h2>
+	<p>
+		In this first test, modern browsers will render the "third of type" element in red. IE7/8 will not render the "third of type" in any colour at all.
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.one em:nth-of-type(3)</span>,<span class="sel">.one-sample</span> { <span class="prop">color</span>: <span class="val">red</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+	<div class="one">
+	   <em>first of type</em>, <em>second of type</em>, <em class="one-sample">third of type</em>, <em>last of type</em>
+	</div>
+
+	<h2>
+		Test 2
+	</h2>
+	<p>
+		In this second test, the first rule has a specificity of <strong>"0,0,2,1"</strong> - zero inline styles, zero ID selectors, one class selector and one pseudo-class selector (2), and one element type selectors (1). The second rule has a specificity of <strong>"0,0,1,0"</strong> - zero inline styles, zero ID selectors, one class selector (1), and zero element type selectors.
+	</p>
+	<p>
+		So, modern browsers will render the "third of type" element in red as the first rule has more specificity than the second rule. IE7/8 will completely ignore the first rule and render the "third of type" in blue. 
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.two em:nth-of-type(3)</span> { <span class="prop">color</span>: <span class="val">red</span>; }
+<span class="sel">.two-sample</span> { <span class="prop">color</span>: <span class="val">blue</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+	<div class="two">
+	   <em>first of type</em>, <em>second of type</em>, <em class="two-sample">third of type</em>, <em>last of type</em>
+	</div>
+
+</div>
+</body>
+</html>

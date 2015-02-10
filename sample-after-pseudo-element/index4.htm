@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Displaying the Cite attribute</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	blockquote
+	{
+		margin: 1em 0;
+		padding: 1.5em;
+		background: #eee;
+	}
+		
+	blockquote[cite]:after
+	{
+		content: "Source: " attr(cite);
+		display: block;
+		margin: 1em 0 0;
+		font-size: 80%;
+	}
+</style> 
+</head>
+<body>
+<div class="container">
+	<h1>
+		Displaying the cite attribute
+	</h1>
+	<blockquote cite="http://www.zeldman.com/">
+		"Without Readability, there’s nothing you can do, but sigh and close the browser window. With Readability, you can read and actually enjoy what Roger Ebert has to say." 
+	</blockquote>
+	
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">blockquote[cite]:after</span>
+{
+	<span class="prop">content</span>: <span class="val">"Source: " attr(cite)</span>;
+	<span class="prop">display</span>: <span class="val">block</span>;
+	<span class="prop">margin</span>: <span class="val">1em 0 0</span>;
+	<span class="prop">font-size</span>: <span class="val">80%</span>;
+}</code></pre>
+<!-- code end -->
+	</figure>
+
+</div>
+</body>
+</html>

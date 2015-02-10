@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>selector: not</title>
+<style media="screen">
+	body
+	{
+		width: 30em;
+		margin: 20px;
+		padding: 0;
+		font: 120%/1.2 arial, helvetica, sas-serif;
+	}
+	
+	p, blockquote { margin: 0; }
+	
+	pre
+	{
+		margin: 1em 0;
+		padding: 1em;
+		background: #eee;
+		line-height: 1;
+	}
+	
+	.example1, .example2, .example3, .example4, .example5, .example6, .example7, .example8, .example9
+	{
+		margin: 0 0 2em;
+		border: 1px solid #999;
+		padding: 1em;
+	}
+	
+	.example1 :not(p) { color: red; }
+	.example2 :not(.foo) { color: red; }
+	.example3 p:not(.foo) { color: red; }
+	.example4 :not(#bar) { color: red; }
+	.example5 p:not(#bar2) { color: red; }
+	.example6 :not(:lang(fr)) { color: red; }
+	.example7 p:not(:lang(fr)) { color: red; }
+	.example8 :not([disabled]) { border: 1px solid red; }
+	.example9 input:not([disabled]) { border: 1px solid red; }
+	.example10 li:not(:first-child):not(:last-child) { color: red; }
+</style>
+</head>
+<body>
+<h1>
+	Selector: not
+</h1>
+
+<h2>
+	Example 1 - negation using type selector
+</h2>
+<pre><code>:not(p) { color: red; }</code></pre>
+<div class="example1">
+	<p>This is a paragraph</p>
+	<div>This is a div</div>
+	<blockquote>This is a blockquote</blockquote>
+</div>
+
+<h2>
+	Example 2 - negation using class selector
+</h2>
+<pre><code>:not(.foo) { color: red; }</code></pre>
+<div class="example2">
+	<p class="foo">This is a paragraph with a class of "foo"</p>
+	<div>This is a div</div>
+	<blockquote>This is a blockquote</blockquote>
+</div>
+
+<h2>
+	Example 3 - negation using class selector
+</h2>
+<pre><code>p:not(.foo) { color: red; }</code></pre>
+<div class="example3">
+	<p class="foo">This is a paragraph with a class of "foo"</p>
+	<p>This is a paragraph</p>
+</div>
+
+<h2>
+	Example 4 - negation using id selector
+</h2>
+<pre><code>:not(#bar) { color: red; }</code></pre>
+<div class="example4">
+	<p id="bar">This is a paragraph with an ID of "bar"</p>
+	<div>This is a div</div>
+	<blockquote>This is a blockquote</blockquote>
+</div>
+
+<h2>
+	Example 5 - negation using id selector
+</h2>
+<pre><code>p:not(#bar2) { color: red; }</code></pre>
+<div class="example5">
+	<p id="bar2">This is a paragraph with an ID of "bar"</p>
+	<p>This is a paragraph</p>
+</div>
+
+<h2>
+	Example 6 - negation using pseudo-class
+</h2>
+<pre><code>:not(:lang(fr)) { color: red; }</code></pre>
+<div class="example6">
+	<p lang="fr">This is a paragraph with a lang of "fr"</p>
+	<div lang="br">This is a div with a lang of "br"</div>
+</div>
+
+<h2>
+	Example 7 - negation using pseudo-class
+</h2>
+<pre><code>p:not(:lang(fr)) { color: red; }</code></pre>
+<div class="example7">
+	<p lang="fr">This is a paragraph with a lang of "fr"</p>
+	<p lang="br">This is a paragraph with a lang of "br"</p>
+	<p>This is a paragraph</p>
+</div>
+
+<h2>
+	Example 8 - negation using attribute selector
+</h2>
+<pre><code>:not([disabled]) { border: 1px solid red; }</code></pre>
+<div class="example8">
+	<label for="one">Label for input (disabled)</label>
+	<input id="one" type="text" disabled><br>
+	<label for="two">Label for textarea</label>
+	<textarea id="two"></textarea>
+</div>
+
+<h2>
+	Example 9 - negation using attribute selector
+</h2>
+<pre><code>input:not([disabled]) { border: 1px solid red; }</code></pre>
+<div class="example9">
+	<label for="three">Label for input (disabled)</label>
+	<input id="three" type="text" disabled><br>
+	<label for="four">Label for input</label>
+	<input id="four" type="text">
+</div>
+
+<h2>
+	Example 10 - negation substring 
+</h2>
+<pre><code>li:not(:first-child):not(:last-child) { color: red; }</code></pre>
+<ul class="example10">
+	<li>Item 1</li>
+	<li>Item 2</li>
+	<li>Item 3</li>
+	<li>Item 4</li>
+	<li>Item 5</li>
+</ul>
+
+
+</body>
+</html>

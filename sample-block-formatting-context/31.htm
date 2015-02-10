@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Wrapping a parent around floating child elements - overflow: scroll</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	.example-container
+	{
+		float: left;
+		width: 100%;
+		margin: 0 0 1em;
+	}
+	
+	.one
+	{
+		float: left;
+		width: 100px;
+		margin: 0 10px 0 0;
+		background: pink;
+	}
+	
+	.example
+	{
+		overflow: scroll;
+		border: 1px solid red;
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		Wrapping a parent around floating child elements - overflow: scroll
+	</h1>
+	<div class="example-container">
+		<div class="example">
+			<div class="one">
+				Float
+			</div>
+			<div class="one">
+				Float
+			</div>
+			<div class="one">
+				Float
+			</div>
+		</div>
+	</div>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.example</span> { <span class="prop">overflow</span>: <span class="val">scroll</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+</div>
+</body>
+</html>

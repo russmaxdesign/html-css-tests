@@ -1,0 +1,106 @@
+/* -----------------------------------
+base
+----------------------------------- */
+
+body
+{
+	margin: 0;
+	padding: 20px;
+	color: #000;
+	background: #fff;
+	font: 1em/1.2 helvetica, arial, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+	margin-top: 0;
+	line-height: 1.1;
+}
+
+p
+{
+	margin: 0 0 1.5em;
+	line-height: 1.5;
+}
+
+a:link { color: blue; }
+a:visited { color: purple; }
+
+a:focus
+{
+	color: #fff;
+	background: #000;
+}
+
+a:hover { color: green; }
+a:active { color: red; }
+
+/* -----------------------------------
+container
+----------------------------------- */
+
+.container
+{
+	margin: 0 auto;
+	max-width: 40em;
+}
+
+.tabpanel
+{
+	margin: 20px;
+	padding: 0;
+}
+
+.tablist
+{
+	margin: 0 0px;
+	padding: 0;
+	list-style: none;
+}
+
+.tab
+{
+	margin: .2em 1px 0 0;
+	padding: 10px;
+	height: 1em;
+	font-weight: bold;
+	border: 1px solid black;
+	background: #dddddd;
+	border-top-left-radius: .5em;
+	border-top-right-radius: .5em;
+	float: left;
+	display: inline;
+	/* IE float bug fix */
+}
+
+.panel
+{
+	clear: both;
+	display: block;
+	margin: 0 0 0 0;
+	padding: 10px;
+	width: 300px;
+	background: #f2f2f2;
+	border-bottom-left-radius: .5em;
+	border-bottom-right-radius: .5em;
+}
+
+ul.controlList { list-style-type: none; }
+
+li[aria-selected='true']
+{
+	color: black;
+	background-color: #fff;
+	border-bottom: 1px solid white;
+}
+
+div[aria-hidden='true'] { display: none; }
+div[aria-hidden='false'] { display: block; }
+
+.focus
+{
+	margin-top: 0;
+	height: 1.2em;
+}
+
+.hidden { display: none; }

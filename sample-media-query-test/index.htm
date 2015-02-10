@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS: media query test</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+	<link rel="stylesheet" href="a.css" media="only screen and (color)">
+</head>
+<body>
+<div class="container">
+	<h1>
+		CSS: media query test
+	</h1>
+	<p>
+		The following span should be green in devices that support "only". <span class="test">Test</span>
+	</p>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;link</span> <span class="att">rel</span>=<span class="val">"stylesheet"</span> <span class="att">href</span>=<span class="val">"a.css"</span> <span class="att">media</span>=<span class="val">"only screen and (color)"</span><span class="e">&gt;</span></code></pre>
+<!-- code end -->
+	</figure>
+
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.test</span> { <span class="prop">background-color</span>: <span class="val">pink</span>; }
+
+<span class="med">@media only screen and (color)</span>
+{
+	<span class="sel">.test</span> { <span class="prop">background-color</span>: <span class="val">green</span>; }
+}</code></pre>
+<!-- code end -->
+	</figure>
+
+</div>
+</body>
+</html>

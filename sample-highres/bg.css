@@ -1,0 +1,55 @@
+/* -----------------------------------
+less than 340px
+----------------------------------- */
+
+@media (max-width:340px)
+{
+	.bg
+	{
+		width: 210px;
+		height: 70px;
+		background: url(logo-narrow-lowres.png) no-repeat;
+	}
+}
+
+/* -----------------------------------
+wider than 340px
+----------------------------------- */
+
+@media (min-width:340px)
+{
+	.bg
+	{
+		width: 360px;
+		height: 80px;
+		background: url(logo-wide-lowres.png) no-repeat;
+	}
+}
+
+/* -----------------------------------
+less than 340 high res
+----------------------------------- */
+
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width:340px), 
+(min-resolution: 192dpi) and (max-width:340px)
+{
+	.bg
+	{
+		background-size: cover;
+		background: url(logo-narrow-highres.png) no-repeat;
+	}
+}
+
+/* -----------------------------------
+wider than 340 high res
+----------------------------------- */
+
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width:340px), 
+(min-resolution: 192dpi) and (min-width:340px)
+{
+	.bg
+	{
+		background-size: cover;
+		background: url(logo-wide-highres.png) no-repeat;
+	}
+}

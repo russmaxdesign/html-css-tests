@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS property: overflow</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	.test
+	{
+		width: 280px;
+		height: 55px;
+		margin: 0 0 2em;
+		background-color: lime;
+		border: 1px solid green;
+	}
+	
+	.one { overflow: visible; }
+	.two { overflow: hidden; }
+	.three { overflow: scroll; }
+	.four { overflow: auto; }
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		CSS property: overflow
+	</h1>
+	<p>
+		The pubdate attribute allows authors to define that the date being used is the date of publish.
+	</p>
+	
+	<h2>
+		overflow: visible
+	</h2>
+	<div class="test one">
+		Lorem ipsum dolor adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut.
+	</div>
+	<figure style="margin-top: 60px;">
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.one</span> { <span class="prop">overflow</span>: <span class="val">visible</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		overflow: hidden
+	</h2>
+	<div class="test two">
+		Lorem ipsum dolor adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut.
+	</div>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.two</span> { <span class="prop">overflow</span>: <span class="val">hidden</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		overflow: scoll
+	</h2>
+	<div class="test three">
+		Lorem ipsum dolor adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut.<br>
+		<img src="example.png" alt="example">
+	</div>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.three</span> { <span class="prop">overflow</span>: <span class="val">scroll</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		overflow: auto
+	</h2>
+	<div class="test four">
+		Lorem ipsum dolor adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut.
+	</div>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.four</span> { <span class="prop">overflow</span>: <span class="val">auto</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS: @media test</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	.one,.two
+	{
+		background-color: pink;
+		padding: .5em;
+	}
+	
+	@media screen
+	{
+		.one { background-color: lime; }
+	}
+	
+	@media print
+	{
+		.two { background-color: lime; }
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		CSS: @media test<h4></h4>
+	</h1>
+	<p>
+		The following span should be lime in devices that support the "screen" media type. <span class="one">Test</span>
+	</p>
+	<p>
+		The following span should be lime in devices that support the "print" media type. <span class="two">Test</span>
+	</p>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;link</span> <span class="att">rel</span>=<span class="val">"stylesheet"</span> <span class="att">href</span>=<span class="val">"one.css"</span><span class="e">&gt;</span></code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="med">@media screen</span>
+{
+	<span class="sel">.one</span> { <span class="prop">background-color</span>: <span class="val">lime</span>; }
+}
+
+<span class="med">@media print</span>
+{
+	<span class="sel">.two</span> { <span class="prop">background-color</span>: <span class="val">lime</span>; }
+}</code></pre>
+<!-- code end -->
+	</figure>
+
+</div>
+</body>
+</html>

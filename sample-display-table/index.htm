@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS value: table</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	.table
+	{
+		display: table;
+		width: 800px;
+		border-collapse: collapse;
+	}
+	
+	.row { display: table-row; }
+	
+	.row div
+	{
+		display: table-cell;
+		width: 300px;
+		padding: 20px;
+		border: 1px solid #000;
+	}
+	
+	.main { background: yellow; }
+	
+	.aside
+	{
+		background: pink;
+		vertical-align: middle;
+	}
+</style> 
+</head>
+<body>
+<div class="container">
+	<h1>
+		CSS value: table
+	</h1>
+	<div class="table">
+		<div class="row">
+			<div class="main">
+				<p>
+					A table set to 800px wide. The TD elements are set with 20px padding and 10px border.
+				</p>
+				<p>				
+					Note that the padding and border are <strong>subtracted</strong> from the overall width (which is the nature of a table box model) - rather than added to the overall width (like the block box model).
+				</p>
+			</div>
+			<div class="aside">
+				Text set to vertical-align: middle;
+			</div>
+		</div>
+	</div>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"table"</span><span class="e">&gt;</span>
+	<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"row"</span><span class="e">&gt;</span>
+		<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"main"</span><span class="e">&gt;</span><span class="e">&lt;/div&gt;</span>
+		<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"aside"</span><span class="e">&gt;</span><span class="e">&lt;/div&gt;</span>
+	<span class="e">&lt;/div&gt;</span>
+<span class="e">&lt;/div&gt;</span></code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.table</span>
+{
+	<span class="prop">display</span>: <span class="val">table</span>;
+	<span class="prop">width</span>: <span class="val">800px</span>;
+	<span class="prop">border-collapse</span>: <span class="val">collapse</span>;
+}
+
+<span class="sel">.row</span> { <span class="prop">display</span>: <span class="val">table-row</span>; }
+
+<span class="sel">.row div</span>
+{
+	<span class="prop">display</span>: <span class="val">table-cell</span>;
+	<span class="prop">width</span>: <span class="val">300px</span>;
+	<span class="prop">padding</span>: <span class="val">20px</span>;
+	<span class="prop">border</span>: <span class="val">1px solid #000</span>;
+}
+
+<span class="sel">.main</span> { <span class="prop">background</span>: <span class="val">yellow</span>; }
+
+<span class="sel">.aside</span>
+{
+	<span class="prop">background</span>: <span class="val">pink</span>;
+	<span class="prop">vertical-align</span>: <span class="val">middle</span>;
+}</code></pre>
+<!-- code end -->
+	</figure>
+
+</div>
+</body>
+</html>

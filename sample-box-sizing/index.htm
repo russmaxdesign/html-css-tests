@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS property: box-sizing</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>	
+	.one,.two,.three
+	{
+		width: 200px;
+		height: 30px;
+		margin: 0 0 1em;
+		padding: 20px;
+		border: 20px solid red;
+		background: pink;
+	}
+	
+	.one
+	{
+		-moz-box-sizing: content-box;
+		-webkit-box-sizing: content-box;
+		box-sizing: content-box;
+	}
+	
+	.two
+	{
+		-moz-box-sizing: padding-box;
+		-webkit-box-sizing: padding-box;
+		box-sizing: padding-box;
+	}
+	
+	.three
+	{
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+</style> 
+</head>
+<body>
+<div class="container">
+	<h1>
+		CSS property: box-sizing
+	</h1>
+	<h2>
+		Example one: content-box
+	</h2>
+	<div class="one">
+	</div>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.one</span>
+{
+	<span class="prop">width</span>: <span class="val">200px</span>;
+	<span class="prop">padding</span>: <span class="val">20px</span>;
+	<span class="prop">border</span>: <span class="val">20px solid red</span>;
+	<span class="prop">-moz-box-sizing</span>: <span class="val">content-box</span>; <span class="comm">/* Mozilla prefix */</span>
+	<span class="prop">box-sizing</span>: <span class="val">content-box</span>;
+}
+
+<span class="comm">/* 20px + 20px + 200px + 20px + 20px = total width of 280px */</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+
+	<h2>
+		Example two: padding-box
+	</h2>
+	<div class="two">
+	</div>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.two</span>
+{
+	<span class="prop">width</span>: <span class="val">200px</span>;
+	<span class="prop">padding</span>: <span class="val">20px</span>;
+	<span class="prop">border</span>: <span class="val">20px solid red</span>;
+	<span class="prop">-moz-box-sizing</span>: <span class="val">padding-box</span>; <span class="comm">/* Mozilla prefix */</span>
+	<span class="prop">box-sizing</span>: <span class="val">padding-box</span>;
+}
+
+<span class="comm">/* 20px + 200px (inc. padding) + 20px = total width of 240px */</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+
+	<h2>
+		Example three: padding-box
+	</h2>
+	<div class="three">
+	</div>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.three</span>
+{
+	<span class="prop">width</span>: <span class="val">200px</span>;
+	<span class="prop">padding</span>: <span class="val">20px</span>;
+	<span class="prop">border</span>: <span class="val">20px solid red</span>;
+	<span class="prop">-moz-box-sizing</span>: <span class="val">border-box</span>; <span class="comm">/* Mozilla prefix */</span>
+	<span class="prop">box-sizing</span>: <span class="val">border-box</span>;
+}
+
+<span class="comm">/* 200px (inc. padding and border) = total width of 200px */</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+
+</div>
+</body>
+</html>

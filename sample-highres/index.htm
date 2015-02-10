@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS: High-resolution background-images</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   	<link rel="stylesheet" href="../x-assets/master.css">
+   	<link rel="stylesheet" href="bg.css">
+</head>
+<body>
+<div class="container">
+	<h1>
+		CSS: High-resolution background-images
+	</h1>
+	<div class="bg"></div>
+
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="comm">/* -----------------------------------
+less than 340px
+----------------------------------- */</span>
+
+<span class="med">@media (max-width:340px)</span>
+{
+	<span class="sel">.bg</span>
+	{
+		<span class="prop">width</span>: <span class="val">210px</span>;
+		<span class="prop">height</span>: <span class="val">70px</span>;
+		<span class="prop">background</span>: <span class="val">url(logo-narrow-lowres.png) no-repeat</span>;
+	}
+}
+
+<span class="comm">/* -----------------------------------
+wider than 340px
+----------------------------------- */</span>
+
+<span class="med">@media (min-width:340px)</span>
+{
+	<span class="sel">.bg</span>
+	{
+		<span class="prop">width</span>: <span class="val">360px</span>;
+		<span class="prop">height</span>: <span class="val">80px</span>;
+		<span class="prop">background</span>: <span class="val">url(logo-wide-lowres.png) no-repeat</span>;
+	}
+}
+
+<span class="comm">/* -----------------------------------
+less than 340 high res
+----------------------------------- */</span>
+
+<span class="med">@media (-webkit-min-device-pixel-ratio: 2) and (max-width:340px), 
+(min-resolution: 192dpi) and (max-width:340px)</span>
+{
+	<span class="sel">.bg</span>
+	{
+		<span class="prop">background-size</span>: <span class="val">cover</span>;
+		<span class="prop">background</span>: <span class="val">url(logo-narrow-highres.png) no-repeat</span>;
+	}
+}
+
+<span class="comm">/* -----------------------------------
+wider than 340 high res
+----------------------------------- */</span>
+
+<span class="med">@media (-webkit-min-device-pixel-ratio: 2) and (min-width:340px), 
+(min-resolution: 192dpi) and (min-width:340px)</span>
+{
+	<span class="sel">.bg</span>
+	{
+		<span class="prop">background-size</span>: <span class="val">cover</span>;
+		<span class="prop">background</span>: <span class="val">url(logo-wide-highres.png) no-repeat</span>;
+	}
+}
+</code></pre>
+<!-- code end -->
+	</figure>
+
+</div>
+</body>
+</html>

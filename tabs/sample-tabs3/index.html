@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>ARIA tab panel example</title>
+		<link rel="stylesheet" href="assets/css/styles.css">
+		<script src="assets/js/jquery-1.10.2.js"></script>
+<script>
+$(document).ready(function(){
+	$("li[role='tab']").click(function(){
+		$("li[role='tab']:not(this)").attr("aria-selected","false");
+
+		//$("li[role='tab']").attr("tabindex","-1");
+		$(this).attr("aria-selected","true");
+
+		//$(this).attr("tabindex","0");
+		var tabpanid= $(this).attr("aria-controls");
+		var tabpan = $("#"+tabpanid);
+		$("div[role='tabpanel']:not(tabpan)").attr("aria-hidden","true");
+		$("div[role='tabpanel']:not(tabpan)").addClass("hidden");
+		tabpan.removeClass("hidden");
+
+		//tabpan.className = "panel";
+		tabpan.attr("aria-hidden","false");
+	});
+	
+	//This adds keyboard accessibility by adding the enter key to the basic click event.
+	$("li[role='tab']").keydown(function(ev) {
+		if (ev.which ==13) {
+			$(this).click();
+		}
+	}); 
+	
+	//This adds keyboard function that pressing an arrow left or arrow right from the tabs toggel the tabs. 
+	$("li[role='tab']").keydown(function(ev) {
+
+		if ((ev.which ==39)||(ev.which ==37))  {
+			var selected= $(this).attr("aria-selected");
+			if  (selected =="true"){
+				$("li[aria-selected='false']").attr("aria-selected","true").focus() ;
+				$(this).attr("aria-selected","false");
+				var tabpanid= $("li[aria-selected='true']").attr("aria-controls");
+				var tabpan = $("#"+tabpanid);
+				$("div[role='tabpanel']:not(tabpan)").attr("aria-hidden","true");
+				$("div[role='tabpanel']:not(tabpan)").addClass("hidden");
+				tabpan.attr("aria-hidden","false");
+				tabpan.removeClass("hidden");
+				
+				//tabpan.className = "panel";
+			}
+		}
+	}); 
+}); 
+</script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>All about Fruit</h1>
+			<p>In botany, a fruit is a part of a flowering plant that derives from specific tissues of the flower, one or more ovaries, and in some cases accessory tissues. Fruits are the means by which these plants disseminate <a href="http://en.wikipedia.org/wiki/Seed">seeds</a>.</p>
+			<ul class="tablist" role="tablist">
+				<li id="tab1" class="tab" aria-controls="panel1" role="tab" aria-selected="true" tabindex="0">Apple</li>
+				<li id="tab2" class="tab" aria-controls="panel2" role="tab" aria-selected="false" tabindex="0">Pears</li>
+			</ul>
+			<div id="panel1" class="panel hidden" aria-labelledby="tab1" role="tabpanel" aria-hidden="false">
+				<h2 tabindex="0">Apples</h2>
+				<p>The skin of ripe apples is generally red, yellow, green, pink, or russetted although many bi- or tri-colored varieties may be found. The skin may also be wholly or partly russeted i.e. rough and brown. The skin is covered in a protective layer of <a href="http://en.wikipedia.org/wiki/Epicuticular_wax">epicuticular wax</a>, The flesh is generally pale yellowish-white, though pink or yellow flesh is also known.</p>
+			</div>
+			<div id="panel2" class="panel" aria-labelledby="tab2" role="tabpanel" aria-hidden="true">
+				<h2 tabindex="0">Pears</h2>
+				<p>The pear is composed of the receptacle or upper end of the flower-stalk (the so-called calyx tube) greatly dilated. Enclosed within its cellular flesh is the true fruit: five cartilaginous carpels, known colloquially as the "core". From the upper rim of the receptacle are given off the five sepals[vague], the five petals, and the very numerous <a href="http://en.wikipedia.org/wiki/Stamen">stamens</a>.</p>
+			</div>
+			<p>
+				These culinary vegetables that are botanically fruit include <a href="http://en.wikipedia.org/wiki/Cucurbitaceae">cucurbits</a> (e.g., squash, pumpkin, and cucumber), tomatoes, peas, beans, corn, eggplant, and sweet pepper. In addition, some spices, such as allspice and chilies, are fruits, botanically speaking. In contrast, rhubarb is often referred to as a fruit, because it is used to make sweet desserts such as pies, though only the petiole (leaf stalk) of the rhubarb plant is edible. Edible gymnosperm seeds are often given fruit names, e.g., pine nuts, ginkgo nuts. 
+			</p>
+		</div>
+	</body>
+</html>

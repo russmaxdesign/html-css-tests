@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Formatting HTML elements and attributes</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	article,aside,details,figure,footer,header,main,nav,section { margin: 1em 0; }
+	
+	hr
+	{
+		margin: 2em 0;
+		height: 3px;
+		border: 0;
+		background: #ccc;
+	}
+	
+	.highlight { color: red; }
+	.form-item { margin: 0 0 1em 0; }
+	.form-item-radio,.form-item-checkbox { margin: 0 0 .3em 0;}
+	.container { max-width: 100em; }
+	details { background: pink; }
+	
+	canvas
+	{
+		background: pink;
+		width: 300px;
+		height: 100px;
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		Formatting HTML elements and attributes
+	</h1>
+	<ul>
+		<li><a href="#s1">Structural elements</a></li>
+		<li><a href="#s2">Figure and figcaption elements</a></li>
+		<li><a href="#s3">Heading elements</a></li>
+		<li><a href="#s4">Paragraph</a></li>
+		<li><a href="#s5">Unordered list</a></li>
+		<li><a href="#s6">Ordered list</a></li>
+		<li><a href="#s7">Definition list</a></li>
+		<li><a href="#s8">Blockquote</a></li>
+		<li><a href="#s9">Form with fieldset and legend</a></li>
+		<li><a href="#s10">Table</a></li>
+		<li><a href="#s11">Address</a></li>
+		<li><a href="#s12">Time</a></li>
+		<li><a href="#s13">Details</a></li>
+		<li><a href="#s14">Canvas</a></li>
+		<li><a href="#s15">Video</a></li>
+		<li><a href="#s16">Inline elements</a></li>
+	</ul>
+
+
+	<hr>
+	<h2 class="highlight" id="s1">
+		Structural elements
+	</h2>
+	<div>
+		This is a DIV element
+	</div>
+	
+	<article>	
+		This is an ARTICLE element
+	</article>
+	
+	<aside>	
+		This is an ASIDE element
+	</aside>
+		
+	<footer>	
+		This is a FOOTER element
+	</footer>
+	
+	<header>	
+		This is a HEADER element
+	</header>
+	
+	<main>	
+		This is a MAIN element
+	</main>
+	
+	<nav>	
+		This is a NAV element
+	</nav>
+	
+	<section>
+		This is a SECTION element
+	</section>
+	
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span><span class="e">&gt;</span>
+	This is a DIV element
+<span class="e">&lt;/div&gt;</span>
+
+<span class="e">&lt;article</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span><span class="e">&gt;</span>
+	This is a ARTICLE element
+<span class="e">&lt;/article&gt;</span>
+
+<span class="comm">&lt;!-- Optional role used to define ARIA landmarks --&gt;</span>
+<span class="e">&lt;aside</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span> <span class="att">role</span>=<span class="val">"rolename"</span><span class="e">&gt;</span>
+	This is a ASIDE element
+<span class="e">&lt;/aside&gt;</span>
+
+<span class="comm">&lt;!-- Optional role used to define ARIA landmarks --&gt;</span>
+<span class="e">&lt;footer</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span> <span class="att">role</span>=<span class="val">"rolename"</span><span class="e">&gt;</span>
+	This is a FOOTER element
+<span class="e">&lt;/footer&gt;</span>
+
+<span class="comm">&lt;!-- Optional role used to define ARIA landmarks --&gt;</span>
+<span class="e">&lt;header</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span> <span class="att">role</span>=<span class="val">"rolename"</span><span class="e">&gt;</span>
+	This is a HEADER element
+<span class="e">&lt;/header&gt;</span>
+
+<span class="comm">&lt;!-- Optional role used to define ARIA landmarks --&gt;</span>
+<span class="e">&lt;main</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span> <span class="att">role</span>=<span class="val">"rolename"</span><span class="e">&gt;</span>
+	This is a MAIN element
+<span class="e">&lt;/main&gt;</span>
+
+<span class="comm">&lt;!-- Optional role used to define ARIA landmarks --&gt;</span>
+<span class="e">&lt;nav</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span> <span class="att">role</span>=<span class="val">"rolename"</span><span class="e">&gt;</span>
+	This is a NAV element
+<span class="e">&lt;/nav&gt;</span>
+
+<span class="comm">&lt;!-- Optional role used to define ARIA landmarks --&gt;</span>
+<span class="e">&lt;section</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span> <span class="att">role</span>=<span class="val">"rolename"</span><span class="e">&gt;</span>
+	This is a SECTION element
+<span class="e">&lt;/section&gt;</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<hr>
+	<h2 class="highlight" id="s2">
+		Figure and figcaption elements
+	</h2>
+	<figure>	
+		<img src="dummy.png" alt="" width="200" height="200">
+		<figcaption>This is a FICAPTION element</figcaption>
+	</figure>
+	
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="comm">&lt;!-- IMAGE width and height may be omitted --&gt;</span>
+<span class="e">&lt;img</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">src</span>=<span class="val">"url"</span> <span class="att">alt</span>=<span class="val">"Alt text"</span> <span class="att">width</span>=<span class="val">"200"</span> <span class="att">height</span>=<span class="val">"200"</span><span class="e">&gt;</span>
+
+<span class="comm">&lt;!-- FICAPTION below --&gt;</span>
+<span class="e">&lt;figure</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span><span class="e">&gt;</span>	
+	<span class="e">&lt;img</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">src</span>=<span class="val">"url"</span> <span class="att">alt</span>=<span class="val">"Alt text"</span><span class="e">&gt;</span>
+	<span class="e">&lt;figcaption&gt;</span>This is a FICAPTION element<span class="e">&lt;/figcaption&gt;</span>
+<span class="e">&lt;/figure&gt;</span>
+
+<span class="comm">&lt;!-- FICAPTION above --&gt;</span>
+<span class="e">&lt;figure</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span><span class="e">&gt;</span>	
+	<span class="e">&lt;figcaption&gt;</span>This is a FICAPTION element<span class="e">&lt;/figcaption&gt;</span>
+	<span class="e">&lt;img</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">src</span>=<span class="val">"url"</span> <span class="att">alt</span>=<span class="val">"Alt text"</span><span class="e">&gt;</span>
+<span class="e">&lt;/figure&gt;</span>
+
+<span class="comm">&lt;!-- multiple FIGURE elements --&gt;</span>
+<span class="e">&lt;figure</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span><span class="e">&gt;</span>
+	<span class="e">&lt;img</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">src</span>=<span class="val">"url"</span> <span class="att">alt</span>=<span class="val">"Alt text"</span><span class="e">&gt;</span>
+	<span class="e">&lt;img</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">src</span>=<span class="val">"url"</span> <span class="att">alt</span>=<span class="val">"Alt text"</span><span class="e">&gt;</span>
+	<span class="e">&lt;img</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">src</span>=<span class="val">"url"</span> <span class="att">alt</span>=<span class="val">"Alt text"</span><span class="e">&gt;</span>
+	<span class="e">&lt;figcaption&gt;</span>This is a FICAPTION element<span class="e">&lt;/figcaption&gt;</span>
+<span class="e">&lt;/figure&gt;</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<hr>
+	<h2 class="highlight" id="s3">
+		Heading elements
+	</h2>
+	<h1>
+		This is a H1 element
+	</h1>
+	<h2>
+		This is a H2 element
+	</h2>
+	<h3>
+		This is a H3 element
+	</h3>
+	<h4>
+		This is a H4 element
+	</h4>
+	<h5>
+		This is a H5 element
+	</h5>
+	<h6>
+		This is a H6 element
+	</h6>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;h1</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span><span class="e">&gt;</span>
+	This is a H1 element
+<span class="e">&lt;/h1&gt;</span>
+
+<span class="e">&lt;h2</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span><span class="e">&gt;</span>
+	This is a H2 element
+<span class="e">&lt;/h2&gt;</span>
+
+<span class="e">&lt;h3</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span><span class="e">&gt;</span>
+	This is a H3 element
+<span class="e">&lt;/h3&gt;</span>
+
+<span class="e">&lt;h4</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span><span class="e">&gt;</span>
+	This is a H4 element
+<span class="e">&lt;/h4&gt;</span>
+
+<span class="e">&lt;h5</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span><span class="e">&gt;</span>
+	This is a H5 element
+<span class="e">&lt;/h5&gt;</span>
+
+<span class="e">&lt;h6</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span><span class="e">&gt;</span>
+	This is a H6 element
+<span class="e">&lt;/h6&gt;</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<hr>
+	<h2 class="highlight" id="s4">
+		Paragraph
+	</h2>
+	<p>
+		This is some text with a break<br>
+		followed by another line of text.
+	</p>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;p</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span><span class="e">&gt;</span>
+	This is some text with a break<span class="e">&lt;br&gt;</span>
+	followed by another line of text.
+<span class="e">&lt;/p&gt;</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<hr>
+	<h2 class="highlight" id="s5">
+		Unordered list
+	</h2>
+	<ul>
+		<li>
+			<p>
+				This is a LI in a UL
+			</p>
+		</li>
+		<li>
+			This is a LI in a UL
+		</li>
+		<li>
+			This is a LI in a UL
+		</li>
+		<li>
+			This is a LI in a UL
+		</li>
+	</ul>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;ul</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span><span class="e">&gt;</span>
+	<span class="e">&lt;li&gt;</span>List item<span class="e">&lt;/li&gt;</span>
+	<span class="e">&lt;li&gt;</span>List item<span class="e">&lt;/li&gt;</span>
+	<span class="e">&lt;li&gt;</span>
+		<span class="e">&lt;p&gt;</span>
+			PARAGRAPH inside a list item
+		<span class="e">&lt;p&gt;</span>
+	<span class="e">&lt;/li&gt;</span>
+<span class="e">&lt;/ul&gt;</span></code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<hr>
+	<h2 class="highlight" id="s6">
+		Ordered list
+	</h2>
+	<ol>
+		<li>
+			This is a LI in a OL
+		</li>
+		<li>
+			This is a LI in a OL
+		</li>
+	</ol>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;ol</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span><span class="e">&gt;</span>
+	<span class="e">&lt;li&gt;</span>List item<span class="e">&lt;/li&gt;</span>
+	<span class="e">&lt;li&gt;</span>List item<span class="e">&lt;/li&gt;</span>
+	<span class="e">&lt;li&gt;</span>
+		<span class="e">&lt;p&gt;</span>
+			PARAGRAPH inside a list item
+		<span class="e">&lt;p&gt;</span>
+	<span class="e">&lt;/li&gt;</span>
+<span class="e">&lt;/ol&gt;</span></code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<hr>
+	<h2 class="highlight" id="s7">
+		Definition list
+	</h2>
+	<dl>
+		<dt>
+			This is a DT in a DL
+		</dt>
+		<dd>
+			This is a DD in a DL
+		</dd>
+	</dl>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;dl</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span><span class="e">&gt;</span>
+	<span class="e">&lt;dt&gt;</span>Definition term<span class="e">&lt;/dt&gt;</span>
+	<span class="e">&lt;dd&gt;</span>Definition description<span class="e">&lt;/dd&gt;</span>
+	<span class="e">&lt;dt&gt;</span>Definition term<span class="e">&lt;/dt&gt;</span>
+	<span class="e">&lt;dd&gt;</span>
+		<span class="e">&lt;p&gt;</span>
+			PARAGRAPH inside a definition description
+		<span class="e">&lt;p&gt;</span>
+	<span class="e">&lt;/dd&gt;</span>
+<span class="e">&lt;/dl&gt;</span></code></pre>
+<!-- code end -->
+	</figure>
+
+	
+	<hr>
+	<h2 class="highlight" id="s8">
+		Blockquote
+	</h2>
+	<blockquote>
+		This is a simple BLOCKQUOTE
+	</blockquote>
+	<blockquote>
+		<p>
+			Lorem ipsum dolor sit amet consect etuer adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+		</p>
+		<p>
+			Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+		</p>
+		<p>
+			<a href="#">Source</a>
+		</p>
+	</blockquote>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="comm">&lt;!-- simple BLOCKQUOTE --&gt;</span>
+<span class="e">&lt;blockquote</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span><span class="e">&gt;</span>
+	This is a BLOCKQUOTE element
+<span class="e">&lt;/blockquote&gt;</span>
+
+<span class="comm">&lt;!-- complex BLOCKQUOTE --&gt;</span>
+<span class="e">&lt;blockquote</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span><span class="e">&gt;</span>
+	<span class="e">&lt;p&gt;</span>
+		PARAGRAPH inside a BLOCKQUOTE
+	<span class="e">&lt;p&gt;</span>
+	<span class="e">&lt;p&gt;</span>
+		PARAGRAPH inside a BLOCKQUOTE
+	<span class="e">&lt;p&gt;</span>
+<span class="e">&lt;/blockquote&gt;</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+
+	
+	<hr>
+	<h2 class="highlight" id="s9">
+		Form with fieldset and legend
+	</h2>
+	<form action="#">
+		<fieldset>
+			<legend>This is a legend</legend>
+			<div class="form-item">
+				<input class="form-hidden" type="hidden" value=""> 
+			</div>
+			<div class="form-item">
+				<label class="form-label" for="one">Text</label>
+				<input class="form-text" type="text" id="one" name="one" value=""> 
+			</div>
+			<div class="form-item">
+				<label class="form-label" for="two">Password</label>
+				<input class="form-password" type="password" id="two" name="two" value=""> 
+			</div>
+			<div class="form-item">
+				<label class="form-label" for="three">File</label>
+				<input class="form-file" type="file" id="three" name="three"> 
+			</div>
+
+			<div class="form-item">
+				<label class="form-label" for="search">Search:</label> 
+				<input class="form-search" type="search" name="search" id="search" value="">
+			</div>
+			<div class="form-item">
+				<label class="form-label" for="email">Email:</label> 
+				<input class="form-email" type="email" name="email" id="email" value="">
+			</div>
+			<div class="form-item">
+				<label class="form-label" for="url">Url:</label> 
+				<input class="form-url" type="url" name="url" id="url" value="">
+			</div>
+			<div class="form-item">
+				<label class="form-label" for="tel">Tel:</label> 
+				<input class="form-tel" type="tel" name="tel" id="tel" value="">
+			</div>
+			<div class="form-item">
+				<label class="form-label" for="number">Number:</label> 
+				<input class="form-number" type="number" name="number" id="number" value="">
+			</div>
+			<div class="form-item">
+				<label class="form-label" for="range">Range:</label> 
+				<input class="form-range" type="range" min="1" max="10" name="range" id="range">
+			</div>
+			<div class="form-item">
+				<label class="form-label" for="color">Color:</label> 
+				<input class="form-color" type="color" name="color" id="color" value="">
+			</div>
+			<div class="form-item">
+				<label class="form-label" for="date">Date:</label> 
+				<input class="form-date" type="date" name="date" id="date" value="">
+			</div>
+			<div class="form-item">
+				<label class="form-label" for="week">Week:</label> 
+				<input class="form-week" type="week" name="week" id="week" value="">
+			</div>
+			<div class="form-item">
+				<label class="form-label" for="month">Month:</label> 
+				<input class="form-month" type="month" name="month" id="month" value="">
+			</div>
+			<div class="form-item">
+				<label class="form-label" for="time">Time:</label> 
+				<input class="form-time" type="time" name="time" id="time" value="">
+			</div>
+			<div class="form-item">
+				<label class="form-label" for="datetime">Datetime:</label> 
+				<input class="form-datetime" type="datetime" name="datetime" id="datetime" value="">
+			</div>
+			<div class="form-item">
+				<label class="form-label" for="datetime-l">Datetime local:</label> 
+				<input class="form-datetimelocal" type="datetime-local" name="datetime-l" id="datetime-l" value="">
+			</div>
+
+			<div class="form-item">
+				<label class="form-label" for="four">select</label>
+				<select class="form-select" id="four" name="four"> 
+					<option value="" selected>Choose an option</option>
+					<option value="">option</option>
+					<option value="">option</option>
+					<option value="">option</option>
+				</select> 
+			</div>
+			<div class="form-item">
+				<label class="form-label" for="five">textarea</label> 
+				<textarea class="form-textarea" id="five" name="five"></textarea> 
+			</div>
+			<div class="form-item form-item-checkbox">
+				<input class="class-name" type="checkbox" id="six1" name="six1" value="six1">
+				<label class="form-label" for="six1">input type=checkbox</label>
+			</div>
+			<div class="form-item form-item-checkbox">
+				<input class="class-name" type="checkbox" id="six2" name="six2" value="six2">
+				<label class="form-label" for="six2">input type=checkbox</label>
+			</div>
+			<div class="form-item form-item-radio">
+				<input class="class-name" type="radio" id="seven1" name="choices" value="seven1">
+				<label class="form-label" for="seven1">input type=radio</label>
+			</div>
+			<div class="form-item form-item-radio">
+				<input class="class-name" type="radio" id="seven2" name="choices" value="seven2">
+				<label class="form-label" for="seven2">input type=radio</label>
+			</div>
+			<div class="form-item">
+				<input class="class-name" type="reset" value="Reset"> 
+			</div>
+			<div class="form-item">
+				<input class="class-name" type="image" src="button.png" alt="Alt text"> 
+			</div>
+			<div class="form-item">
+				<input class="class-name" type="submit" value="input type=submit"> 
+			</div>
+			<div class="form-item">
+				<input class="class-name" type="button" value="input type=button"> 
+			</div>
+			<div class="form-item form-indent">
+				<button class="class-name" type="submit">button type=submit</button>
+			</div>
+		</fieldset>
+	</form>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;form</span> <span class="att">action</span>=<span class="val">"#"</span><span class="e">&gt;</span>
+	<span class="comm">&lt;!-- Optional FIELDSET and LEGEND - used for multi-section forms --&gt;</span>
+	<span class="e">&lt;fieldset&gt;</span>
+		<span class="e">&lt;legend&gt;</span>This is a legend<span class="e">&lt;/legend&gt;</span>
+		
+		<span class="comm">&lt;!-- input type="HIDDEN" for hidden functionality - no LABEL required --&gt;</span>
+		<span class="e">&lt;input</span> <span class="att">class</span>=<span class="val">"form-hidden"</span> <span class="att">type</span>=<span class="val">"hidden"</span> <span class="att">value</span>=<span class="val">""</span><span class="e">&gt;</span> 
+
+		<span class="comm">&lt;!-- input type="TEXT" for general information --&gt;</span>
+		<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"form-item"</span><span class="e">&gt;</span>
+			<span class="e">&lt;label</span> <span class="att">class</span>=<span class="val">"form-label"</span> <span class="att">for</span>=<span class="val">"one"</span><span class="e">&gt;</span>Label text<span class="e">&lt;/label&gt;</span>
+			<span class="e">&lt;input</span> <span class="att">class</span>=<span class="val">"form-text"</span> <span class="att">type</span>=<span class="val">"text"</span> <span class="att">id</span>=<span class="val">"one"</span> <span class="att">name</span>=<span class="val">"one"</span><span class="e">&gt;</span> 
+		<span class="e">&lt;/div&gt;</span>
+
+		<span class="comm">&lt;!-- input type="PASSWORD" for password information --&gt;</span>
+		<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"form-item"</span><span class="e">&gt;</span>
+			<span class="e">&lt;label</span> <span class="att">class</span>=<span class="val">"form-label"</span> <span class="att">for</span>=<span class="val">"two"</span><span class="e">&gt;</span>Label text<span class="e">&lt;/label&gt;</span>
+			<span class="e">&lt;input</span> <span class="att">class</span>=<span class="val">"form-password"</span> <span class="att">type</span>=<span class="val">"password"</span> <span class="att">id</span>=<span class="val">"two"</span> <span class="att">name</span>=<span class="val">"two"</span><span class="e">&gt;</span> 
+		<span class="e">&lt;/div&gt;</span>
+
+		<span class="comm">&lt;!-- input type="FILE" for file upload --&gt;</span>
+		<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"form-item"</span><span class="e">&gt;</span>
+			<span class="e">&lt;label</span> <span class="att">class</span>=<span class="val">"form-label"</span> <span class="att">for</span>=<span class="val">"three"</span><span class="e">&gt;</span>Label text<span class="e">&lt;/label&gt;</span>
+			<span class="e">&lt;input</span> <span class="att">class</span>=<span class="val">"form-file"</span> <span class="att">type</span>=<span class="val">"file"</span> <span class="att">id</span>=<span class="val">"three"</span> <span class="att">name</span>=<span class="val">"three"</span><span class="e">&gt;</span> 
+		<span class="e">&lt;/div&gt;</span>
+
+		<span class="comm">&lt;!-- input type="SEARCH" for search boxes --&gt;</span>
+		<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"form-item"</span><span class="e">&gt;</span>
+			<span class="e">&lt;label</span> <span class="att">class</span>=<span class="val">"form-search"</span> <span class="att">for</span>=<span class="val">"search"</span><span class="e">&gt;</span>Search:<span class="e">&lt;/label&gt;</span> 
+			<span class="e">&lt;input</span> <span class="att">class</span>=<span class="val">"form-search"</span> <span class="att">type</span>=<span class="val">"search"</span> <span class="att">name</span>=<span class="val">"search"</span> <span class="att">id</span>=<span class="val">"search"</span><span class="e">&gt;</span>
+		<span class="e">&lt;/div&gt;</span>
+
+		<span class="comm">&lt;!-- input type="EMAIL" for email information --&gt;</span>
+		<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"form-item"</span><span class="e">&gt;</span>
+			<span class="e">&lt;label</span> <span class="att">class</span>=<span class="val">"form-label"</span> <span class="att">for</span>=<span class="val">"email"</span><span class="e">&gt;</span>Email:<span class="e">&lt;/label&gt;</span> 
+			<span class="e">&lt;input</span> <span class="att">class</span>=<span class="val">"form-email"</span> <span class="att">type</span>=<span class="val">"email"</span> <span class="att">name</span>=<span class="val">"email"</span> <span class="att">id</span>=<span class="val">"email"</span><span class="e">&gt;</span>
+		<span class="e">&lt;/div&gt;</span>
+
+		<span class="comm">&lt;!-- input type="URL" for web address information --&gt;</span>
+		<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"form-item"</span><span class="e">&gt;</span>
+			<span class="e">&lt;label</span> <span class="att">class</span>=<span class="val">"form-label"</span> <span class="att">for</span>=<span class="val">"url"</span><span class="e">&gt;</span>Url:<span class="e">&lt;/label&gt;</span> 
+			<span class="e">&lt;input</span> <span class="att">class</span>=<span class="val">"form-url"</span> <span class="att">type</span>=<span class="val">"url"</span> <span class="att">name</span>=<span class="val">"url"</span> <span class="att">id</span>=<span class="val">"url"</span><span class="e">&gt;</span>
+		<span class="e">&lt;/div&gt;</span>
+
+		<span class="comm">&lt;!-- input type="TEL" for phone number information --&gt;</span>
+		<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"form-item"</span><span class="e">&gt;</span>
+			<span class="e">&lt;label</span> <span class="att">class</span>=<span class="val">"form-label"</span> <span class="att">for</span>=<span class="val">"tel"</span><span class="e">&gt;</span>Tel:<span class="e">&lt;/label&gt;</span> 
+			<span class="e">&lt;input</span> <span class="att">class</span>=<span class="val">"form-tel"</span> <span class="att">type</span>=<span class="val">"tel"</span> <span class="att">name</span>=<span class="val">"tel"</span> <span class="att">id</span>=<span class="val">"tel"</span><span class="e">&gt;</span>
+		<span class="e">&lt;/div&gt;</span>
+
+		<span class="comm">&lt;!-- input type="NUMBER" for numbers --&gt;</span>
+		<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"form-item"</span><span class="e">&gt;</span>
+			<span class="e">&lt;label</span> <span class="att">class</span>=<span class="val">"form-label"</span> <span class="att">for</span>=<span class="val">"number"</span><span class="e">&gt;</span>Number:<span class="e">&lt;/label&gt;</span> 
+			<span class="e">&lt;input</span> <span class="att">class</span>=<span class="val">"form-number"</span> <span class="att">type</span>=<span class="val">"number"</span> <span class="att">name</span>=<span class="val">"number"</span> <span class="att">id</span>=<span class="val">"number"</span><span class="e">&gt;</span>
+		<span class="e">&lt;/div&gt;</span>
+
+		<span class="comm">&lt;!-- input type="RANGE" for number slider --&gt;</span>
+		<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"form-item"</span><span class="e">&gt;</span>
+			<span class="e">&lt;label</span> <span class="att">class</span>=<span class="val">"form-label"</span> <span class="att">for</span>=<span class="val">"range"</span><span class="e">&gt;</span>Range:<span class="e">&lt;/label&gt;</span> 
+			<span class="e">&lt;input</span> <span class="att">class</span>=<span class="val">"form-range"</span> <span class="att">type</span>=<span class="val">"range"</span> <span class="att">min</span>=<span class="val">"1"</span> <span class="att">max</span>=<span class="val">"10"</span> <span class="att">name</span>=<span class="val">"range"</span> <span class="att">id</span>=<span class="val">"range"</span>&gt;
+		<span class="e">&lt;/div&gt;</span>
+
+		<span class="comm">&lt;!-- input type="COLOR" for color selection --&gt;</span>
+		<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"form-item"</span><span class="e">&gt;</span>
+			<span class="e">&lt;label</span> <span class="att">class</span>=<span class="val">"form-label"</span> <span class="att">for</span>=<span class="val">"color"</span><span class="e">&gt;</span>Color:<span class="e">&lt;/label&gt;</span> 
+			<span class="e">&lt;input</span> <span class="att">class</span>=<span class="val">"form-color"</span> <span class="att">type</span>=<span class="val">"color"</span> <span class="att">name</span>=<span class="val">"color"</span> <span class="att">id</span>=<span class="val">"color"</span><span class="e">&gt;</span>
+		<span class="e">&lt;/div&gt;</span>
+
+		<span class="comm">&lt;!-- input type="DATE" for date information --&gt;</span>
+		<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"form-item"</span><span class="e">&gt;</span>
+			<span class="e">&lt;label</span> <span class="att">class</span>=<span class="val">"form-label"</span> <span class="att">for</span>=<span class="val">"date"</span><span class="e">&gt;</span>Date:<span class="e">&lt;/label&gt;</span> 
+			<span class="e">&lt;input</span> <span class="att">class</span>=<span class="val">"form-date"</span> <span class="att">type</span>=<span class="val">"date"</span> <span class="att">name</span>=<span class="val">"date"</span> <span class="att">id</span>=<span class="val">"date"</span><span class="e">&gt;</span>
+		<span class="e">&lt;/div&gt;</span>
+		<span class="comm">&lt;!-- input type="WEEK" for date information - week only --&gt;</span>
+		<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"form-item"</span><span class="e">&gt;</span>
+			<span class="e">&lt;label</span> <span class="att">class</span>=<span class="val">"form-label"</span> <span class="att">for</span>=<span class="val">"week"</span><span class="e">&gt;</span>Week:<span class="e">&lt;/label&gt;</span> 
+			<span class="e">&lt;input</span> <span class="att">class</span>=<span class="val">"form-week"</span> <span class="att">type</span>=<span class="val">"week"</span> <span class="att">name</span>=<span class="val">"week"</span> <span class="att">id</span>=<span class="val">"week"</span><span class="e">&gt;</span>
+		<span class="e">&lt;/div&gt;</span>
+
+		<span class="comm">&lt;!-- input type="MONTH" for date information - month only --&gt;</span>
+		<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"form-item"</span><span class="e">&gt;</span>
+			<span class="e">&lt;label</span> <span class="att">class</span>=<span class="val">"form-label"</span> <span class="att">for</span>=<span class="val">"month"</span><span class="e">&gt;</span>Month:<span class="e">&lt;/label&gt;</span> 
+			<span class="e">&lt;input</span> <span class="att">class</span>=<span class="val">"form-month"</span> <span class="att">type</span>=<span class="val">"month"</span> <span class="att">name</span>=<span class="val">"month"</span> <span class="att">id</span>=<span class="val">"month"</span><span class="e">&gt;</span>
+		<span class="e">&lt;/div&gt;</span>
+
+		<span class="comm">&lt;!-- input type="TIME" for time information --&gt;</span>
+		<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"form-item"</span><span class="e">&gt;</span>
+			<span class="e">&lt;label</span> <span class="att">class</span>=<span class="val">"form-label"</span> <span class="att">for</span>=<span class="val">"time"</span><span class="e">&gt;</span>Time:<span class="e">&lt;/label&gt;</span> 
+			<span class="e">&lt;input</span> <span class="att">class</span>=<span class="val">"form-time"</span> <span class="att">type</span>=<span class="val">"time"</span> <span class="att">name</span>=<span class="val">"time"</span> <span class="att">id</span>=<span class="val">"time"</span><span class="e">&gt;</span>
+		<span class="e">&lt;/div&gt;</span>
+
+		<span class="comm">&lt;!-- input type="DATETIME" for date and time information --&gt;</span>
+		<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"form-item"</span><span class="e">&gt;</span>
+			<span class="e">&lt;label</span> <span class="att">class</span>=<span class="val">"form-label"</span> <span class="att">for</span>=<span class="val">"datetime"</span><span class="e">&gt;</span>Datetime:<span class="e">&lt;/label&gt;</span> 
+			<span class="e">&lt;input</span> <span class="att">class</span>=<span class="val">"form-datetime"</span> <span class="att">type</span>=<span class="val">"datetime"</span> <span class="att">name</span>=<span class="val">"datetime"</span> <span class="att">id</span>=<span class="val">"datetime"</span><span class="e">&gt;</span>
+		<span class="e">&lt;/div&gt;</span>
+
+		<span class="comm">&lt;!-- input type="DATETIMELOCAL" for date and time information including local timezone --&gt;</span>
+		<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"form-item"</span><span class="e">&gt;</span>
+			<span class="e">&lt;label</span> <span class="att">class</span>=<span class="val">"form-label"</span> <span class="att">for</span>=<span class="val">"datetime-local"</span><span class="e">&gt;</span>Datetime local:<span class="e">&lt;/label&gt;</span> 
+			<span class="e">&lt;input</span> <span class="att">class</span>=<span class="val">"form-datetimelocal"</span> <span class="att">type</span>=<span class="val">"datetime-local"</span> <span class="att">name</span>=<span class="val">"datetime-local"</span> <span class="att">id</span>=<span class="val">"datetime-local"</span> <span class="e">&gt;</span>
+		<span class="e">&lt;/div&gt;</span>
+
+		<span class="comm">&lt;!-- SELECT for drop-down choices --&gt;</span>
+		<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"form-item"</span><span class="e">&gt;</span>
+			<span class="e">&lt;label</span> <span class="att">class</span>=<span class="val">"form-label"</span> <span class="att">for</span>=<span class="val">"four"</span><span class="e">&gt;</span>Label text<span class="e">&lt;/label&gt;</span>
+			<span class="e">&lt;select</span> <span class="att">class</span>=<span class="val">"form-select"</span> <span class="att">id</span>=<span class="val">"four"</span> <span class="att">name</span>=<span class="val">"four"</span><span class="e">&gt;</span> 
+				<span class="e">&lt;option</span> <span class="att">value</span>=<span class="val">""</span> <span class="att">selected</span><span class="e">&gt;</span>Choose an option<span class="e">&lt;/option&gt;</span>
+				<span class="e">&lt;option</span> <span class="att">value</span>=<span class="val">""</span><span class="e">&gt;</span>Option 1<span class="e">&lt;/option&gt;</span>
+				<span class="e">&lt;option</span> <span class="att">value</span>=<span class="val">""</span><span class="e">&gt;</span>Option 2<span class="e">&lt;/option&gt;</span>
+				<span class="e">&lt;option</span> <span class="att">value</span>=<span class="val">""</span><span class="e">&gt;</span>Option 3<span class="e">&lt;/option&gt;</span>
+			<span class="e">&lt;/select&gt;</span> 
+		<span class="e">&lt;/div&gt;</span>
+
+		<span class="comm">&lt;!-- TEXTAREA for long user input --&gt;</span>
+		<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"form-item"</span><span class="e">&gt;</span>
+			<span class="e">&lt;label</span> <span class="att">class</span>=<span class="val">"form-label"</span> <span class="att">for</span>=<span class="val">"five"</span><span class="e">&gt;</span>Label text<span class="e">&lt;/label&gt;</span> 
+			<span class="e">&lt;textarea</span> <span class="att">class</span>=<span class="val">"form-textarea"</span> <span class="att">id</span>=<span class="val">"five"</span> <span class="att">name</span>=<span class="val">"five"</span><span class="e">&gt;</span><span class="e">&lt;/textarea&gt;</span> 
+		<span class="e">&lt;/div&gt;</span>
+
+		<span class="comm">&lt;!-- RADIO --&gt;</span>
+		<span class="e">&lt;ul&gt;</span>
+			<span class="e">&lt;li&gt;</span><span class="e">&lt;input</span> <span class="att">class</span>=<span class="val">"form-name"</span> <span class="att">type</span>=<span class="val">"checkbox"</span> <span class="att">id</span>=<span class="val">"six"</span> <span class="att">name</span>=<span class="val">"choices"</span><span class="e">&gt;</span><span class="e">&lt;label</span> <span class="att">class</span>=<span class="val">"form-label"</span> <span class="att">for</span>=<span class="val">"six"</span><span class="e">&gt;</span>Label text<span class="e">&lt;/label&gt;</span><span class="e">&lt;/li&gt;</span>
+			<span class="e">&lt;li&gt;</span><span class="e">&lt;input</span> <span class="att">class</span>=<span class="val">"form-name"</span> <span class="att">type</span>=<span class="val">"radio"</span> <span class="att">id</span>=<span class="val">"seven"</span> <span class="att">name</span>=<span class="val">"choices"</span><span class="e">&gt;</span><span class="e">&lt;label</span> <span class="att">class</span>=<span class="val">"form-label"</span> <span class="att">for</span>=<span class="val">"seven"</span><span class="e">&gt;</span>Label text<span class="e">&lt;/label&gt;</span><span class="e">&lt;/li&gt;</span>
+		<span class="e">&lt;/ul&gt;</span>
+
+		<span class="comm">&lt;!-- TEXTAREA for long user input --&gt;</span>
+		<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"form-item"</span><span class="e">&gt;</span>
+			<span class="e">&lt;input</span> <span class="att">class</span>=<span class="val">"form-name"</span> <span class="att">type</span>=<span class="val">"reset"</span> <span class="att">value</span>=<span class="val">"Reset"</span><span class="e">&gt;</span> 
+		<span class="e">&lt;/div&gt;</span>
+
+		<span class="comm">&lt;!-- input type="RESET" to reset form - no LABEL required --&gt;</span>
+		<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"form-item"</span><span class="e">&gt;</span>
+			<span class="e">&lt;input</span> <span class="att">class</span>=<span class="val">"form-name"</span> <span class="att">type</span>=<span class="val">"image"</span> <span class="att">src</span>=<span class="val">"assets/img/button.png"</span> <span class="att">alt</span>=<span class="val">"Submit"</span><span class="e">&gt;</span> 
+		<span class="e">&lt;/div&gt;</span>
+
+		<span class="comm">&lt;!-- input type="SUBMIT" to submit form - no LABEL required --&gt;</span>
+		<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"form-item"</span><span class="e">&gt;</span>
+			<span class="e">&lt;input</span> <span class="att">class</span>=<span class="val">"form-name"</span> <span class="att">type</span>=<span class="val">"submit"</span> <span class="att">value</span>=<span class="val">"Submit"</span><span class="e">&gt;</span> 
+		<span class="e">&lt;/div&gt;</span>
+
+		<span class="comm">&lt;!-- input type="BUTTON" to submit form - no LABEL required --&gt;</span>
+		<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"form-item"</span><span class="e">&gt;</span>
+			<span class="e">&lt;input</span> <span class="att">class</span>=<span class="val">"form-name"</span> <span class="att">type</span>=<span class="val">"button"</span> <span class="att">value</span>=<span class="val">"Submit"</span><span class="e">&gt;</span> 
+		<span class="e">&lt;/div&gt;</span>
+
+		<span class="comm">&lt;!-- BUTTON to submit form - no LABEL required --&gt;</span>
+		<span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"form-item form-indent"</span><span class="e">&gt;</span>
+			<span class="e">&lt;button</span> <span class="att">class</span>=<span class="val">"form-name"</span> <span class="att">type</span>=<span class="val">"submit"</span><span class="e">&gt;</span>Submit<span class="e">&lt;/button&gt;</span>
+		<span class="e">&lt;/div&gt;</span>
+
+	<span class="comm">&lt;!-- end FIELDSET only used if FIELDSET included --&gt;</span>
+	<span class="e">&lt;/fieldset&gt;</span>
+<span class="e">&lt;/form&gt;</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+
+	
+	<hr>
+	<h2 class="highlight" id="s10">
+		Table
+	</h2>
+	<table>
+		<caption>This is a CAPTION in a TABLE</caption>
+		<colgroup class="table1-colgroup1">
+			<col class="table1-col1">
+			<col class="table1-col2">
+			<col class="table1-col3">
+		</colgroup>	
+		<thead>
+			<tr>
+				<th>This is a TH in a TR in a THEAD</th>
+				<th>This is a TH in a TR in a THEAD</th>
+				<th>This is a TH in a TR in a THEAD</th>
+			</tr>
+		</thead>
+		<tfoot> 
+			<tr>
+				<th>This is a TH in a TR in a TFOOT in a TABLE</th>
+				<td>This is a TD in a TR in a TFOOT in a TABLE</td>
+				<td>This is a TD in a TR in a TFOOT in a TABLE</td>
+			</tr>
+		</tfoot> 
+		<tbody>
+			<tr>
+				<th>This is a TH in a TR in a TBODY in a TABLE</th>
+				<td>This is a TD in a TR in a TBODY in a TABLE</td>
+				<td>This is a TD in a TR in a TBODY in a TABLE</td>
+			</tr>
+		</tbody>
+	</table>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;table</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span><span class="e">&gt;</span>
+
+	<span class="comm">&lt;!-- optional CAPTION element --&gt;</span>
+	<span class="e">&lt;caption&gt;</span>This is a CAPTION in a TABLE<span class="e">&lt;/caption&gt;</span>
+
+	<span class="comm">&lt;!-- optional COLGROUP element --&gt;</span>
+	<span class="e">&lt;colgroup</span> <span class="att">class</span>=<span class="val">"table1-colgroup1"</span><span class="e">&gt;</span>
+		<span class="e">&lt;col</span> <span class="att">class</span>=<span class="val">"table1-col1"</span><span class="e">&gt;</span>
+		<span class="e">&lt;col</span> <span class="att">class</span>=<span class="val">"table1-col2"</span><span class="e">&gt;</span>
+		<span class="e">&lt;col</span> <span class="att">class</span>=<span class="val">"table1-col3"</span><span class="e">&gt;</span>
+	<span class="e">&lt;/colgroup&gt;</span>	
+
+	<span class="comm">&lt;!-- THEAD should be present in all tables --&gt;</span>
+	<span class="e">&lt;thead&gt;</span>
+		<span class="e">&lt;tr&gt;</span>
+			<span class="e">&lt;th&gt;</span>This is a TH in a TR in a THEAD<span class="e">&lt;/th&gt;</span>
+			<span class="e">&lt;th&gt;</span>This is a TH in a TR in a THEAD<span class="e">&lt;/th&gt;</span>
+			<span class="e">&lt;th&gt;</span>This is a TH in a TR in a THEAD<span class="e">&lt;/th&gt;</span>
+		<span class="e">&lt;/tr&gt;</span>
+	<span class="e">&lt;/thead&gt;</span>
+
+	<span class="comm">&lt;!-- optional TFOOT element --&gt;</span>
+	<span class="e">&lt;tfoot&gt;</span> 
+		<span class="e">&lt;tr&gt;</span>
+			<span class="e">&lt;th&gt;</span>This is a TH in a TR in a TFOOT in a TABLE<span class="e">&lt;/th&gt;</span>
+			<span class="e">&lt;td&gt;</span>This is a TD in a TR in a TFOOT in a TABLE<span class="e">&lt;/td&gt;</span>
+			<span class="e">&lt;td&gt;</span>This is a TD in a TR in a TFOOT in a TABLE<span class="e">&lt;/td&gt;</span>
+		<span class="e">&lt;/tr&gt;</span>
+	<span class="e">&lt;/tfoot&gt;</span> 
+
+	<span class="comm">&lt;!-- TBODY should be present in all tables --&gt;</span>
+	<span class="e">&lt;tbody&gt;</span>
+		<span class="e">&lt;tr&gt;</span>
+			<span class="e">&lt;th&gt;</span>This is a TH in a TR in a TBODY in a TABLE<span class="e">&lt;/th&gt;</span>
+			<span class="e">&lt;td&gt;</span>This is a TD in a TR in a TBODY in a TABLE<span class="e">&lt;/td&gt;</span>
+			<span class="e">&lt;td&gt;</span>This is a TD in a TR in a TBODY in a TABLE<span class="e">&lt;/td&gt;</span>
+		<span class="e">&lt;/tr&gt;</span>
+	<span class="e">&lt;/tbody&gt;</span>
+<span class="e">&lt;/table&gt;</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<hr>
+	<h2 class="highlight" id="s11">
+		Address
+	</h2>
+	<address>
+		This is an ADDRESS
+	</address>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;address&gt;</span>
+	This is a ADDRESS
+<span class="e">&lt;/address&gt;</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<hr>
+	<h2 class="highlight" id="s12">
+		Time
+	</h2>
+	<time pubdate datetime="YYYY-MM-DD">
+		Human friendly TIME information here
+	</time>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="comm">&lt;!-- optional PUBDATE attribute used if information is publish date --&gt;</span>
+<span class="e">&lt;time</span> <span class="att">pubdate</span> <span class="att">datetime</span>=<span class="val">"YYYY-MM-DD"</span><span class="e">&gt;</span>
+	Human friendly TIME information here
+<span class="e">&lt;/time&gt;</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<hr>
+	<h2 class="highlight" id="s13">
+		Details element
+	</h2>
+	<details open>
+		<summary>This is a DETAILS element</summary>
+		<p>
+			Lorem ipsum dolor sit amet consect etuer adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+		</p>
+	</details>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="comm">&lt;!-- optional OPEN attribute used to have element initially opened --&gt;</span>
+<span class="e">&lt;details</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span> <span class="att">open</span><span class="e">&gt;</span>
+	<span class="e">&lt;summary></span>This is the DETAILS element<span class="e">&lt;/summary&gt;</span>
+	<span class="e">&lt;p&gt;</span>
+		Lorem ipsum dolor sit...
+	<span class="e">&lt;/p&gt;</span>
+<span class="e">&lt;/details&gt;</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<hr>
+	<h2 class="highlight" id="s14">
+		Canvas element
+	</h2>
+	<canvas id="mycanvas">
+	</canvas>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;canvas</span> <span class="att">id</span>=<span class="val">"id-name"</span><span class="e">&gt;</span>
+<span class="e">&lt;/canvas&gt;</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<hr>
+	<h2 class="highlight" id="s15">
+		Video element
+	</h2>
+<video controls poster="poster.png">
+	<source src="test-mp4.mp4" type="video/mp4">
+	<source src="test-webm.webm" type="video/webm">
+	<!-- fallback -->
+</video>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;video</span> <span class="att">controls</span> <span class="att">poster</span>=<span class="val">"poster.png"</span><span class="e">&gt;</span>
+	<span class="e">&lt;source</span> <span class="att">src</span>=<span class="val">"test-mp4.mp4"</span> <span class="att">type</span>=<span class="val">"video/mp4"png"</span><span class="e">&gt;</span>
+	<span class="e">&lt;source</span> <span class="att">src</span>=<span class="val">"test-webm.webm"</span> <span class="att">type</span>=<span class="val">"video/webm"png"</span><span class="e">&gt;</span>
+	<span class="comm">&lt;!-- fallback --&gt;</span>
+<span class="e">&lt;/video&gt;</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<hr>
+	<h2 class="highlight" id="s16">
+		Inline elements
+	</h2>
+	<p>
+		This paragraph contains a bunch of phrase elements. Up first in an <a href="test">Anchor</a>, followed by an <abbr title="test">ABBR with a title value</abbr>, followed by a <cite>CITE</cite> element, followed by a <code>CODE</code> element, followed by a <del>DEL</del> element, followed by a <em>EM</em> element, followed by a <ins>INS</ins> element, followed by a <kbd>KBD</kbd> element, followed by a <q>Q</q> element, followed by a <samp>SAMP</samp> element, followed by a <span>SPAN</span> element, followed by a <strong>STRONG</strong> element, followed by a <var>VAR</var> element, followed by a <sup>2</sup> element, followed by a <sub>2</sub> element, all within a containing paragraph.
+	</p>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="comm">&lt;!-- ANCHOR element --&gt;</span>
+<span class="e">&lt;a</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span> <span class="att">href</span>=<span class="val">"URI"</span> <span class="att">title</span>=<span class="val">"title-information"</span> <span class="att">lang</span>=<span class="val">"language-subtag"</span> <span class="att">dir</span>=<span class="val">"ltr/rtl"</span> <span class="att">onclick</span>=<span class="val">"script-information"</span><span class="e">&gt;</span>ANCHOR text<span class="e">&lt;/a&gt;</span>
+
+<span class="comm">&lt;!-- ABBREVIATION element --&gt;</span>
+<span class="e">&lt;abbr</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span> <span class="att">title</span>=<span class="val">"title-information"</span> <span class="att">lang</span>=<span class="val">"language-subtag"</span> <span class="att">dir</span>=<span class="val">"ltr/rtl"</span><span class="e">&gt;</span>ABBR<span class="e">&lt;/abbr&gt;</span>
+
+<span class="comm">&lt;!-- BOLD element --&gt;</span>
+<span class="e">&lt;b</span><span class="e">&gt;</span>Text<span class="e">&lt;/b&gt;</span>
+
+<span class="comm">&lt;!-- BDO element --&gt;</span>
+<span class="e">&lt;bdo <span class="att">dir</span>=<span class="val">"ltr/rtl"</span></span><span class="e">&gt;</span>Text<span class="e">&lt;/bdo&gt;</span>
+
+<span class="comm">&lt;!-- CITE element --&gt;</span>
+<span class="e">&lt;cite</span><span class="e">&gt;</span>Text<span class="e">&lt;/cite&gt;</span>
+
+<span class="comm">&lt;!-- CODE element --&gt;</span>
+<span class="e">&lt;code</span><span class="e">&gt;</span>Text<span class="e">&lt;/code&gt;</span>
+
+<span class="comm">&lt;!-- DEL element --&gt;</span>
+<span class="e">&lt;del</span><span class="e">&gt;</span>Text<span class="e">&lt;/del&gt;</span>
+
+<span class="comm">&lt;!-- DFN element --&gt;</span>
+<span class="e">&lt;dfn</span><span class="e">&gt;</span>Text<span class="e">&lt;/dfn&gt;</span>
+
+<span class="comm">&lt;!-- EM element --&gt;</span>
+<span class="e">&lt;em</span><span class="e">&gt;</span>Text<span class="e">&lt;/em&gt;</span>
+
+<span class="comm">&lt;!-- I element --&gt;</span>
+<span class="e">&lt;i</span><span class="e">&gt;</span>Text<span class="e">&lt;/i&gt;</span>
+
+<span class="comm">&lt;!-- INS element --&gt;</span>
+<span class="e">&lt;ins</span><span class="e">&gt;</span>Text<span class="e">&lt;/ins&gt;</span>
+
+<span class="comm">&lt;!-- KBD element --&gt;</span>
+<span class="e">&lt;kbd</span><span class="e">&gt;</span>Text<span class="e">&lt;/kbd&gt;</span>
+
+<span class="comm">&lt;!-- Q element --&gt;</span>
+<span class="e">&lt;q</span><span class="e">&gt;</span>Text<span class="e">&lt;/q&gt;</span>
+
+<span class="comm">&lt;!-- SAMP element --&gt;</span>
+<span class="e">&lt;samp</span><span class="e">&gt;</span>Text<span class="e">&lt;/samp&gt;</span>
+
+<span class="comm">&lt;!-- SMALL element --&gt;</span>
+<span class="e">&lt;small</span><span class="e">&gt;</span>Text<span class="e">&lt;/small&gt;</span>
+
+<span class="comm">&lt;!-- SPAN element --&gt;</span>
+<span class="e">&lt;span</span> <span class="att">class</span>=<span class="val">"class-name"</span> <span class="att">id</span>=<span class="val">"id-name"</span> <span class="att">lang</span>=<span class="val">"language-subtag"</span> <span class="att">dir</span>=<span class="val">"ltr/rtl"</span><span class="e">&gt;</span>SPAN text<span class="e">&lt;/span&gt;</span>
+
+<span class="comm">&lt;!-- STRONG element --&gt;</span>
+<span class="e">&lt;strong</span><span class="e">&gt;</span>Text<span class="e">&lt;/strong&gt;</span>
+
+<span class="comm">&lt;!-- SUB element --&gt;</span>
+<span class="e">&lt;sub</span><span class="e">&gt;</span>Text<span class="e">&lt;/sub&gt;</span>
+
+<span class="comm">&lt;!-- SUP element --&gt;</span>
+<span class="e">&lt;sup</span><span class="e">&gt;</span>Text<span class="e">&lt;/sup&gt;</span>
+
+<span class="comm">&lt;!-- VAR element --&gt;</span>
+<span class="e">&lt;var</span><span class="e">&gt;</span>Text<span class="e">&lt;/var&gt;</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+</div>
+</body>
+</html>

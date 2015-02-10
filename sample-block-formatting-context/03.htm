@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Wrapping a parent around margins - padding above and below</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	.example
+	{
+		background: yellow;
+		padding: 1px 0;
+	}
+	
+	p
+	{
+		margin: 1em 0;
+		background: pink;
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		Wrapping a parent around margins - padding above and below
+	</h1>
+	<div class="example-container">
+		<div class="example">
+			<p>
+				This is a paragraph
+			</p>
+		</div>
+	</div>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.example</span> { <span class="prop">padding</span>: <span class="val">1px 0</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+</div>
+</body>
+</html>

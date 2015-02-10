@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Form test</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	body
+	{
+		width: 40em;
+		margin: 0;
+		padding: 20px;
+		color: #000;
+		background: #fff;
+		font: 100%/1.2 helvetica, arial, sans-serif;
+	}
+	
+	form { background: yellow; } 
+	.example
+	{
+		margin: 1em 0 2em;
+	}
+	
+	.form1 { }
+	.form3 fieldset {border: 0; padding: 0; }
+	
+	.legend2
+	{
+		background: lime;
+		padding: 20px;
+		margin: 20px;
+	}
+	
+	.legend3
+	{
+		position: relative;
+		left: -30px;
+		background: green;
+	}
+	
+	.legend4 span
+	{
+		position: relative;
+		left: -30px;
+		background: green;
+	}
+	
+	.legend6 { color: red; }
+	.legend7 { border: 0; }
+	
+	.fieldset8
+	{
+		border: 0;
+		padding: 0;
+	}
+	
+	.legend8
+	{
+		margin: 0;
+		padding: 0;
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		Form controls
+	</h1>
+	<h2>
+		1. margin above and below form
+	</h2>
+	<p>
+		By default, most browsers do not render margin above and below the &lt;form&gt; element. However, IE6 and IE7 render margins above and below.
+	</p>
+	<div class="example">
+		<div class="dummy">This is some text</div>
+		<form class="form1" method="get" action="#">
+			<fieldset>
+				<legend>legend element</legend>
+				<div>
+					<label for="example1">label element</label>
+					<input name="example1" id="example1" type="text">
+				</div>
+			</fieldset>
+		</form>
+		<div class="dummy">This is some text</div>	
+	</div>
+	<h2>	
+		2. padding inside fieldset
+	</h2>
+	<p>
+		By default, most browsers apply padding to all sides of the &lt;fieldset&gt; element. However, IE6-11 do not apply any padding.
+	</p>
+	<div class="example">
+		<form class="form2" method="get" action="#">
+			<fieldset>
+				<legend>legend element</legend>
+				<div>
+					<label for="example2">label element</label>
+					<input name="example2" id="example2" type="text">
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<h2>
+		3. margin and padding on legend
+	</h2>
+	<p>	
+		If &lt;fieldset&gt; borders and padding are removed, the &lt;legend&gt; should sit in against the left edge of the parent container. 
+	</p>
+	<div class="example">
+		<form class="form3" method="get" action="#">
+			<fieldset>
+				<legend>legend element</legend>
+				<div>
+					<label for="example3">label element</label>
+					<input name="example3" id="example3" type="text">
+				</div>
+			</fieldset>
+		</form>
+	</div>
+
+	<h2>Relative positioning on legend</h2>
+	<form method="get" action="#">
+		<fieldset>
+			<legend class="legend3">legend3</legend>
+			<div>
+				<label for="three">three</label>
+				<input name="three" id="three" type="text">
+			</div>
+		</fieldset>
+	</form>
+	<h2>Relative positioning on span inside legend</h2>
+	<form method="get" action="#">
+		<fieldset>
+			<legend class="legend4"><span>legend5</span></legend>
+			<div>
+				<label for="four">four</label>
+				<input name="four" id="four" type="text">
+			</div>
+		</fieldset>
+	</form>
+	<h2>Color of legend - no style</h2>
+	<form method="get" action="#">
+		<fieldset>
+			<legend class="legend5"><span>legend5</span></legend>
+			<div>
+				<label for="five">five</label>
+				<input name="five" id="five" type="text">
+			</div>
+		</fieldset>
+	</form>
+	<h2>Color of legend - color rule applied</h2>
+	<form method="get" action="#">
+		<fieldset>
+			<legend class="legend6"><span>legend6</span></legend>
+			<div>
+				<label for="six">six</label>
+				<input name="six" id="six" type="text">
+			</div>
+		</fieldset>
+	</form>
+	<h2>Color of legend - border applied</h2>
+	<form method="get" action="#">
+		<fieldset>
+			<legend class="legend7"><span>legend7</span></legend>
+			<div>
+				<label for="seven">seven</label>
+				<input name="seven" id="seven" type="text">
+			</div>
+		</fieldset>
+	</form>
+	<h2>position of fieldset when border removed</h2>
+	<form method="get" action="#">
+		<fieldset class="fieldset8">
+			<legend class="legend8"><span>legend8</span></legend>
+			<div>
+				<label for="eight">eight</label>
+				<input name="eight" id="eight" type="text">
+			</div>
+		</fieldset>
+	</form>
+</div>
+</body>
+</html>

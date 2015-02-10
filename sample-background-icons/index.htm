@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>CSS: testing background images positioned at the end of inline elements</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	.one a,.two a,.three a,.four a,.five a span
+	{
+		border: 1px solid red;
+	}
+
+	.two a
+	{
+		padding: 0 12px 0 0;
+		background: url(external.gif) no-repeat 100% 0;
+	}
+
+	.three a
+	{
+		padding: 0 12px 0 0;
+		background: url(external.gif) no-repeat 100% 0;
+		white-space: nowrap; /* ie6 */
+	}
+	
+	.four a
+	{
+		padding: 0 12px 0 0;
+		background: url(external.gif) no-repeat 100% 0;
+		position: relative; /* ie6 */
+		white-space: nowrap; /* ie6 */
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		CSS: testing background images positioned at the end of inline elements
+	</h1>
+	<h2>
+		Sample 1
+	</h2>
+	<p class="one">
+		Lorem ipsum dolor sit amet tinunt ut laoreet dolore magna aliquam erat volut. Ut wisi <a href="#">adipi scing elit sed diam nibh veniam</a> enim ad minim veniam. 
+	</p>
+
+
+	<h2>
+		Sample 2
+	</h2>
+	<p class="two">
+		Lorem ipsum dolor sit amet tinunt ut laoreet dolore magna aliquam erat volut. Ut wisi <a href="#">adipi scing elit sed diam nibh veniam</a> enim ad minim veniam. 
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.two a</span>
+{
+	<span class="prop">padding</span>: <span class="val">0 12px 0 0</span>;
+	<span class="prop">background</span>: <span class="val">url(external.gif) no-repeat 100% 0</span>;
+}</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		Sample 3
+	</h2>
+	<p class="three">
+		Lorem ipsum dolor sit amet tinunt ut laoreet dolore magna aliquam erat volut. Ut wisi <a href="#">adipi scing elit sed diam nibh veniam</a> enim ad minim veniam. 
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.three a</span>
+{
+	<span class="prop">padding</span>: <span class="val">0 12px 0 0</span>;
+	<span class="prop">background</span>: <span class="val">url(external.gif) no-repeat 100% 0</span>;
+	<span class="prop">white-space</span>: <span class="val">nowrap</span>;
+}</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		Sample 4
+	</h2>
+	<p class="two">
+		Lorem ipsum dolor sit amet tinunt ut laoreet dolore magna aliquam erat volut. Ut wisi <a href="#">adipi scing elit sed diam nibh veniam</a> enim ad minim veniam. 
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.four a</span>
+{
+	<span class="prop">padding</span>: <span class="val">0 12px 0 0</span>;
+	<span class="prop">background</span>: <span class="val">url(external.gif) no-repeat 100% 0</span>;
+	<span class="prop">position</span>: <span class="val">relative</span>; <span class="comm">/* ie6 */</span>
+	<span class="prop">white-space</span>: <span class="val">nowrap</span>; <span class="comm">/* ie6 */</span>
+}</code></pre>
+<!-- code end -->
+	</figure>
+
+</div>
+</body>
+</html>

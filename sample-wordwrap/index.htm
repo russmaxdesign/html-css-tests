@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>CSS properties: word-wrap and word-break</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	.test
+	{
+		width: 200px;
+		margin: 1em 0;
+		padding: .5em 1em;
+		background-color: pink;
+		border: 1px solid red;
+	}
+	
+	.test-table { width: 200px; }
+	
+	.test-table td
+	{
+		border: 1px solid red;
+		background-color: pink;
+	}
+	
+	.word-wrap { word-wrap: break-word; }
+	.word-break { word-break: break-all; }
+	.no { background: pink; }
+</style>
+
+</head>
+<body>
+<div class="container">
+	<h1>
+		CSS properties: word-wrap and word-break
+	</h1>
+	<h2>
+		Nothing
+	</h2>
+	<p>
+		The DIV below has been set to 200px wide. As the content is wider it will poke out the right side of the element.
+	</p>
+	<div class="test">
+		SometexthereSometexthereSometexthereSometexthereSometexthereSometexthereSometexthere
+	</div>
+	<div class="test">
+		<a href="#">SometexthereSometexthereSometexthereSometexthereSometexthereSometexthereSometexthere</a>
+	</div>
+	<p>
+		The TABLE below has been set to 200px wide. As the content is wider than the TD, the TD will expand to fix the content, regardless of any width applied to the TABLE or TD. 
+	</p>
+	<table class="test-table">
+		<tr>
+			<td>SometexthereSometexthereSometexthereSometexthereSometexthereSometexthereSometexthere</td>
+		</tr>
+		<tr>
+			<td><a href="#">SometexthereSometexthereSometexthereSometexthereSometexthereSometexthereSometexthere</a></td>
+		</tr>
+	</table>
+	
+	<h2>
+		word-wrap
+	</h2>
+	<p>
+		The DIV below has been set to 200px wide with <code>word-wrap: break-word</code> applied.
+	</p>
+	<div class="test word-wrap">
+		SometexthereSometexthereSometexthereSometexthereSometexthereSometexthereSometexthere
+	</div>
+	<div class="test word-wrap">
+		<a href="#">SometexthereSometexthereSometexthereSometexthereSometexthereSometexthereSometexthere</a>
+	</div>
+	<p>
+		The TABLE below has been set to 200px wide with <code>word-wrap: break-word</code> applied to the TD. This does not affect the content in most browsers.
+	</p>
+	<table class="test-table">
+		<tr>
+			<td class="word-wrap">SometexthereSometexthereSometexthereSometexthereSometexthereSometexthereSometexthere</td>
+		</tr>
+		<tr>
+			<td class="word-wrap"><a href="#">SometexthereSometexthereSometexthereSometexthereSometexthereSometexthereSometexthere</a></td>
+		</tr>
+	</table>
+	
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"word-wrap"</span><span class="e">&gt;</span>
+	<span class="e">&lt;a</span> <span class="att">href</span>=<span class="val">"#"</span><span class="e">&gt;</span>Sometexthere...<span class="e">&lt;/a&gt;</span>
+<span class="e">&lt;/div&gt;</span>
+<span class="e">&lt;td</span> <span class="att">class</span>=<span class="val">"word-wrap"</span><span class="e">&gt;</span>
+	<span class="e">&lt;a</span> <span class="att">href</span>=<span class="val">"#"</span><span class="e">&gt;</span>Sometexthere...<span class="e">&lt;/a&gt;</span>
+<span class="e">&lt;/td&gt;</span></code></pre>
+<!-- code end -->
+	</figure>
+
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.word-wrap</span> { <span class="prop">word-wrap</span>: <span class="val">break-word</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		word-break
+	</h2>
+	<p>
+		The DIV below has been set to 200px wide with <code>word-break: break-all</code> applied.
+	</p>
+	<div class="test word-break">
+		SometexthereSometexthereSometexthereSometexthereSometexthereSometexthereSometexthere
+	</div>
+	<div class="test word-break">
+		<a href="#">SometexthereSometexthereSometexthereSometexthereSometexthereSometexthereSometexthere</a>
+	</div>
+	<p>
+		The TABLE below has been set to 200px wide with <code>word-break: break-all</code> applied to the TD.
+	</p>
+	<table class="test-table">
+		<tr>
+			<td class="word-break">SometexthereSometexthereSometexthereSometexthereSometexthereSometexthereSometexthere</td>
+		</tr>
+		<tr>
+			<td class="word-break"><a href="#">SometexthereSometexthereSometexthereSometexthereSometexthereSometexthereSometexthere</a></td>
+		</tr>
+	</table>
+	
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;div</span> <span class="att">class</span>=<span class="val">"word-break"</span><span class="e">&gt;</span>
+	<span class="e">&lt;a</span> <span class="att">href</span>=<span class="val">"#"</span><span class="e">&gt;</span>Sometexthere...<span class="e">&lt;/a&gt;</span>
+<span class="e">&lt;/div&gt;</span>
+<span class="e">&lt;td</span> <span class="att">class</span>=<span class="val">"word-break"</span><span class="e">&gt;</span>
+	<span class="e">&lt;a</span> <span class="att">href</span>=<span class="val">"#"</span><span class="e">&gt;</span>Sometexthere...<span class="e">&lt;/a&gt;</span>
+<span class="e">&lt;/td&gt;</span></code></pre>
+<!-- code end -->
+	</figure>
+
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.word-break</span> { <span class="prop">word-break</span>: <span class="val">break-all</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<div class="table-container">
+		<table>
+			<caption>Browser support chart</caption>
+			<thead>
+				<tr>
+					<th>Property</th>
+					<th>Mac: Safari 4.0+</th>
+					<th>Mac: Chrome 5.0+</th>
+					<th>Mac: FireFox 24</th>
+					<th>Mac: Opera 12+</th>
+					<th>Win: FireFox 3.6+</th>
+					<th>Win: Opera 12+</th>
+					<th>Win: IE6</th>
+					<th>Win: IE7</th>
+					<th>Win: IE8</th>
+					<th>Win: IE9</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th><code>word-wrap</code> on DIV</th>
+					<td>YES</td>
+					<td>YES</td>
+					<td>YES</td>
+					<td>YES</td>
+					<td>YES</td>
+					<td>YES</td>
+					<td>YES</td>
+					<td>YES</td>
+					<td>YES</td>
+					<td>YES</td>
+				</tr>
+				<tr>
+					<th><code>word-wrap</code> on TD</th>
+					<td class="no">NO</td>
+					<td class="no">NO</td>
+					<td class="no">NO</td>
+					<td class="no">NO</td>
+					<td class="no">NO</td>
+					<td class="no">NO</td>
+					<td class="no">NO</td>
+					<td class="no">NO</td>
+					<td class="no">NO</td>
+					<td class="no">NO</td>
+				</tr>
+				<tr>
+					<th><code>word-break</code> on DIV</th>
+					<td>YES</td>
+					<td>YES</td>
+					<td>YES</td>
+					<td class="no">NO</td>
+					<td class="no">NO</td>
+					<td class="no">NO</td>
+					<td>YES</td>
+					<td>YES</td>
+					<td>YES</td>
+					<td>YES</td>
+				</tr>
+				<tr>
+					<th><code>word-break</code> TD</th>
+					<td>YES</td>
+					<td>YES</td>
+					<td>YES</td>
+					<td class="no">NO</td>
+					<td class="no">NO</td>
+					<td class="no">NO</td>
+					<td>YES</td>
+					<td>YES</td>
+					<td>YES</td>
+					<td>YES</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+</body>
+</html>

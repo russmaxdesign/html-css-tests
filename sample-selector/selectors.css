@@ -1,0 +1,166 @@
+body { font-size: 125%; }
+
+p
+{
+	margin: 0 0 1em;
+	line-height: 1.3;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	margin: 0 0 .5em;
+	line-height: 1.1;
+}
+
+h1 { font-size: 36px; }
+h2 { font-size: 24px; }
+
+h3
+{
+	width: 3.5em;
+	margin: 0;
+	border-radius: 4px 4px 0 0;
+	padding: .4em .5em .3em;
+	color: #fff;
+	background-color: #333;
+	background-image: -webkit-linear-gradient(rgb(80,80,80), rgb(19,19,19));
+	font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+}
+
+.ui-li-divider, .ui-li-static { font-size: 16px; }
+.ui-btn-inner { font-size: 22px; }
+.ui-content { padding: 15px 20px; }
+
+pre
+{
+	display: block;
+	overflow: auto;
+	background: #fff;
+	border: 1px solid #ccc;
+	margin: 0 0 1em;
+	padding: .5em;
+	box-shadow: 5px 5px 5px #ddd;
+	border-radius: 0 4px 4px 4px;
+	text-align: left;
+	font: 19px/1.1 "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+
+pre strong { color: rgb(200,0,0); }
+
+blockquote
+{
+	margin: 1em 0;
+	padding: 1em;
+	background: #eee;
+}
+
+.css1-bg, .css2-bg, .css3-bg
+{
+	padding: .3em .7em;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 85%;
+	font-weight: normal;
+}
+
+.css1-bg { background: rgb(155,0,0); }
+.css2-bg { background: rgb(0,71,131); }
+.css3-bg { background: rgb(65,105,0); }
+
+.index span.css1,.index span.css2,.index span.css3
+{
+	margin: 0 0 0 .5em;
+	font-size: 12px;
+}
+
+.css1 { color: rgb(155,0,0); }
+.css2 { color: rgb(0,71,131); }
+.css3 { color: rgb(65,105,0); }
+.deleted { text-decoration: line-through; }
+
+.group h3
+{
+	color: #000;
+	background: #fff;
+}
+
+.group pre
+{
+	color: #000;
+	background: #fff;
+	box-shadow: 0 0 0 0;
+	text-shadow: 0 0 0 #fff;
+	border: 1px solid #fff;
+}
+
+.simple-list
+{
+	margin: 1em 0;
+	padding: 0;
+	list-style: none;
+}
+
+.simple-list li { margin: 0 0 0.3em; }
+.simple-list a { font-weight: normal !important; }
+
+.navigation
+{
+	position: relative;
+	width: 116px;
+	height: 52px;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+}
+
+.back, .home2, .next
+{
+	text-indent: -500em;
+	background-image: url(nav.png);
+	background-repeat: no-repeat;
+}
+
+.back
+{
+	position: absolute;
+	left: 0;
+	top: 10px;
+	width: 32px;
+	height: 32px;
+	background-position: 0 0;
+}
+
+.back:focus { background-position: 0 -32px; }
+.back:active { background-position: 0 -96px; }
+.back.inactive { background-position: 0 -128px; }
+
+.home2
+{
+	position: absolute;
+	left: 42px;
+	top: 10px;
+	width: 32px;
+	height: 32px;
+	background-position: -32px 0;
+}
+
+.home2:focus { background-position: -32px -32px; }
+.home2:active { background-position: -32px -96px; }
+.home2.inactive { background-position: -32px -128px; }
+.home2.live { background-position: -32px -160px; }
+
+.next
+{
+	position: absolute;
+	right: 0;
+	top: 10px;
+	width: 32px;
+	height: 32px;
+	background-position: -64px 0;
+}
+
+.next:focus { background-position: -64px -32px; }
+.next:active { background-position: -64px -96px; }
+.next.inactive { background-position: -64px -128px; }

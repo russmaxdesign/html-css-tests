@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>HTML: longdesc vs describedby</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	section { background-color: pink; }	
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		HTML: longdesc vs describedby
+	</h1>
+	<h2>
+		Example 1 - visible longdesc
+	</h2>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<p>
+		In this example, the long description for an image is visible and directly below the image, so no additional work is needed.
+	</p>
+	<section>
+		<figure>
+			<img src="dummy.png" alt="Alt text">
+			<figcaption>This is a caption for image 1</figcaption>
+		</figure>
+		<h3>
+			Image Description for Image 1
+		</h3>
+		<p>
+			Lorem ipsum dolor sit amet consect etuer adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+		</p>
+	</section>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;figure&gt;</span>
+	<span class="e">&lt;img</span> <span class="att">src</span>=<span class="val">"dummy.png"</span> <span class="att">alt</span>=<span class="val">"Alt text"</span><span class="e">&gt;</span>
+	<span class="e">&lt;figcaption&gt;</span>This is a caption for image 1<span class="e">&lt;/figcaption&gt;</span>
+<span class="e">&lt;/figure&gt;</span>
+<span class="e">&lt;section&gt;</span>
+	<span class="e">&lt;h3&gt;</span>
+		Image Description for Image 1
+	<span class="e">&lt;/h3&gt;</span>
+	<span class="e">&lt;p&gt;</span>
+		Lorem ipsum dolor sit...
+	<span class="e">&lt;/p&gt;</span>
+<span class="e">&lt;/section&gt;</span></code></pre>
+<!-- code end -->
+	</figure>
+	
+
+	<h2>
+		Example 2 - longdesc attribute
+	</h2>
+	<p>
+		In this example, the long description is defined using the "longdesc" attribute that points to a new page with the long description. This attribute is supported by some assistive devices, but the long description is not available to everyone.
+	</p>
+	<section>
+		<figure>
+			<img src="dummy.png" alt="Alt text" longdesc="02.htm">
+			<figcaption>This is a caption for image 2</figcaption>
+		</figure>
+	</section>
+
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;figure&gt;</span>
+	<span class="e">&lt;img</span> <span class="att">src</span>=<span class="val">"dummy.png"</span> <span class="att">alt</span>=<span class="val">"Alt text"</span> <span class="att">longdesc</span>=<span class="val">"02.htm"</span><span class="e">&gt;</span>
+	<span class="e">&lt;figcaption&gt;</span>This is a caption for image 2<span class="e">&lt;/figcaption&gt;</span>
+<span class="e">&lt;/figure&gt;</span></code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		Example 3 - longdesc attribute with visible "D" link
+	</h2>
+	<p>
+		In this example, the long description is defined again using the "longdesc" attribute that points to a new page with the long description. However, this example also includes a visible "D" link, which allows users to click and then read the long description.
+	</p>
+	<section>
+		<figure>
+			<img src="dummy.png" alt="Alt text" longdesc="03.htm">
+			<figcaption>This is a caption for image 3 [<a href="03.htm">D</a>]</figcaption>
+		</figure>
+	</section>
+
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;figure&gt;</span>
+	<span class="e">&lt;img</span> <span class="att">src</span>=<span class="val">"dummy.png"</span> <span class="att">alt</span>=<span class="val">"Alt text"</span> <span class="att">longdesc</span>=<span class="val">"03.htm"</span><span class="e">&gt;</span>
+	<span class="e">&lt;figcaption&gt;</span>This is a caption for image 3 [<span class="e">&lt;a</span> <span class="att">href</span>=<span class="val">"03.htm"</span><span class="e">&gt;</span>D&lt;<span class="e">/a&gt;</span>]
+<span class="e">&lt;/figcaption&gt;</span>
+<span class="e">&lt;/figure&gt;</span></code></pre>
+<!-- code end -->
+	</figure>
+
+
+	
+	<h2>
+		Example 4 - aria-describedby
+	</h2>
+	<p>
+		In this example, the long description is placed away from the image - there is non-related content between the image and long description. However, the image and it's long description are linked via the "aria-describedby" attribute and it's associated value "longdesc4".
+	<section>
+		<figure>
+			<img src="dummy.png" alt="Alt text" aria-describedby="longdesc4">
+			<figcaption>This is a caption for image 4</figcaption>
+		</figure>
+	</section>
+	<h3>
+		Some general content
+	</h3>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut. 
+	</p>
+	<p>
+		Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+	</p>
+	<p>
+		Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+	</p>
+	<section id="longdesc4">
+		<h3>
+			Image Description for image 4
+		</h3>
+		<p>
+			Lorem ipsum dolor sit amet consect etuer adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+		</p>
+	</section>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;figure&gt;</span>
+	<span class="e">&lt;img</span> <span class="att">src</span>=<span class="val">"dummy.png"</span> <span class="att">alt</span>=<span class="val">"Alt text"</span> <span class="att">aria-describedby</span>=<span class="val">"longdesc4"</span><span class="e">&gt;</span>
+	<span class="e">&lt;figcaption&gt;</span>This is a caption for image 4<span class="e">&lt;/figcaption&gt;</span>
+<span class="e">&lt;/figure&gt;</span>
+...
+<span class="e">&lt;section</span> <span class="att">id</span>=<span class="val">"longdesc4"</span><span class="e">&gt;</span>
+	<span class="e">&lt;h3&gt;</span>
+		Image Description for Image 1
+	<span class="e">&lt;/h3&gt;</span>
+	<span class="e">&lt;p&gt;</span>
+		Lorem ipsum dolor sit...
+	<span class="e">&lt;/p&gt;</span>
+<span class="e">&lt;/section&gt;</span></code></pre>
+<!-- code end -->
+	</figure>
+
+</div>
+
+</body>
+</html>

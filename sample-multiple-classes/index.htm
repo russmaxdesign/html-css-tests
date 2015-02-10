@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS: multiple classes</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	.one,.two { padding: .5em; }
+	.one { background-color: blue; }
+	.two { background-color: yellow; }
+	.one.two { background-color: green; }
+	.no { background-color: pink; }
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		CSS: multiple classes
+	</h1>
+
+	<p>
+		The following span should be blue. <span class="one">Test</span>
+	</p>
+	<p>
+		The following span should be yellow. <span class="two">Test</span>
+	</p>
+	<p>
+		The following span should be green. <span class="one two">Test</span>
+	</p>
+
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;span</span> <span class="att">class</span>=<span class="val">"one"</span><span class="e">&gt;</span>Test<span class="e">&lt;/span&gt;</span>
+<span class="e">&lt;span</span> <span class="att">class</span>=<span class="val">"two"</span><span class="e">&gt;</span>Test<span class="e">&lt;/span&gt;</span>
+<span class="e">&lt;span</span> <span class="att">class</span>=<span class="val">"one two"</span><span class="e">&gt;</span>Test<span class="e">&lt;/span&gt;</span></code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.one</span> { <span class="prop">background-color</span>: <span class="val">blue</span>; }
+<span class="sel">.two</span> { <span class="prop">background-color</span>: <span class="val">yellow</span>; }
+<span class="sel">.one.two</span> { <span class="prop">background-color</span>: <span class="val">green</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+	<div class="table-container">
+		<table>
+			<caption>Browser support chart</caption>
+			<tr>
+				<th>Mac: Safari 4.0</th>
+				<td>YES</td>
+			</tr>
+			<tr>
+				<th>Mac: Chrome 5.0</th>
+				<td>YES</td>
+			</tr>
+			<tr>
+				<th>Mac: FireFox 3.6</th>
+				<td>YES</td>
+			</tr>
+			<tr>
+				<th>Mac: Opera 10</th>
+				<td>YES</td>
+			</tr>
+			<tr>
+				<th>Win: FireFox 3.6</th>
+				<td>YES</td>
+			</tr>
+			<tr>
+				<th>Win: Opera 10</th>
+				<td>YES</td>
+			</tr>
+			<tr>
+				<th>Win: IE6</th>
+				<td class="no">NO</td>
+			</tr>
+			<tr>
+				<th>Win: IE7</th>
+				<td>YES</td>
+			</tr>
+			<tr>
+				<th>Win: IE8</th>
+				<td>YES</td>
+			</tr>
+		</table>
+	</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS: table box model</title>
+<style>
+	body
+	{
+		margin: 0;
+		padding: 0;
+		color: #000;
+		background: #eee;
+		font: 100%/1.5 helvetica, arial, sans-serif;
+	}
+	
+	h1,h2,h3,h4
+	{
+		clear: left;
+		line-height: 1.1;
+	}
+	
+	h1
+	{
+		margin: 0 0 .5em;
+		font-size: 200%;
+	}
+	
+	h2
+	{
+		margin: 2em 0 .3em;
+		font-size: 137.5%;
+	}
+	
+	p { margin: 1em 0 .3em; }
+	
+	.container
+	{
+		max-width: 50em;
+		padding: 2em;
+		background: #fff;
+	}
+	
+	table
+	{
+		margin: 0.3em 0 1em 0;
+		background: #ddd;
+	}
+	
+	td, th
+	{
+		border: 1px solid green;
+		padding: 0;
+		font-weight: normal;
+		text-align: left;
+	}
+	
+	/* set 1 */
+	.one { border: 1px solid red; }
+	.two { border: 20px solid red; }
+	.three { padding: 20px; }
+	
+	/* set 2 */
+	.four,.five,.six,.seven { border-collapse: collapse; }
+	.five { border: 1px solid red; }
+	.six { border: 20px solid red; }
+	.seven { padding: 0 20px; }
+	
+	/* set 3 */
+	.eight,.nine,.ten,.eleven { width: 400px; }
+	.nine { border: 1px solid red; }
+	.ten { border: 20px solid red; }
+	.eleven { padding: 20px; }
+	
+	/* set 4 */
+	.twelve,.thirteen,.fourteen,.fifteen
+	{
+		width: 400px;
+		border-collapse: collapse;
+	}
+	
+	.thirteen { border: 1px solid red; }
+	.fourteen { border: 20px solid red; }
+	.fifteen { padding: 20px; }
+	
+	/* set 5 */
+	.cell
+	{
+		width: 100px;
+		background: #aaa;
+	}
+	
+	.seventeen .cell { padding: 20px; }
+	.eighteen .cell { border: 20px solid red; }
+	
+	.nineteen .cell
+	{
+		padding: 20px;
+		border: 20px solid red;
+	}
+	
+	/* set 6 */
+	.twenty,.twentyone,.twentytwo,.twentythree { width: 100%; }
+	.twentyone { border: 1px solid red; }
+	.twentytwo { border: 20px solid red; }
+	.twentythree th,.twentythree td { padding: 20px; }
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		CSS: table box model
+	</h1>
+	<h2>
+		Set 1 - shrink-wrapped
+	</h2>
+	<p>
+		Shrink-wrapped 
+	</p>
+	<table class="zero">
+		<tr>
+			<th>TH 1</th>
+			<th>TH 2</th>
+		</tr>
+		<tr>
+			<td>TD 1</td>
+			<td>TD 2</td>
+		</tr>
+	</table>
+
+	<p>
+		Shrink-wrapped, border: 1px on table
+	</p>
+	<table class="one">
+		<tr>
+			<th>TH 1</th>
+			<th>TH 2</th>
+		</tr>
+		<tr>
+			<td>TD 1</td>
+			<td>TD 2</td>
+		</tr>
+	</table>
+
+	<p>
+		Shrink-wrapped, border: 20px on table
+	</p>
+	<table class="two">
+		<tr>
+			<th>TH 1</th>
+			<th>TH 2</th>
+		</tr>
+		<tr>
+			<td>TD 1</td>
+			<td>TD 2</td>
+		</tr>
+	</table>
+
+	<p>
+		Shrink-wrapped, padding: 20px on table
+	</p>
+	<table class="three">
+		<tr>
+			<th>TH 1</th>
+			<th>TH 2</th>
+		</tr>
+		<tr>
+			<td>TD 1</td>
+			<td>TD 2</td>
+		</tr>
+	</table>
+
+	<h2>
+		Set 2 - shrink-wrapped, border-collapse
+	</h2>
+	<p>
+		Shrink-wrapped, border-collapse
+	</p>
+	<table class="four">
+		<tr>
+			<th>TH 1</th>
+			<th>TH 2</th>
+		</tr>
+		<tr>
+			<td>TD 1</td>
+			<td>TD 2</td>
+		</tr>
+	</table>
+
+	<p>
+		Shrink-wrapped, border-collapse, border: 1px on table<br>
+		(border disappears under td border)
+	</p>
+	<table class="five">
+		<tr>
+			<th>TH 1</th>
+			<th>TH 2</th>
+		</tr>
+		<tr>
+			<td>TD 1</td>
+			<td>TD 2</td>
+		</tr>
+	</table>
+
+	<p>
+		Shrink-wrapped, border-collapse, border: 20px on table
+	</p>
+	<table class="six">
+		<tr>
+			<th>TH 1</th>
+			<th>TH 2</th>
+		</tr>
+		<tr>
+			<td>TD 1</td>
+			<td>TD 2</td>
+		</tr>
+	</table>
+
+	<p>
+		Shrink-wrapped, border-collapse, padding: 20px on table<br>
+		(padding does not work on table when "border-collapse: collapse" is set)
+	</p>
+	<table class="seven">
+		<tr>
+			<th>TH 1</th>
+			<th>TH 2</th>
+		</tr>
+		<tr>
+			<td>TD 1</td>
+			<td>TD 2</td>
+		</tr>
+	</table>
+
+	<h2>
+		Set 3 - width: 400px
+	</h2>
+	<p>
+		Width: 400px
+	</p>
+	<table class="eight">
+		<tr>
+			<th>TH 1</th>
+			<th>TH 2</th>
+		</tr>
+		<tr>
+			<td>TD 1</td>
+			<td>TD 2</td>
+		</tr>
+	</table>
+
+	<p>
+		Width: 400px, border: 1px
+	</p>
+	<table class="nine">
+		<tr>
+			<th>TH 1</th>
+			<th>TH 2</th>
+		</tr>
+		<tr>
+			<td>TD 1</td>
+			<td>TD 2</td>
+		</tr>
+	</table>
+
+	<p>
+		Width: 400px, border: 20px
+	</p>
+	<table class="ten">
+		<tr>
+			<th>TH 1</th>
+			<th>TH 2</th>
+		</tr>
+		<tr>
+			<td>TD 1</td>
+			<td>TD 2</td>
+		</tr>
+	</table>
+
+	<p>
+		Width: 400px, padding: 20px
+	</p>
+	<table class="eleven">
+		<tr>
+			<th>TH 1</th>
+			<th>TH 2</th>
+		</tr>
+		<tr>
+			<td>TD 1</td>
+			<td>TD 2</td>
+		</tr>
+	</table>
+
+	<h2>
+		Set 4 - width: 400px, border-collapse
+	</h2>
+	<p>
+		Width: 400px, border-collapse
+	</p>
+	<table class="twelve">
+		<tr>
+			<th>TH 1</th>
+			<th>TH 2</th>
+		</tr>
+		<tr>
+			<td>TD 1</td>
+			<td>TD 2</td>
+		</tr>
+	</table>
+
+	<p>
+		Width: 400px, border-collapse, border: 1px<br>
+		(border disappears under td border)
+	</p>
+	<table class="thirteen">
+		<tr>
+			<th>TH 1</th>
+			<th>TH 2</th>
+		</tr>
+		<tr>
+			<td>TD 1</td>
+			<td>TD 2</td>
+		</tr>
+	</table>
+
+	<p>
+		Width: 400px, border-collapse, border: 20px
+	</p>
+	<table class="fourteen">
+		<tr>
+			<th>TH 1</th>
+			<th>TH 2</th>
+		</tr>
+		<tr>
+			<td>TD 1</td>
+			<td>TD 2</td>
+		</tr>
+	</table>
+
+	<p>
+		Width: 400px, border-collapse, padding: 20px<br>
+		(padding does not work on table when "border-collapse: collapse" is set)
+	</p>
+	<table class="fifteen">
+		<tr>
+			<th>TH 1</th>
+			<th>TH 2</th>
+		</tr>
+		<tr>
+			<td>TD 1</td>
+			<td>TD 2</td>
+		</tr>
+	</table>
+
+
+	<h2>
+		Set 5 - cell width
+	</h2>
+	<p>
+		Cell set to 100px wide
+	</p>
+	<table class="sixteen">
+		<tr>
+			<th>TH 1</th>
+			<th>TH 2</th>
+		</tr>
+		<tr>
+			<td class="cell">TD 1</td>
+			<td>TD 2</td>
+		</tr>
+	</table>
+	<p>
+		Cell set to 100px wide with 20px padding
+	</p>
+	<table class="seventeen">
+		<tr>
+			<th>TH 1</th>
+			<th>TH 2</th>
+		</tr>
+		<tr>
+			<td class="cell">TD 1</td>
+			<td>TD 2</td>
+		</tr>
+	</table>
+	<p>
+		Cell set to 100px wide with 20px border
+	</p>
+	<table class="eighteen">
+		<tr>
+			<th>TH 1</th>
+			<th>TH 2</th>
+		</tr>
+		<tr>
+			<td class="cell">TD 1</td>
+			<td>TD 2</td>
+		</tr>
+	</table>
+	<p>
+		Cell set to 100px wide with 20px padding and 20px border
+	</p>
+	<table class="nineteen">
+		<tr>
+			<th>TH 1</th>
+			<th>TH 2</th>
+		</tr>
+		<tr>
+			<td class="cell">TD 1</td>
+			<td>TD 2</td>
+		</tr>
+	</table>
+	<h2>
+		Set 6
+	</h2>
+	<table class="twenty">
+		<tr>
+			<th>TH 1</th>
+			<th>TH 2</th>
+		</tr>
+		<tr>
+			<td>TD 1</td>
+			<td>TD 2</td>
+		</tr>
+	</table>
+	<table class="twentyone">
+		<tr>
+			<th>TH 1</th>
+			<th>TH 2</th>
+		</tr>
+		<tr>
+			<td>TD 1</td>
+			<td>TD 2</td>
+		</tr>
+	</table>
+	<table class="twentytwo">
+		<tr>
+			<th>TH 1</th>
+			<th>TH 2</th>
+		</tr>
+		<tr>
+			<td>TD 1</td>
+			<td>TD 2</td>
+		</tr>
+	</table>
+	<table class="twentythree">
+		<tr>
+			<th>TH 1</th>
+			<th>TH 2</th>
+		</tr>
+		<tr>
+			<td>TD 1</td>
+			<td>TD 2</td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>

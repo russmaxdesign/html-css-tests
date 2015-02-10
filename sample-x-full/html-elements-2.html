@@ -1,0 +1,1728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>HTML Element Index</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	.container { max-width: 100em; }
+	.no { }
+	.removed { background-color: pink; }
+	.yes { background-color: lime; }
+	.html3 { background-color: limegreen; }
+	.html4 { background-color: limegreen; }
+	.html5 { background-color: limegreen; }
+	.xhtml11 { background-color: limegreen; }
+	.xhtml2 { background-color: limegreen; }
+</style>
+<script type="text/javascript" src="jquery-1.10.2.min.js"></script> 
+<script type="text/javascript" src="jquery.tablesorter.js"></script> 
+<script type="text/javascript" language="javascript">
+$(document).ready(function() 
+    { 
+        $("#myTable").tablesorter(); 
+    } 
+); 
+</script> 
+</head>
+<body>
+
+<!-- 
+no
+-no removed
+yes
+yes new
+
+-->
+<div class="container">
+	<table id="myTable" class="tablesorter">
+		<thead>
+			<tr>
+				<th scope="col" style="width: 15%;">Element</th>
+				<th scope="col" style="width: 10%;"><a href="http://www.w3.org/TR/REC-html32">HTML 3.2</a></th>
+				<th scope="col" style="width: 10%;"><a href="http://www.w3.org/TR/html401/">HTML 4.01</a></th>
+				<th scope="col" style="width: 10%;"><a href="http://www.w3.org/TR/xhtml1/">XHTML 1.0 (Strict)</a></th>
+				<th scope="col" style="width: 10%;"><a href="http://www.w3.org/TR/xhtml11/"><em>XHTML 1.1</em></a></th>
+				<th scope="col" style="width: 10%;"><a href="http://whatwg.org/html"><em>HTML 5</em></a></th>
+				<th scope="col" style="width: 10%;"><a href="http://www.w3.org/TR/xhtml2/"><em>XHTML 2.0</em></a></th>
+				<th scope="col" style="width: 25%;">Meaning</th>
+			</tr>
+		</thead>
+		<tfoot> 
+		<tr>
+			<th scope="col">Element</th>
+			<th scope="col">HTML 3.2</th>
+			<th scope="col">HTML 4.01</th>
+			<th scope="col">XHTML 1.0 (Strict)</th>
+			<th scope="col"><em>XHTML 1.1</em></th>
+			<th scope="col"><em>HTML 5</em></th>
+			<th scope="col"><em>XHTML 2.0</em></th>
+			<th scope="col">Meaning</th>
+		</tr>
+		</tfoot> 
+		<tbody>
+			<tr id="toc-a" class="match">
+				<th scope="row"><code>a</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Anchor.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>abbr</code></th>
+				<td class="no">NO</td>
+				<td class="yes html4">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Abbreviation.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>access</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Accessibility mapping.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>acronym</code></th>
+				<td class="no">NO</td>
+				<td class="yes html4">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="no removed">-NO (removed)</td>
+				<td class="no">NO</td>
+				<td>Acronym.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>action</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Action.</td>
+			</tr>
+			<tr>
+				<th scope="row"><a href="http://www.w3.org/TR/xhtml2/mod-handler.html#edef_handler_addEventListener"><code>addEventListener</code></a></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Event-related.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>address</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Author information.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>applet</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="no removed">-NO (removed)</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td>Java applet.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>area</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="no">NO</td>
+				<td>Client-side image map.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>article</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>“Independent” section.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>aside</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>“Auxiliary” section.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>audio</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>Audio stream.</td>
+			</tr>
+			<tr id="toc-b">
+				<th scope="row"><code>b</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="no">NO</td>
+				<td>Bold text style.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>base</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="no">NO</td>
+				<td>Document base <abbr title="Uniform Resource Identifier">URI</abbr>.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>basefont</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="no removed">-NO (removed)</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td>Base font size.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>bdi</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td><abbr title="Internationalization">I18N</abbr>: <abbr title="Bi-directionality">Bidi</abbr> isolation.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>bdo</code></th>
+				<td class="no">NO</td>
+				<td class="yes html4">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="no">NO</td>
+				<td>I18N: Bidi override.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>big</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="no removed">-NO (removed)</td>
+				<td class="no">NO</td>
+				<td>Large text style.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>blockcode</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Code block.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>blockquote</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Long quotation.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>body</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Document body.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>br</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Forced line break.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>button</code></th>
+				<td class="no">NO</td>
+				<td class="yes html4">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="no">NO</td>
+				<td>Push button.</td>
+			</tr>
+			<tr id="toc-c">
+				<th scope="row"><code>canvas</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>Bitmap canvas.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>caption</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>(Table) caption.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>center</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="no removed">-NO (removed)</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td><code>&lt;div align="center"&gt;</code>.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>cite</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Citation.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>code</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Code fragment.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>col</code></th>
+				<td class="no">NO</td>
+				<td class="yes html4">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Table column.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>colgroup</code></th>
+				<td class="no">NO</td>
+				<td class="yes html4">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Table column group.</td>
+			</tr>
+			<tr id="toc-d">
+				<th scope="row"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-data-element"><code>data</code></a></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>Data with machine-readable equivalent.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>datalist</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>Data list.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>dd</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Definition description.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>del</code></th>
+				<td class="no">NO</td>
+				<td class="yes html4">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Deleted text.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>delete</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Delete.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>details</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>Additional information.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>dfn</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Instance definition.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>di</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Definition item.</td>
+			</tr>
+			<tr>
+				<th scope="row"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#the-dialog-element"><code>dialog</code></a></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>User interaction.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>dir</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="no removed">-NO (removed)</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td>Directory list.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>dispatch</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Dispatch.</td>
+			</tr>
+			<tr>
+				<th scope="row"><a href="http://www.w3.org/TR/xhtml2/mod-handler.html#edef_handler_dispatchEvent"><code>dispatchEvent</code></a></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Dispatch event.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>div</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Generic container.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>dl</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Definition list.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>dt</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Definition term.</td>
+			</tr>
+			<tr id="toc-e" class="match">
+				<th scope="row"><code>em</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Emphasis.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>embed</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>Integration point.</td>
+			</tr>
+			<tr id="toc-f">
+				<th scope="row"><code>fieldset</code></th>
+				<td class="no">NO</td>
+				<td class="yes html4">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="no">NO</td>
+				<td>Form control group.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>figcaption</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>Legend.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>figure</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>Paragraph with embedded content and caption.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>font</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="no removed">-NO (removed)</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td>Local change to font.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>footer</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>Section footer.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>form</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="no">NO</td>
+				<td>Interactive form.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>frame</code></th>
+				<td class="no">NO</td>
+				<td class="yes html4">YES (new)</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td>Subwindow.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>frameset</code></th>
+				<td class="no">NO</td>
+				<td class="yes html4">YES (new)</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td>Window subdivision.</td>
+			</tr>
+			<tr id="toc-g">
+				<th scope="row"><code>group</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Element group.</td>
+			</tr>
+			<tr id="toc-h">
+				<th scope="row"><code>h</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Heading.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>h1</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Heading.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>h2</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Heading.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>h3</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Heading.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>h4</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Heading.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>h5</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Heading.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>h6</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Heading.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>head</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Document head.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>header</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>Section header.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>hgroup</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>Section heading.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>hr</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="no">NO</td>
+				<td>Horizontal rule.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>html</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Document root.</td>
+			</tr>
+			<tr id="toc-i">
+				<th scope="row"><code>i</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="no">NO</td>
+				<td>Italic text style.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>iframe</code></th>
+				<td class="no">NO</td>
+				<td class="yes html4">YES (new)</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes">YES</td>
+				<td class="no">NO</td>
+				<td>Inline subwindow.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>img</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Embedded image.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>input</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Form control.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>ins</code></th>
+				<td class="no">NO</td>
+				<td class="yes html4">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Inserted text.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>insert</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Insert.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>isindex</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="no removed">-NO (removed)</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td>Single line prompt.</td>
+			</tr>
+			<tr id="toc-k" class="match">
+				<th scope="row"><code>kbd</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Text to be entered.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>keygen</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>Key generator.</td>
+			</tr>
+			<tr id="toc-l">
+				<th scope="row"><code>l</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Line of text.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>label</code></th>
+				<td class="no">NO</td>
+				<td class="yes html4">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="no">NO</td>
+				<td>Form field label.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>legend</code></th>
+				<td class="no">NO</td>
+				<td class="yes html4">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="no">NO</td>
+				<td>Fieldset legend.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>li</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>List item.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>link</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Media-independent link.</td>
+			</tr>
+			<tr>
+				<th scope="row"><a href="http://www.w3.org/TR/xhtml2/mod-xml-events.html#edef_xml-events_listener"><code>listener</code></a></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Event-related.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>load</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Load.</td>
+			</tr>
+			<tr id="toc-m">
+				<th scope="row"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-main-element"><code>main</code></a></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>Dominant contents container.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>map</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="no">NO</td>
+				<td>Client-side image map.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>mark</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>Marked text.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>menu</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes">YES</td>
+				<td class="no">NO</td>
+				<td>Menu list.</td>
+			</tr>
+			<tr>
+				<th scope="row"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#the-menuitem-element"><code>menuitem</code></a></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>User-invokable command.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>message</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Message.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>meta</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Generic meta-information.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>meter</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>Scalar measurement.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>model</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Model.</td>
+			</tr>
+			<tr id="toc-n">
+				<th scope="row"><code>nav</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>Navigation links section.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>noframes</code></th>
+				<td class="no">NO</td>
+				<td class="yes html4">YES (new)</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td>Alternate container.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>noscript</code></th>
+				<td class="no">NO</td>
+				<td class="yes html4">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="no">NO</td>
+				<td>Alternate container.</td>
+			</tr>
+			<tr id="toc-o">
+				<th scope="row"><code>object</code></th>
+				<td class="no">NO</td>
+				<td class="yes html4">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Generic embedded object.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>ol</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Ordered list.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>optgroup</code></th>
+				<td class="no">NO</td>
+				<td class="yes html4">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="no">NO</td>
+				<td>Option group.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>option</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="no">NO</td>
+				<td>Selectable choice.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>output</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="yes">YES</td>
+				<td>Output.</td>
+			</tr>
+			<tr id="toc-p" class="match">
+				<th scope="row"><code>p</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Paragraph.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>param</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Named property value.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>pre</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Preformatted text.</td>
+			</tr>
+			<tr>
+				<th scope="row"><a href="http://www.w3.org/TR/xhtml2/mod-handler.html#edef_handler_preventDefault"><code>preventDefault</code></a></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Event-related.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>progress</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>Progress of a task.</td>
+			</tr>
+			<tr id="toc-q">
+				<th scope="row"><code>q</code></th>
+				<td class="no">NO</td>
+				<td class="yes html4">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Short inline quotation.</td>
+			</tr>
+			<tr id="toc-r">
+				<th scope="row"><code>range</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Range definition.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>rb</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td><a href="http://www.w3.org/TR/ruby/">Ruby</a> base.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>rbc</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Ruby base container.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>rebuild</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Rebuild.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>recalculate</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Recalculate.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>refresh</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Refresh.</td>
+			</tr>
+			<tr>
+				<th scope="row"><a href="http://www.w3.org/TR/xhtml2/mod-handler.html#edef_handler_removeEventListener"><code>removeEventListener</code></a></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Event-related.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>repeat</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Repeat.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>reset</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Reset.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>revalidate</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Revalidate.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>rp</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml11">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Ruby parentheses.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>rt</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml11">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Ruby text.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>rtc</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Ruby text container.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>ruby</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml11">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Ruby markup.</td>
+			</tr>
+			<tr id="toc-s">
+				<th scope="row"><code>s</code></th>
+				<td class="no">NO</td>
+				<td class="yes html4">YES (new)</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes">YES</td>
+				<td class="no">NO</td>
+				<td>Strike-through text style.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>samp</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Sample output.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>script</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Script statements.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>secret</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Secret input.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>section</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="yes">YES</td>
+				<td>Document section.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>select</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Option selector.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>select1</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Single select.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>send</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Send.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>separator</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Break.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>setfocus</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Set focus.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>setindex</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Set index.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>setvalue</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Set value.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>small</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="no">NO</td>
+				<td>Small text style (HTML 5: small print).</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>source</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>Media resource.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>span</code></th>
+				<td class="no">NO</td>
+				<td class="yes html4">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Generic container.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>standby</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Message (while loading).</td>
+			</tr>
+			<tr>
+				<th scope="row"><a href="http://www.w3.org/TR/xhtml2/mod-handler.html#edef_handler_stopPropagation"><code>stopPropagation</code></a></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Event-related.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>strike</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="no removed">-NO (removed)</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td>Strike-through text.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>strong</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Strong emphasis (HTML 5: importance).</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>style</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Style info.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>sub</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Subscript.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>submit</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Submit.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>summary</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="yes">YES</td>
+				<td>Table summary.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>sup</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Superscript.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>switch</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Selection.</td>
+			</tr>
+			<tr id="toc-t" class="match">
+				<th scope="row"><code>table</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Table.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>tbody</code></th>
+				<td class="no">NO</td>
+				<td class="yes html4">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Table body.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>td</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Table data cell.</td>
+			</tr>
+			<tr>
+				<th scope="row"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#the-template-element"><code>template</code></a></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>HTML fragment declaration.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>textarea</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Multi-line text field.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>tfoot</code></th>
+				<td class="no">NO</td>
+				<td class="yes html4">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Table footer.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>th</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Table header cell.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>thead</code></th>
+				<td class="no">NO</td>
+				<td class="yes html4">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Table header.</td>
+			</tr>
+			<tr>
+				<th scope="row"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-time-element"><code>time</code></a></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>Date and/or time.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>title</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Document title.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>tr</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Table row.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>track</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>Timed track.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>trigger</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>Trigger.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>tt</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="no removed">-NO (removed)</td>
+				<td class="no">NO</td>
+				<td>Teletype text style.</td>
+			</tr>
+			<tr id="toc-u">
+				<th scope="row"><code>u</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes">YES</td>
+				<td class="no">NO</td>
+				<td>Underlined text style.</td>
+			</tr>
+			<tr class="match">
+				<th scope="row"><code>ul</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Unordered list.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>upload</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes xhtml2">YES (new)</td>
+				<td>File upload.</td>
+			</tr>
+			<tr id="toc-v" class="match">
+				<th scope="row"><code>var</code></th>
+				<td class="yes html3">YES (new)</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td class="yes">YES</td>
+				<td>Variable instance.</td>
+			</tr>
+			<tr>
+				<th scope="row"><code>video</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>Video or movie.</td>
+			</tr>
+			<tr id="toc-w">
+				<th scope="row"><code>wbr</code></th>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="no">NO</td>
+				<td class="yes html5">YES (new)</td>
+				<td class="no">NO</td>
+				<td>Line break opportunity.</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</body>
+</html>

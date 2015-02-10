@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS: styling the select element</title>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	div { margin: 0 0 1em; }
+	
+	label
+	{
+		display: block;
+		margin: 1em 0 .3em;
+		font-weight: bold;
+	}
+	
+	.select1
+	{
+		width: 200px;
+		border: 1px solid red;
+	}
+	
+	.select2
+	{
+		height: 40px;
+		border: 1px solid red;
+	}
+	
+	.select3
+	{
+		padding: 10px;
+		border: 1px solid red;
+	}
+	
+	.select5
+	{
+		background-color: lime;
+		border: 1px solid red;
+	}
+	
+	.select6
+	{
+		border-radius: 5px;
+		border: 1px solid red;
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		CSS: styling the select element
+	</h1>
+	<form method="post">
+		<div>
+			<label for="select1">select1 - width</label>
+			<select class="select1" id="select1" name="select1">
+				<option value="" selected>option 1</option>
+				<option value="">option 2</option>
+			</select>
+		</div>
+		<figure>
+			<figcaption class="code-heading">CSS code</figcaption>
+	<!-- code start -->
+<pre><code><span class="sel">.select1</span>
+{
+	<span class="prop">width</span>: <span class="val">200px</span>;
+	<span class="prop">border</span>: <span class="val">1px solid red</span>;
+}</code></pre>
+	<!-- code end -->
+		</figure>
+
+		<div>
+			<label for="select2">select2 - height + border</label>
+			<select class="select2" id="select2" name="select2">
+				<option value="" selected>option 1</option>
+				<option value="">option 2</option>
+			</select>
+		</div>
+		<figure>
+			<figcaption class="code-heading">CSS code</figcaption>
+	<!-- code start -->
+<pre><code><span class="sel">.select2</span>
+{
+	<span class="prop">height</span>: <span class="val">40px</span>;
+	<span class="prop">border</span>: <span class="val">1px solid red</span>;
+}</code></pre>
+	<!-- code end -->
+		</figure>
+
+		<div>
+			<label for="select3">select3 - padding</label>
+			<select class="select3" id="select3" name="select3">
+				<option value="" selected>option 1</option>
+				<option value="">option 2</option>
+			</select>
+		</div>
+		<figure>
+			<figcaption class="code-heading">CSS code</figcaption>
+	<!-- code start -->
+<pre><code><span class="sel">.select3</span>
+{
+	<span class="prop">padding</span>: <span class="val">10px</span>;
+	<span class="prop">border</span>: <span class="val">1px solid red</span>;
+}</code></pre>
+	<!-- code end -->
+		</figure>
+
+		<div>
+			<label for="select5">select5 - background</label>
+			<select class="select5" id="select5" name="select5">
+				<option value="" selected>option 1</option>
+				<option value="">option 2</option>
+			</select>
+		</div>
+		<figure>
+			<figcaption class="code-heading">CSS code</figcaption>
+	<!-- code start -->
+<pre><code><span class="sel">.select5</span>
+{
+	<span class="prop">background-color</span>: <span class="val">lime</span>;
+	<span class="prop">border</span>: <span class="val">1px solid red</span>;
+}</code></pre>
+	<!-- code end -->
+		</figure>
+
+		<div>
+			<label for="select6">select6 - border-radius</label>
+			<select class="select6" id="select6" name="select6">
+				<option value="" selected>option 1</option>
+				<option value="">option 2</option>
+			</select>
+		</div>
+		<figure>
+			<figcaption class="code-heading">CSS code</figcaption>
+	<!-- code start -->
+<pre><code><span class="sel">.select6</span>
+{
+	<span class="prop">border-radius</span>: <span class="val">5px</span>;
+	<span class="prop">border</span>: <span class="val">1px solid red</span>;
+}</code></pre>
+	<!-- code end -->
+		</figure>
+
+	</form>
+</div>
+</body>
+</html>

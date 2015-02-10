@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Formatting CSS rules</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	h3 { margin: 0 0 .3em; }
+	
+	ul
+	{
+		margin: 0 0 1em;
+		padding: 0;
+		list-style: none;
+	}
+	
+	.ignore { color: pink; }
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		Formatting CSS rules
+	</h1>
+	<h2>
+		Formatting single line CSS rules
+	</h2>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="comm">/* single line CSS rule */</span>
+<span class="sel">.three</span> { <span class="prop">width</span>: <span class="val">200px</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		Formatting multiple line CSS rules
+	</h2>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="comm">/* multiple line CSS rule - option 1 */</span>
+<span class="sel">.three</span>
+{
+	<span class="prop">width</span>: <span class="val">200px</span>;
+	<span class="prop">padding</span>: <span class="val">20px</span>;
+}
+
+<span class="comm">/* multiple line CSS rule - option 2 */</span>
+<span class="sel">.three</span> {
+	<span class="prop">width</span>: <span class="val">200px</span>;
+	<span class="prop">padding</span>: <span class="val">20px</span>;
+}
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		Formatting @media rules
+	</h2>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="med">@media (min-width:30em) and (max-width:50em)</span>
+{
+	<span class="sel">.three</span>
+	{
+		<span class="prop">width</span>: <span class="val">200px</span>;
+		<span class="prop">padding</span>: <span class="val">20px</span>;
+	}
+}
+</code></pre>
+<!-- code end -->
+	</figure>
+</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS property: text-indent</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	p { background-color: pink; }
+	.one { text-indent: -20px; }
+	
+	.two
+	{
+		display: inline-block;
+		text-indent: -20px;
+	}
+
+	.three
+	{
+		text-indent: -20px;
+	}
+
+	.four
+	{
+		text-indent: 50px;
+	}
+	
+	.five { text-indent: -500em; }
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		CSS property: text-indent
+	</h1>
+	<h2>
+		Inline element - does not work
+	</h2>
+	<p>
+		<span class="one">Some text here</span>
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.one</span> { <span class="prop">text-indent</span>: <span class="val">-20px</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		Inline-block element - does not work
+	</h2>
+	<p>
+		<span class="one">Some text here</span>
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.two</span> { <span class="prop">text-indent</span>: <span class="val">-20px</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		Block level element - negative
+	</h2>
+	<p class="three">
+		Some text here
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.three</span> { <span class="prop">text-indent</span>: <span class="val">-20px</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+	<h2>
+		Block level element - positive
+	</h2>
+	<p class="four">
+		Some text here
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.four</span> { <span class="prop">text-indent</span>: <span class="val">50px</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		Off-left
+	</h2>
+	<p class="five">
+		Some text here
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.five</span> { <span class="prop">text-indent</span>: <span class="val">-500em</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+</div>
+</body>
+</html>

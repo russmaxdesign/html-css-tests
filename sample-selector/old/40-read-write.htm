@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>selector: read-write</title>
+<style media="screen">
+	body
+	{
+		width: 40em;
+		margin: 20px;
+		padding: 0;
+		font: 100% arial, helvetica, sas-serif;
+	}
+	
+	pre
+	{
+		margin: 1em 0;
+		padding: 1em;
+		background: #eee;
+	}
+	
+	textarea:read-write { border: 1px solid red; }
+</style>
+</head>
+<body>
+<h1>
+	Selector: read-write
+</h1>
+<form action="#">
+	<div>
+		<label for="one">Label 1</label>
+		<textarea id="one" name="one" rows="3" cols="20"></textarea>
+	</div>
+	<div>
+		<label for="two">Label 2 (readonly)</label>
+		<textarea id="two" readonly name="two" rows="3" cols="20"></textarea>
+	</div>
+</form>
+
+<pre><code>textarea:read-write { border: 1px solid red; }</code></pre>
+</body>
+</html>

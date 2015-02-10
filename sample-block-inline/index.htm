@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS: are they inline or inline-block?</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	.test
+	{
+		height: 60px;
+		width: 200px;
+		margin: 20px 10px;
+		padding: 10px;
+		border: 2px solid red;
+		background-color: pink;
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		CSS: are they inline or inline-block?
+	</h1>
+	<p>
+		Below are a series of elements defined as "inline". However some of them are actually "inline-block".
+	</p>
+	<p>
+		For an inline element:
+	</p>
+	<ul>
+		<li>Width does not apply</li>
+		<li>Height does not apply</li>
+		<li>Overflow does not apply</li>
+		<li>Margin is applied but only affects content to the left and right</li>
+		<li>Padding is applied but only affects content to the left and right</li>
+		<li>Border is applied but only affects content to the left and right</li>
+	</ul>
+	<p>
+		To test which elements are inline or inline block, the following CSS is applied to all elements:
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.test</span>
+{
+	<span class="prop">height</span>: <span class="val">60px</span>;
+	<span class="prop">width</span>: <span class="val">200px</span>;
+	<span class="prop">margin</span>: <span class="val">20px 10px</span>;
+	<span class="prop">padding</span>: <span class="val">10px</span>;
+	<span class="prop">border</span>: <span class="val">2px solid red</span>;
+	<span class="prop">background-color</span>: <span class="val">pink</span>;
+}</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		a
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna <a href="#" class="test">aliquam</a> erat volut. Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod.
+	</p>
+	<h2>
+		abbr
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna <abbr class="test" title="Hyper Text Markup Language">aliquam</abbr> erat volut. Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod.
+	</p>
+
+	<h2>
+		b
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna <b class="test">aliquam</b> erat volut. Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod.
+	</p>
+
+	<h2>
+		bdo
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna <bdo dir="ltr" class="test">aliquam</bdo> erat volut. Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod.
+	</p>
+
+	<h2>
+		button (inline-block)
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna <button class="test">aliquam</button> erat volut. Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod.
+	</p>
+
+	<h2>
+		cite
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna <cite class="test">aliquam</cite> erat volut. Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod.
+	</p>
+
+	<h2>
+		code
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna <code class="test">aliquam</code> erat volut. Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod.
+	</p>
+
+	<h2>
+		del
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna <del class="test">aliquam</del> erat volut. Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod.
+	</p>
+
+	<h2>
+		dfn
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna <dfn class="test">aliquam</dfn> erat volut. Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod.
+	</p>
+
+	<h2>
+		em
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna <em class="test">aliquam</em> erat volut. Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod.
+	</p>
+
+	<h2>
+		i
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna <i class="test">aliquam</i> erat volut. Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod.
+	</p>
+	
+	<h2>
+		img (inline-block)
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam <img class="test" src="external.gif" alt="Dummy image"> erat volut. Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod.
+	</p>
+
+	<h2>
+		input (inline-block)
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna <input class="test" name="a" id="a" type="text"> erat volut. Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod.
+	</p>
+
+	<h2>
+		ins
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna <ins class="test">aliquam</ins> erat volut. Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod.
+	</p>
+
+	<h2>
+		kbd
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna <kbd class="test">aliquam</kbd> erat volut. Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod.
+	</p>
+
+	<h2>
+		label
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna <label class="test">aliquam</label> erat volut. Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod.
+	</p>
+
+	<h2>
+		q
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna <q class="test">aliquam</q> erat volut. Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod.
+	</p>
+
+	<h2>
+		samp
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna <samp class="test">aliquam</samp> erat volut. Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod.
+	</p>
+
+	<h2>
+		select (inline-block)
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna <select class="test" id="select" name="select">
+	<option value="" selected>aa</option>
+	<option value="">bb</option>
+</select>
+		erat volut. Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod.
+	</p>
+	
+	<h2>
+		small
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna <small class="test">aliquam</small> erat volut. Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod.
+	</p>
+
+	<h2>
+		span
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna <span class="test">aliquam</span> erat volut. Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod.
+	</p>
+
+	<h2>
+		strong
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna <strong class="test">aliquam</strong> erat volut. Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod.
+	</p>
+
+	<h2>
+		sub
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna <sub class="test">aliquam</sub> erat volut. Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod.
+	</p>
+
+	<h2>
+		sup
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna <sup class="test">aliquam</sup> erat volut. Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod.
+	</p>
+
+	<h2>
+		textarea (inline-block)
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna <textarea class="test" id="c" name="c"></textarea> erat volut. Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod.
+	</p>
+
+	<h2>
+		var
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna <var class="test">aliquam</var> erat volut. Lorem ipsum dolor sit amet consect etuer scing elit sed diam nonummy nibh euismod.
+	</p>
+</div>
+
+
+</body>
+</html>

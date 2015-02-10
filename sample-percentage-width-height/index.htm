@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS: percentage width and height</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	.parent
+	{
+		background: yellow;
+		margin: 1em 0 2em;
+	}
+	
+	.child { background: pink; }
+	
+	/* example1 */
+	.parent1 { height: 200px; }
+	.child1 { height: 50%; }
+	
+	/* example2 */
+	.parent2 { /* no height defined */ }
+	.child1 { height: 50%; }
+	
+	/* example3 */
+	.parent3 { width: 600px; }
+	.child3 { width: 50%; }
+	
+	/* example4 */
+	.parent4 { width: 600px; }
+	
+	.child4
+	{
+		width: 50%;
+		padding-left: 10%;
+	}
+	
+	/* example5 */
+	.parent5 { /* no height or width defined */ }
+	.child5 { padding-bottom: 20%; }
+	
+	/* example6 */
+	.parent6 { height: 300px; }
+	.child6 { padding-bottom: 20%; }
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		CSS: percentage width and height
+	</h1>
+	<h2>
+		Example 1
+	</h2>
+	<p>
+		When the parent element has been given a height, a child element given a percentage height will take this height front the parent.
+	</p>
+	<div class="parent parent1">  
+		<div class="child child1">Child with pink background - inside the parent with yellow background</div>
+	</div>
+
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.parent1</span> { <span class="prop">height</span>: <span class="val">400px</span>; }
+<span class="sel">.child1</span> { <span class="prop">height</span>: <span class="val">50%</span>; }
+
+<span class="comm">/*
+	parent1 height = 200px
+	child1 height: 50% x 200px = 100px
+	total height of child1 should be 100px 
+*/</span></code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		Example 2
+	</h2>
+	<p>
+		When the parent element has been given no height, a child element given a percentage height will attempt take this height from the parent. However, as the parent has no height, the child's height will not be applied
+	</p>
+	<div class="parent parent2">  
+		<div class="child child2">Child with pink background - inside the parent with yellow background</div>
+	</div>
+
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.parent2</span> { <span class="comm">/* no height defined */</span> }
+<span class="sel">.child2</span> { <span class="prop">height</span>: <span class="val">50%</span>; }
+
+<span class="comm">/*
+	parent2 height = 0
+	child2 height: 50% x 0 = 0
+	total height of child2 should be 0
+	(or shrink-wrapped around an content inside)
+*/</span></code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		Example 3
+	</h2>
+	<p>
+		When the parent element has been given a width, a child element given a percentage width will take this width front the parent.
+	</p>
+	<div class="parent parent3">  
+		<div class="child child3">Child with pink background - inside the parent with yellow background</div>
+	</div>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.parent3</span> { <span class="prop">width</span>: <span class="val">600px</span>; }
+<span class="sel">.child3</span> { <span class="prop">width</span>: <span class="val">50%</span>; }
+
+<span class="comm">/*
+	parent3 width = 600px
+	child3 width: 50% x 600px = 300px
+	total width of child3 should be 300px
+*/</span></code></pre>
+<!-- code end -->
+	</figure>
+
+
+
+	<h2>
+		Example 4
+	</h2>
+	<p>
+		When the parent element has been given a width, and a child element has been given a percentage width and percentage padding-left, both the width and padding-left will be in relation to the parent's width.
+	</p>
+	<div class="parent parent4">  
+		<div class="child child4">Child with lime background - inside the parent with yellow background</div>
+	</div>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.parent4</span> { <span class="prop">width</span>: <span class="val">600px</span>; }
+
+<span class="sel">.child4</span> 
+{
+	<span class="prop">width</span>: <span class="val">50%</span>;
+	<span class="prop">padding-left</span>: <span class="val">10%</span>;
+}
+
+<span class="comm">/*
+	parent4 width = 600px
+	child4 width: 50% x 600px = 300px
+	child4 padding-left: 10% x 600px = 60px
+	total width of child4 should be 360px
+*/</span></code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		Example 5
+	</h2>
+	<p>
+		A child element given a percentage-based padding-bottom will take this measurement from it's width.
+	</p>
+	<div class="parent parent5">  
+		<div class="child child5">Child with lime background - inside the parent with yellow background</div>
+	</div>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.parent5</span> {	<span class="comm">/* no height or width defined */</span> }
+<span class="sel">.child5</span> { <span class="prop">padding-bottom</span>: <span class="val">20%</span>; }
+
+<span class="comm">/*
+	parent5 width = 600px
+	child5 width (undefined but will spread to width of parent) = 600px
+	parent5 height (undefined) = 0
+	child5 height (undefined) = 0 PLUS height of any content inside
+	child5 padding-bottom: 20% x 600px = 120px
+	total height of child5 should be height of any content inside PLUS 120px padding
+*/</span></code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		Example 6
+	</h2>
+	<p>
+		A child element given a percentage-based padding-bottom will take this measurement from it's width - even if the parent has been given a height.
+	</p>
+	<div class="parent parent6">  
+		<div class="child child6">Child with lime background - inside the parent with yellow background</div>
+	</div>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.parent6</span> {	<span class="prop">height</span>: <span class="val">300px</span>; }
+<span class="sel">.child6</span> { <span class="prop">padding-bottom</span>: <span class="val">20%</span>; }
+
+<span class="comm">/*
+	parent6 width = 600px
+	child6 width (undefined but will spread to width of parent) = 600px
+	parent6 height = 300px
+	child6 height (undefined) = 0 PLUS height of any content inside
+	child6 padding-bottom: 20% x 600px = 120px
+	total height of child5 should be height of any content inside PLUS 120px padding
+*/</span></code></pre>
+<!-- code end -->
+	</figure>
+
+</div>
+</body>
+</html>

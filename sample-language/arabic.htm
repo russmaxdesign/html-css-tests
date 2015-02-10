@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Defining a language for part of a page - Arabic</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	.language
+	{
+		padding: 1em;
+		background-color: pink;
+	}
+	
+	:lang(ar-eg) { color: red; }
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		Defining a language for part of a page - Arabic
+	</h1>
+	<p>
+		Below is a sample of some Arabic text in a non-arabic document:
+	</p>
+	<ul>
+		<li><strong>dir</strong> (attribute): specifies the base direction of directionally neutral text in an element's content and attribute values.</li>
+		<li><strong>ltr</strong> (value): Left-to-right text</li>
+		<li><strong>rtl</strong> (value: Right-to-left text</li>
+		<li><strong>lang</strong> (attribute): specifies the base language of an element's attribute values and text content. </li>
+		<li><strong>ar-eg</strong> (value): Arabic (Egypt)</li>
+	</ul>
+	<div class="language" dir="rtl" lang="ar-eg">
+		<p>
+			يَجِبُ عَلَى الإنْسَانِ أن يَكُونَ أمِيْنَاً وَصَادِقَاً مَعَ نَفْسِهِ وَمَعَ أَهْلِهِ وَجِيْرَانِهِ وَأَنْ يَبْذُلَ كُلَّ جُهْدٍ فِي إِعْلاءِ شَأْنِ الوَطَنِ وَأَنْ يَعْمَلَ عَلَى مَا يَجْلِبُ السَّعَادَةَ لِلنَّاسِ . ولَن يَتِمَّ لَهُ ذلِك إِلا بِأَنْ يُقَدِّمَ المَنْفَعَةَ العَامَّةَ عَلَى المَنْفَعَةِ الخَاصَّةِ وَهذَا مِثَالٌ لِلتَّضْحِيَةِ .
+		</p>
+		<p>
+			يَجِبُ مِن وَجَبَ (مِثَال ) , فِعْلٌ مُضَارِعٌ مَرْفُوعٌ بِضَمَّةٍ .
+		</p>
+		<p>
+			عَلَى الإِنْسَانِ عَلى حَرفُ جَرٍّ , ن  َمَجْرُورٌ بِكَسْرَة.
+		</p>
+		<p>
+			أَنْ حَرفُ نَصْب 
+		</p>
+		<p>
+			يَكُون  مِن كَانَ ( أَجْوَفٌ ) ويَدْخُلُ الجُمْلَةَ الإِسْمِيَّةَ وَيَنْصِبُ خَبَرَهَا
+		</p>
+	</div>
+
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">:lang(ar-eg)</span> { <span class="prop">color</span>: <span class="val">red</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;div</span> <span class="att">dir</span>=<span class="val">"rtl"</span> <span class="att">lang</span>=<span class="val">"ar-eg</span><span class="e">"&gt;</span>
+	<span class="e">&lt;p&gt;</span>
+		يَجِبُ عَلَى الإنْسَانِ أن يَكُونَ أمِيْنَاً وَصَادِقَاً مَعَ نَفْسِهِ وَمَعَ أَهْلِه
+	<span class="e">&lt;/p&gt;
+	&lt;p&gt;</span>
+		يَجِبُ مِن وَجَبَ (مِثَال ) , فِعْلٌ مُضَارِعٌ مَرْفُوعٌ بِضَمَّةٍ .
+	<span class="e">&lt;/p&gt;
+	&lt;p&gt;</span>
+		عَلَى الإِنْسَانِ عَلى حَرفُ جَرٍّ , ن  َمَجْرُورٌ بِكَسْرَة.
+	<span class="e">&lt;/p&gt;
+	&lt;p&gt;</span>
+		أَنْ حَرفُ نَصْب 
+	<span class="e">&lt;/p&gt;
+	&lt;p&gt;</span>
+		يَكُون  مِن كَانَ ( أَجْوَفٌ ) ويَدْخُلُ الجُمْلَةَ الإِسْمِيَّةَ وَيَنْصِبُ خَبَرَهَا
+	<span class="e">&lt;/p&gt;
+&lt;/div&gt;</span></code></pre>
+<!-- code end -->
+	</figure>
+
+</div>
+</body>
+</html>

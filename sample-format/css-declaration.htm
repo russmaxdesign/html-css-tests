@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS: declaration order</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	h3 { margin: 0 0 .3em; }
+	
+	ul
+	{
+		margin: 0 0 1em;
+		padding: 0;
+		list-style: none;
+	}
+	
+	.ignore { color: pink; }
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		CSS: declaration order
+	</h1>
+	<p>
+		Ideally, declarations should be written in a consistent order. Declaration order can be <a href="http://csscomb.com/online/">sorted automatically using CSS Comb</a>. The tool can be refined to sort in any preferred order. Below is a list of our preferred order (items displayed in faint pink are "rarely used" items): 
+	</p>
+
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code>
+<span class="comm">/* position */</span>
+<span class="prop">top:</span> <span class="val"> 20px</span> | <span class="val">2em</span> | <span class="val">80%</span> | <span class="val">unchanged </span>;
+<span class="prop">right:</span> <span class="val"> 20px</span> | <span class="val">2em</span> | <span class="val">80%</span> | <span class="val">unchanged </span>;
+<span class="prop">bottom:</span> <span class="val"> 20px</span> | <span class="val">2em</span> | <span class="val">80%</span> | <span class="val">unchanged </span>;
+<span class="prop">left:</span> <span class="val"> 20px</span> | <span class="val">2em</span> | <span class="val">80%</span> | <span class="val">unchanged </span>;
+<span class="prop">z-index:</span> <span class="val"> 1</span> | <span class="val">0</span> | <span class="val">-2</span> | <span class="val">auto </span>;
+
+<span class="comm">/* display/visibility */</span>
+<span class="prop">display:</span> <span class="val"> none</span> | <span class="val">inline</span> | <span class="val">block</span> | <span class="val">inline-block</span> | <span class="val">list-item</span> | <span class="val">run-in</span> | <span class="val">compact</span> | <span class="val">marker </span>;
+<span class="prop">visibility:</span> <span class="val"> visible</span> | <span class="val">hidden</span> | <span class="val">collapse</span> | <span class="val">unchanged </span>;
+
+<span class="comm">/* flex */</span>
+<span class="prop">-webkit-flex-direction:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-flex-direction:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-flex-direction:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-flex-direction:</span> <span class="val">XXX</span>; 
+<span class="prop">flex-direction:</span> <span class="val">XXX</span>;
+<span class="prop">-webkit-flex-order:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-flex-order:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-flex-order:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-flex-order:</span> <span class="val">XXX</span>; 
+<span class="prop">flex-order:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-flex-pack:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-flex-pack:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-flex-pack:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-flex-pack:</span> <span class="val">XXX</span>; 
+<span class="prop">flex-pack:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-flex-align:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-flex-align:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-flex-align:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-flex-align:</span> <span class="val">XXX</span>; 
+<span class="prop">flex-align:</span> <span class="val">XXX</span>; 
+
+<span class="comm">/* columns */</span>
+<span class="prop">-webkit-columns:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-columns:</span> <span class="val">XXX</span>; 
+<span class="prop">columns:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-column-span:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-column-span:</span> <span class="val">XXX</span>; 
+<span class="prop">column-span:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-column-width:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-column-width:</span> <span class="val">XXX</span>; 
+<span class="prop">column-width:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-column-count:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-column-count:</span> <span class="val">XXX</span>; 
+<span class="prop">column-count:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-column-fill:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-column-fill:</span> <span class="val">XXX</span>; 
+<span class="prop">column-fill:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-column-gap:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-column-gap:</span> <span class="val">XXX</span>; 
+<span class="prop">column-gap:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-column-rule:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-column-rule:</span> <span class="val">XXX</span>; 
+<span class="prop">column-rule:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-column-rule-width:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-column-rule-width:</span> <span class="val">XXX</span>; 
+<span class="prop">column-rule-width:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-column-rule-style:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-column-rule-style:</span> <span class="val">XXX</span>; 
+<span class="prop">column-rule-style:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-column-rule-color:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-column-rule-color:</span> <span class="val">XXX</span>; 
+<span class="prop">column-rule-color:</span> <span class="val">XXX</span>; 
+
+<span class="comm">/* float */</span>
+<span class="prop">float:</span> <span class="val">XXX</span>; left</span> | <span class="val">right</span> | <span class="val">none ;
+<span class="prop">clear:</span> <span class="val">XXX</span>; left</span> | <span class="val">right</span> | <span class="val">both</span> | <span class="val">none;
+<span class="prop">overflow:</span> <span class="val">XXX</span>; visible</span> | <span class="val">hidden</span> | <span class="val">scroll</span> | <span class="val">auto</span> | <span class="val">unchanged ;
+<span class="prop">-ms-overflow-x:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-overflow-y:</span> <span class="val">XXX</span>; 
+<span class="prop">overflow-x:</span> <span class="val"> visible</span> | <span class="val">hidden</span> | <span class="val">scroll</span> | <span class="val">auto</span> | <span class="val">unchanged </span>;
+<span class="prop">overflow-y:</span> <span class="val"> visible</span> | <span class="val">hidden</span> | <span class="val">scroll</span> | <span class="val">auto</span> | <span class="val">unchanged </span>;
+<span class="prop">clip:</span> <span class="val">XXX</span>; 
+
+<span class="comm">/* box-sizing */</span>
+<span class="prop">-webkit-box-sizing:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-box-sizing:</span> <span class="val">XXX</span>; 
+<span class="prop">box-sizing:</span> <span class="val">XXX</span>; 
+
+<span class="comm">/* width, height */</span>
+<span class="prop">min-width:</span> <span class="val">XXX</span>; 
+<span class="prop">min-height:</span> <span class="val">XXX</span>; 
+<span class="prop">max-width:</span> <span class="val">XXX</span>; 
+<span class="prop">max-height:</span> <span class="val">XXX</span>; 
+<span class="prop">width:</span> <span class="val">XXX</span>; 
+<span class="prop">height:</span> <span class="val">XXX</span>; 
+
+<span class="comm">/* margin */</span>
+<span class="prop">margin:</span> <span class="val">XXX</span>; 
+<span class="prop">margin-top:</span> <span class="val">XXX</span>; 
+<span class="prop">margin-right:</span> <span class="val">XXX</span>; 
+<span class="prop">margin-bottom:</span> <span class="val">XXX</span>; 
+<span class="prop">margin-left:</span> <span class="val">XXX</span>; 
+
+<span class="comm">/* padding */</span>
+<span class="prop">padding:</span> <span class="val">XXX</span>; 
+<span class="prop">padding-top:</span> <span class="val">XXX</span>; 
+<span class="prop">padding-right:</span> <span class="val">XXX</span>; 
+<span class="prop">padding-bottom:</span> <span class="val">XXX</span>; 
+<span class="prop">padding-left:</span> <span class="val">XXX</span>; 
+
+<span class="comm">/* outline */</span>
+<span class="prop">outline:</span> <span class="val">XXX</span>; 
+<span class="prop">outline-width:</span> <span class="val">XXX</span>; 
+<span class="prop">outline-style:</span> <span class="val">XXX</span>; 
+<span class="prop">outline-color:</span> <span class="val">XXX</span>; 
+<span class="prop">outline-offset:</span> <span class="val">XXX</span>;
+
+<span class="comm">/* border */</span>
+<span class="prop">border:</span> <span class="val">XXX</span>; 
+<span class="prop">border-spacing:</span> <span class="val">XXX</span>; 
+<span class="prop">border-collapse:</span> <span class="val">XXX</span>; 
+<span class="prop">border-width:</span> <span class="val">XXX</span>; 
+<span class="prop">border-style:</span> <span class="val">XXX</span>; 
+<span class="prop">border-color:</span> <span class="val">XXX</span>; 
+<span class="prop">border-top:</span> <span class="val">XXX</span>; 
+<span class="prop">border-top-width:</span> <span class="val">XXX</span>; 
+<span class="prop">border-top-style:</span> <span class="val">XXX</span>; 
+<span class="prop">border-top-color:</span> <span class="val">XXX</span>; 
+<span class="prop">border-right:</span> <span class="val">XXX</span>; 
+<span class="prop">border-right-width:</span> <span class="val">XXX</span>; 
+<span class="prop">border-right-style:</span> <span class="val">XXX</span>; 
+<span class="prop">border-right-color:</span> <span class="val">XXX</span>; 
+<span class="prop">border-bottom:</span> <span class="val">XXX</span>; 
+<span class="prop">border-bottom-width:</span> <span class="val">XXX</span>; 
+<span class="prop">border-bottom-style:</span> <span class="val">XXX</span>; 
+<span class="prop">border-bottom-color:</span> <span class="val">XXX</span>; 
+<span class="prop">border-left:</span> <span class="val">XXX</span>; 
+<span class="prop">border-left-width:</span> <span class="val">XXX</span>; 
+<span class="prop">border-left-style:</span> <span class="val">XXX</span>; 
+<span class="prop">border-left-color:</span> <span class="val">XXX</span>; 
+
+<span class="comm">/* border-radius */</span>
+<span class="prop">-webkit-border-radius:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-border-radius:</span> <span class="val">XXX</span>; 
+<span class="prop">border-radius:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-border-top-left-radius:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-border-radius-topleft:</span> <span class="val">XXX</span>; 
+<span class="prop">border-top-left-radius:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-border-top-right-radius:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-border-radius-topright:</span> <span class="val">XXX</span>; 
+<span class="prop">border-top-right-radius:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-border-bottom-right-radius:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-border-radius-bottomright:</span> <span class="val">XXX</span>; 
+<span class="prop">border-bottom-right-radius:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-border-bottom-left-radius:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-border-radius-bottomleft:</span> <span class="val">XXX</span>; 
+<span class="prop">border-bottom-left-radius:</span> <span class="val">XXX</span>; 
+
+<span class="comm">/* border-image */</span>
+<span class="prop">-webkit-border-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-border-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-border-image:</span> <span class="val">XXX</span>; 
+<span class="prop">border-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-border-image-source:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-border-image-source:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-border-image-source:</span> <span class="val">XXX</span>; 
+<span class="prop">border-image-source:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-border-image-slice:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-border-image-slice:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-border-image-slice:</span> <span class="val">XXX</span>; 
+<span class="prop">border-image-slice:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-border-image-width:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-border-image-width:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-border-image-width:</span> <span class="val">XXX</span>; 
+<span class="prop">border-image-width:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-border-image-outset:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-border-image-outset:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-border-image-outset:</span> <span class="val">XXX</span>; 
+<span class="prop">border-image-outset:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-border-image-repeat:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-border-image-repeat:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-border-image-repeat:</span> <span class="val">XXX</span>; 
+<span class="prop">border-image-repeat:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-border-top-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-border-top-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-border-top-image:</span> <span class="val">XXX</span>; 
+<span class="prop">border-top-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-border-right-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-border-right-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-border-right-image:</span> <span class="val">XXX</span>; 
+<span class="prop">border-right-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-border-bottom-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-border-bottom-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-border-bottom-image:</span> <span class="val">XXX</span>; 
+<span class="prop">border-bottom-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-border-left-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-border-left-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-border-left-image:</span> <span class="val">XXX</span>; 
+<span class="prop">border-left-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-border-corner-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-border-corner-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-border-corner-image:</span> <span class="val">XXX</span>; 
+<span class="prop">border-corner-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-border-top-left-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-border-top-left-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-border-top-left-image:</span> <span class="val">XXX</span>; 
+<span class="prop">border-top-left-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-border-top-right-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-border-top-right-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-border-top-right-image:</span> <span class="val">XXX</span>; 
+<span class="prop">border-top-right-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-border-bottom-right-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-border-bottom-right-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-border-bottom-right-image:</span> <span class="val">XXX</span>; 
+<span class="prop">border-bottom-right-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-border-bottom-left-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-border-bottom-left-image:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-border-bottom-left-image:</span> <span class="val">XXX</span>; 
+<span class="prop">border-bottom-left-image:</span> <span class="val">XXX</span>; 
+
+<span class="comm">/* background */</span>
+
+<span class="prop">background:</span> <span class="val">XXX</span>; 
+<span class="prop">background-color:</span> <span class="val">XXX</span>; 
+<span class="prop">background-image:</span> <span class="val">XXX</span>; 
+<span class="prop">background-attachment:</span> <span class="val">XXX</span>; 
+<span class="prop">background-position:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-background-position-x:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-background-position-y:</span> <span class="val">XXX</span>; 
+<span class="prop">background-position-x:</span> <span class="val">XXX</span>; 
+<span class="prop">background-position-y:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-background-clip:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-background-clip:</span> <span class="val">XXX</span>; 
+<span class="prop">background-clip:</span> <span class="val">XXX</span>; 
+<span class="prop">background-origin:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-background-size:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-background-size:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-background-size:</span> <span class="val">XXX</span>; 
+<span class="prop">background-size:</span> <span class="val">XXX</span>; 
+<span class="prop">background-repeat:</span> <span class="val">XXX</span>; 
+
+<span class="comm">/* box-shadow */</span>
+
+<span class="prop">box-decoration-break:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-box-shadow:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-box-shadow:</span> <span class="val">XXX</span>; 
+<span class="prop">box-shadow:</span> <span class="val">XXX</span>; 
+
+<span class="comm">/* table */</span>
+
+<span class="prop">table-layout:</span> <span class="val">XXX</span>; 
+<span class="prop">caption-side:</span> <span class="val">XXX</span>; 
+<span class="prop">empty-cells:</span> <span class="val">XXX</span>; 
+
+<span class="comm">/* color */</span>
+
+<span class="prop">color:</span> <span class="val">XXX</span>; 
+<span class="prop">opacity:</span> <span class="val">XXX</span>; 
+
+<span class="comm">/* list */</span>
+
+<span class="prop">list-style:</span> <span class="val">XXX</span>; 
+<span class="prop">list-style-position:</span> <span class="val">XXX</span>; 
+<span class="prop">list-style-type:</span> <span class="val">XXX</span>; 
+<span class="prop">list-style-image:</span> <span class="val">XXX</span>; 
+
+<span class="comm">/* text */</span>
+
+<span class="prop">quotes:</span> <span class="val">XXX</span>; 
+<span class="prop">content:</span> <span class="val">XXX</span>; 
+<span class="prop">counter-increment:</span> <span class="val">XXX</span>; 
+<span class="prop">counter-reset:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-writing-mode:</span> <span class="val">XXX</span>; 
+<span class="prop">vertical-align:</span> <span class="val">XXX</span>; 
+<span class="prop">text-align:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-text-align-last:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-text-align-last:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-text-align-last:</span> <span class="val">XXX</span>; 
+<span class="prop">text-align-last:</span> <span class="val">XXX</span>; 
+<span class="prop">text-decoration:</span> <span class="val">XXX</span>; 
+<span class="prop">text-emphasis:</span> <span class="val">XXX</span>; 
+<span class="prop">text-emphasis-position:</span> <span class="val">XXX</span>; 
+<span class="prop">text-emphasis-style:</span> <span class="val">XXX</span>; 
+<span class="prop">text-emphasis-color:</span> <span class="val">XXX</span>; 
+<span class="prop">text-indent:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-text-justify:</span> <span class="val">XXX</span>; 
+<span class="prop">text-justify:</span> <span class="val">XXX</span>; 
+<span class="prop">text-outline:</span> <span class="val">XXX</span>; 
+<span class="prop">text-transform:</span> <span class="val">XXX</span>; 
+<span class="prop">text-wrap:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-text-overflow:</span> <span class="val">XXX</span>; 
+<span class="prop">text-overflow:</span> <span class="val">XXX</span>; 
+<span class="prop">text-overflow-ellipsis:</span> <span class="val">XXX</span>; 
+<span class="prop">text-overflow-mode:</span> <span class="val">XXX</span>; 
+<span class="prop">text-shadow:</span> <span class="val">XXX</span>; 
+<span class="prop">white-space:</span> <span class="val">XXX</span>; 
+<span class="prop">word-spacing:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-word-wrap:</span> <span class="val">XXX</span>; 
+<span class="prop">word-wrap:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-word-break:</span> <span class="val">XXX</span>; 
+<span class="prop">word-break:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-tab-size:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-tab-size:</span> <span class="val">XXX</span>; 
+<span class="prop">tab-size:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-hyphens:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-hyphens:</span> <span class="val">XXX</span>; 
+<span class="prop">hyphens:</span> <span class="val">XXX</span>; 
+<span class="prop">letter-spacing:</span> <span class="val">XXX</span>; 
+
+<span class="comm">/* font */</span>
+
+<span class="prop">font:</span> <span class="val">XXX</span>; 
+<span class="prop">font-weight:</span> <span class="val">XXX</span>; 
+<span class="prop">font-style:</span> <span class="val">XXX</span>; 
+<span class="prop">font-variant:</span> <span class="val">XXX</span>; 
+<span class="prop">font-size-adjust:</span> <span class="val">XXX</span>; 
+<span class="prop">font-stretch:</span> <span class="val">XXX</span>; 
+<span class="prop">font-size:</span> <span class="val">XXX</span>; 
+<span class="prop">font-family:</span> <span class="val">XXX</span>; 
+<span class="prop">src:</span> <span class="val">XXX</span>; 
+<span class="prop">line-height:</span> <span class="val">XXX</span>; 
+
+<span class="prop">-ms-interpolation-mode:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-filter:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-filter:</span> <span class="val">XXX</span>; 
+<span class="prop">filter:</span> <span class="val">XXX</span>; 
+<span class="prop">resize:</span> <span class="val">XXX</span>; 
+<span class="prop">cursor:</span> <span class="val">XXX</span>; 
+
+<span class="comm">/* nav */</span>
+<span class="prop">nav-index:</span> <span class="val">XXX</span>; 
+<span class="prop">nav-up:</span> <span class="val">XXX</span>; 
+<span class="prop">nav-right:</span> <span class="val">XXX</span>; 
+<span class="prop">nav-down:</span> <span class="val">XXX</span>; 
+<span class="prop">nav-left:</span> <span class="val">XXX</span>; 
+
+<span class="comm">/* transition */</span>
+<span class="prop">-webkit-transition:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-transition:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-transition:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-transition:</span> <span class="val">XXX</span>; 
+<span class="prop">transition:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-transition-delay:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-transition-delay:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-transition-delay:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-transition-delay:</span> <span class="val">XXX</span>; 
+<span class="prop">transition-delay:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-transition-timing-function:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-transition-timing-function:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-transition-timing-function:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-transition-timing-function:</span> <span class="val">XXX</span>; 
+<span class="prop">transition-timing-function:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-transition-duration:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-transition-duration:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-transition-duration:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-transition-duration:</span> <span class="val">XXX</span>; 
+<span class="prop">transition-duration:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-transition-property:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-transition-property:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-transition-property:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-transition-property:</span> <span class="val">XXX</span>; 
+<span class="prop">transition-property:</span> <span class="val">XXX</span>; 
+
+<span class="comm">/* transform */</span>
+<span class="prop">-webkit-transform:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-transform:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-transform:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-transform:</span> <span class="val">XXX</span>; 
+<span class="prop">transform:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-transform-origin:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-transform-origin:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-transform-origin:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-transform-origin:</span> <span class="val">XXX</span>; 
+<span class="prop">transform-origin:</span> <span class="val">XXX</span>; 
+
+<span class="comm">/* animation */</span>
+<span class="prop">-webkit-animation:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-animation:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-animation:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-animation:</span> <span class="val">XXX</span>; 
+<span class="prop">animation:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-animation-name:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-animation-name:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-animation-name:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-animation-name:</span> <span class="val">XXX</span>; 
+<span class="prop">animation-name:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-animation-duration:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-animation-duration:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-animation-duration:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-animation-duration:</span> <span class="val">XXX</span>; 
+<span class="prop">animation-duration:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-animation-play-state:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-animation-play-state:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-animation-play-state:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-animation-play-state:</span> <span class="val">XXX</span>; 
+<span class="prop">animation-play-state:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-animation-timing-function:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-animation-timing-function:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-animation-timing-function:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-animation-timing-function:</span> <span class="val">XXX</span>; 
+<span class="prop">animation-timing-function:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-animation-delay:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-animation-delay:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-animation-delay:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-animation-delay:</span> <span class="val">XXX</span>; 
+<span class="prop">animation-delay:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-animation-iteration-count:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-animation-iteration-count:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-animation-iteration-count:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-animation-iteration-count:</span> <span class="val">XXX</span>; 
+<span class="prop">animation-iteration-count:</span> <span class="val">XXX</span>; 
+<span class="prop">-webkit-animation-direction:</span> <span class="val">XXX</span>; 
+<span class="prop">-moz-animation-direction:</span> <span class="val">XXX</span>; 
+<span class="prop">-ms-animation-direction:</span> <span class="val">XXX</span>; 
+<span class="prop">-o-animation-direction:</span> <span class="val">XXX</span>; 
+<span class="prop">animation-direction:</span> <span class="val">XXX</span>; 
+
+<span class="comm">/* direction */</span>
+<span class="prop">pointer-events:</span> <span class="val">XXX</span>; 
+<span class="prop">unicode-bidi:</span> <span class="val">XXX</span>; 
+<span class="prop">direction:</span> <span class="val">XXX</span>; 
+
+<span class="comm">/* orphans and widows */</span>
+<span class="prop">break-before:</span> <span class="val">XXX</span>; 
+<span class="prop">break-inside:</span> <span class="val">XXX</span>; 
+<span class="prop">break-after:</span> <span class="val">XXX</span>; 
+<span class="prop">page-break-before:</span> <span class="val">XXX</span>; 
+<span class="prop">page-break-inside:</span> <span class="val">XXX</span>; 
+<span class="prop">page-break-after:</span> <span class="val">XXX</span>; 
+<span class="prop">orphans:</span> <span class="val">XXX</span>; 
+<span class="prop">widows:</span> <span class="val">XXX</span>; 
+
+<span class="comm">/* zoom */</span>
+<span class="prop">-ms-zoom:</span> <span class="val">XXX</span>; 
+<span class="prop">zoom:</span> <span class="val">XXX</span>; 
+<span class="prop">max-zoom:</span> <span class="val">XXX</span>; 
+<span class="prop">min-zoom:</span> <span class="val">XXX</span>; 
+<span class="prop">user-zoom:</span> <span class="val">XXX</span>; 
+<span class="prop">orientation:</span> <span class="val">XXX</span>; 
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+</div>
+</body>
+</html>

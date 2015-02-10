@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>selector: class</title>
+<style media="screen">
+	body
+	{
+		width: 30em;
+		margin: 20px;
+		padding: 0;
+		font: 120%/1.2 arial, helvetica, sas-serif;
+	}
+	
+	pre
+	{
+		margin: 1em 0;
+		padding: 1em;
+		background: #eee;
+		line-height: 1;
+	}
+	
+	.example1, .example2, .example3, .example4, .example5
+	{
+		margin: 1em 0;
+		padding: 1em;
+		border: 1px solid #999;
+	}
+	
+	.intro { color: red; }
+	.Intro { color: blue; }
+	p.main { color: red; }
+	.test1 { color: red; }
+	.test2 { color: blue; }
+	.test1.test2 { color: green; }
+	.class1.class2 { color: red; }
+</style> 
+</head>
+<body>
+<h1>
+	Selector: class 
+</h1>
+<h2>
+	Example 1 - case sensitive
+</h2>
+<p>
+	This example shows that class names are case sensitive:
+</p>
+<pre><code>.intro { color: red; }
+.Intro { color: blue; }</code></pre> 
+<div class="example1">
+	<p class="intro">
+		This is a paragraph with a class of "intro"
+	</p>
+	<p class="Intro">
+		This is a paragraph with a class of "Intro"
+	</p>
+</div>
+
+<h2>
+	Example 2 - refining class selectors using elements
+</h2>
+<p>
+	This example shows that elements can be added before class names to make them more specific:
+</p>
+<pre><code>p.intro { color: red; }</code></pre> 
+<div class="example1">
+	<p class="main">
+		This is a paragraph with a class of "intro"
+	</p>
+	<div class="main">
+		This is a div with a class of "intro"
+	</div>
+</div>
+
+<h2>
+	Example 3 - multiple class strings
+</h2>
+<p>
+	Classes and be added together to form subsets.
+</p>
+<pre><code>.test1 { color: red; }
+.test2 { color: blue; }
+.test1.test2 { color: green; }
+</code></pre> 
+<div class="example3">
+	<p class="test1">
+		This is a paragraph with a class of "test1"
+	</p>
+	<p class="test2">
+		This is a paragraph with a class of "test2"
+	</p>
+	<p class="test1 test2">
+		This is a paragraph with a class of "test1 test2"
+	</p>
+</div>
+
+<h2>
+	Example 4 - multiple class strings
+</h2>
+<p>
+	The order of class names is irrelevant:
+</p>
+<pre><code>.class2.class1 { color: red; }
+</code></pre> 
+<div class="example4">
+	<p class="class1 class2">
+		This is a paragraph with a class of "class1 class2"
+	</p>
+</div>
+
+<h2>
+	Example 5 - multiple class strings
+</h2>
+<p>
+	The order of HTML attributes is irrelevant:
+</p>
+<pre><code>.class1.class2 { color: red; }
+</code></pre> 
+<div class="example5">
+	<p class="class1 class2">
+		This is a paragraph with a class of "class1 class2"
+	</p>
+	<p class="class2 class1">
+		This is a paragraph with a class of "class2 class1"
+	</p>
+</div>
+
+</body>
+</html>

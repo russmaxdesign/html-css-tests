@@ -1,0 +1,10 @@
+.test
+{
+	background-color: pink;
+	padding: .5em;
+}
+
+@media only screen and (color)
+{
+	.test { background-color: green; }
+}

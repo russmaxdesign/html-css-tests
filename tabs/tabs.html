@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Tabs</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>All about Fruit</h1>
+			<p>In botany, a fruit is a part of a flowering plant that derives from specific tissues of the flower, one or more ovaries, and in some cases accessory tissues. Fruits are the means by which these plants disseminate <a href="http://en.wikipedia.org/wiki/Seed">seeds</a>.</p>
+			<ul>
+				<li><a href="http://www.deque.com/blog/building-accessible-tab-panel-aria/">Building an Accessible Tab Panel – an ARIA example</a></li>
+				<li><a href="http://juicystudio.com/article/aria-controls-lack-support.php">Simple tab control design pattern</a></li>
+			</ul>
+			<ul class="tablist" role="tablist">
+				<li role="presentation">
+					<a 
+						href="#panel1" 
+						role="tab" 
+						aria-controls="panel1" 
+						aria-selected="true" 
+						tabindex="0"
+						id="tab1">Apple</a>
+				</li>
+				<li role="presentation">
+					<a
+						href="#panel2" 
+						role="tab" 
+						aria-controls="panel2" 
+						aria-selected="false" 
+						tabindex="-1" 
+						id="tab2">Pears</a>
+				</li>
+				<li role="presentation">
+					<a 
+						href="#panel3" 
+						role="tab" 
+						aria-controls="panel3" 
+						aria-selected="false" 
+						tabindex="-1"
+						id="tab3">Oranges</a>
+				</li>
+			</ul>
+			<div
+				role="tabpanel" 
+				aria-hidden="false"
+				aria-expanded="true"
+				aria-labelledby="tab1" 
+				id="panel1" 
+				class="panel">
+					<h2>Apples</h2>
+					<p>The skin of ripe apples is generally red, yellow, green, pink, or russetted although many bi- or tri-colored varieties may be found. The skin may also be wholly or partly russeted i.e. rough and brown. The skin is covered in a protective layer of <a href="http://en.wikipedia.org/wiki/Epicuticular_wax">epicuticular wax</a>, The flesh is generally pale yellowish-white, though pink or yellow flesh is also known.</p>
+			</div>
+			<div 
+				role="tabpanel" 
+				aria-hidden="true"
+				aria-expanded="false"
+				aria-labelledby="tab2" 
+				id="panel2" 
+				class="panel">
+					<h2>Pears</h2>
+					<p>The pear is composed of the receptacle or upper end of the flower-stalk (the so-called calyx tube) greatly dilated. Enclosed within its cellular flesh is the true fruit: five cartilaginous carpels, known colloquially as the "core". From the upper rim of the receptacle are given off the five sepals[vague], the five petals, and the very numerous <a href="http://en.wikipedia.org/wiki/Stamen">stamens</a>.</p>
+			</div>
+			<div 
+				role="tabpanel" 
+				aria-hidden="true"
+				aria-expanded="false"
+				aria-labelledby="tab3" 
+				id="panel3" 
+				class="panel">
+					<h2>Oranges</h2>
+					<p>The orange (specifically, the sweet orange) is the fruit of the citrus species Citrus × sinensis in the family Rutaceae. The fruit of the Citrus sinensis is considered a sweet orange, whereas the fruit of the Citrus aurantium is considered a bitter orange. The orange is a hybrid, possibly between pomelo (Citrus maxima) and <a href="http://en.wikipedia.org/wiki/Mandarin_orange">mandarin</a> (Citrus reticulata), which has been cultivated since ancient times.</p>
+			</div>
+			<p>
+				These culinary vegetables that are botanically fruit include <a href="http://en.wikipedia.org/wiki/Cucurbitaceae">cucurbits</a> (e.g., squash, pumpkin, and cucumber), tomatoes, peas, beans, corn, eggplant, and sweet pepper. In addition, some spices, such as allspice and chilies, are fruits, botanically speaking. In contrast, rhubarb is often referred to as a fruit, because it is used to make sweet desserts such as pies, though only the petiole (leaf stalk) of the rhubarb plant is edible. Edible gymnosperm seeds are often given fruit names, e.g., pine nuts, ginkgo nuts. 
+			</p>
+		</div>
+	</body>
+</html>
+

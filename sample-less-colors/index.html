@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS selector: :after pseudo-element</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+	<link rel="stylesheet" href="css/colors.css">
+</head>
+<body>
+<div class="container">
+	<h1>Less color tests</h1>
+	<h2>Masters</h2>
+	<table>
+		<tr>
+			<td class="box box1">Base</td>
+			<td class="box box10">Highlight</td>
+			<td class="box box48">Lowlight</td>
+		</tr>
+	</table>
+	<figure>
+		<figcaption class="code-heading">LESS code</figcaption>
+<!-- code start -->
+<pre><code><span class="prop">@base</span>: <span class="val">#2e54b5</span>;
+<span class="prop">@highlight</span>: <span class="val">#df5420</span>;
+<span class="prop">@lowlight</span>: <span class="val">#609161</span>;
+</code></pre>
+<!-- code end -->
+	</figure>
+	<h2>Darken</h2>
+	<p>Decrease the lightness of a color in the HSL color space by an absolute amount.</p>
+	<table>
+		<tr>
+			<td class="box box1">Base</td>
+			<td class="box box2">5%</td>
+			<td class="box box3">10%</td>
+			<td class="box box4">15%</td>
+			<td class="box box5">20%</td>
+		</tr>
+	</table>
+	<figure>
+		<figcaption class="code-heading">LESS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.box1</span> { <span class="prop">background-color</span>: <span class="val">@base</span>; }
+<span class="sel">.box2</span> { <span class="prop">background-color</span>: <span class="val">darken(@base, 5%)</span>; }
+<span class="sel">.box3</span> { <span class="prop">background-color</span>: <span class="val">darken(@base, 10%)</span>; }
+<span class="sel">.box4</span> { <span class="prop">background-color</span>: <span class="val">darken(@base, 15%)</span>; }
+<span class="sel">.box5</span> { <span class="prop">background-color</span>: <span class="val">darken(@base, 20%)</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+	<h2>Lighten</h2>
+	<p>Increase the lightness of a color in the HSL color space by an absolute amount.</p>
+	<table>
+		<tr>
+			<td class="box box1">Base</td>
+			<td class="box box6">5%</td>
+			<td class="box box7">10%</td>
+			<td class="box box8">15%</td>
+			<td class="box box9">20%</td>
+		</tr>
+	</table>
+	<figure>
+		<figcaption class="code-heading">LESS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.box1</span> { <span class="prop">background-color</span>: <span class="val">@base</span>; }
+<span class="sel">.box6</span> { <span class="prop">background-color</span>: <span class="val">lighten(@base, 5%)</span>; }
+<span class="sel">.box7</span> { <span class="prop">background-color</span>: <span class="val">lighten(@base, 10%)</span>; }
+<span class="sel">.box8</span> { <span class="prop">background-color</span>: <span class="val">lighten(@base, 15%)</span>; }
+<span class="sel">.box9</span> { <span class="prop">background-color</span>: <span class="val">lighten(@base, 20%)</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>Mix</h2>
+	<p>Mix two colors together in variable proportion. Opacity is included in the calculations.</p>
+	<table>
+		<tr>
+			<td class="box box1">Base</td>
+			<td class="box box11">10%</td>
+			<td class="box box12">25%</td>
+			<td class="box box13">50%</td>
+			<td class="box box14">75%</td>
+			<td class="box box15">90%</td>
+			<td class="box box10">High</td>
+		</tr>
+	</table>
+	<figure>
+		<figcaption class="code-heading">LESS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.box10</span> { <span class="prop">background-color</span>: <span class="val">@highlight</span>; }
+<span class="sel">.box11</span> { <span class="prop">background-color</span>: <span class="val">mix(@highlight, @base, 10%)</span>; }
+<span class="sel">.box12</span> { <span class="prop">background-color</span>: <span class="val">mix(@highlight, @base, 25%)</span>; }
+<span class="sel">.box13</span> { <span class="prop">background-color</span>: <span class="val">mix(@highlight, @base, 50%)</span>; }
+<span class="sel">.box14</span> { <span class="prop">background-color</span>: <span class="val">mix(@highlight, @base, 75%)</span>; }
+<span class="sel">.box15</span> { <span class="prop">background-color</span>: <span class="val">mix(@highlight, @base, 90%)</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+
+	<h2>Saturate</h2>
+	<p>Increase the saturation of a color in the HSL color space by an absolute amount.</p>
+	<table>
+		<tr>
+			<td class="box box16">25%</td>
+			<td class="box box17">50%</td>
+			<td class="box box18">75%</td>
+			<td class="box box19">100%</td>
+		</tr>
+	</table>
+	<figure>
+		<figcaption class="code-heading">LESS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.box16</span> { <span class="prop">background-color</span>: <span class="val">saturate(@base, 25%)</span>; }
+<span class="sel">.box17</span> { <span class="prop">background-color</span>: <span class="val">saturate(@base, 50%)</span>; }
+<span class="sel">.box18</span> { <span class="prop">background-color</span>: <span class="val">saturate(@base, 75%)</span>; }
+<span class="sel">.box19</span> { <span class="prop">background-color</span>: <span class="val">saturate(@base, 100%)</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+
+	<h2>Desaturate</h2>
+	<p>Decrease the saturation of a color in the HSL color space by an absolute amount.</p>
+	<table>
+		<tr>
+			<td class="box box20">25%</td>
+			<td class="box box21">50%</td>
+			<td class="box box22">75%</td>
+			<td class="box box23">100%</td>
+		</tr>
+	</table>
+	<figure>
+		<figcaption class="code-heading">LESS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.box20</span> { <span class="prop">background-color</span>: <span class="val">desaturate(@base, 25%)</span>; }
+<span class="sel">.box21</span> { <span class="prop">background-color</span>: <span class="val">desaturate(@base, 50%)</span>; }
+<span class="sel">.box22</span> { <span class="prop">background-color</span>: <span class="val">desaturate(@base, 75%)</span>; }
+<span class="sel">.box23</span> { <span class="prop">background-color</span>: <span class="val">desaturate(@base, 100%)</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+
+	<h2>Spin</h2>
+	<p>Rotate the hue angle of a color in either direction.</p>
+	<table>
+		<tr>
+			<td class="box box1">0deg</td>
+			<td class="box box24">90deg</td>
+			<td class="box box25">180deg</td>
+			<td class="box box26">270deg</td>
+		</tr>
+	</table>
+	<figure>
+		<figcaption class="code-heading">LESS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.box24</span> { <span class="prop">background-color</span>: <span class="val">spin(@base, 90)</span>; }
+<span class="sel">.box25</span> { <span class="prop">background-color</span>: <span class="val">spin(@base, 180)</span>; }
+<span class="sel">.box26</span> { <span class="prop">background-color</span>: <span class="val">spin(@base, 270)</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+
+	<h2>Fade</h2>
+	<p>Set the absolute transparency of a color. Can be applied to colors whether they already have an opacity value or not.</p>
+	<table>
+		<tr>
+			<td class="box box27">10%</td>
+			<td class="box box28">20%</td>
+			<td class="box box29">30%</td>
+			<td class="box box30">40%</td>
+			<td class="box box31">50%</td>
+			<td class="box box32">60%</td>
+			<td class="box box33">70%</td>
+			<td class="box box1">Base</td>
+		</tr>
+	</table>
+	<figure>
+		<figcaption class="code-heading">LESS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.box27</span> { <span class="prop">background-color</span>: <span class="val">fade(@base, 10%)</span>; }
+<span class="sel">.box28</span> { <span class="prop">background-color</span>: <span class="val">fade(@base, 20%)</span>; }
+<span class="sel">.box29</span> { <span class="prop">background-color</span>: <span class="val">fade(@base, 30%)</span>; }
+<span class="sel">.box30</span> { <span class="prop">background-color</span>: <span class="val">fade(@base, 40%)</span>; }
+<span class="sel">.box31</span> { <span class="prop">background-color</span>: <span class="val">fade(@base, 50%)</span>; }
+<span class="sel">.box32</span> { <span class="prop">background-color</span>: <span class="val">fade(@base, 60%)</span>; }
+<span class="sel">.box33</span> { <span class="prop">background-color</span>: <span class="val">fade(@base, 70%)</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+
+	<h2>Fade-in</h2>
+	<p>Decrease the transparency (or increase the opacity) of a color, making it more opaque.</p>
+	<table>
+		<tr>
+			<td class="box box27">10%</td>
+			<td class="box box28">20%</td>
+			<td class="box box29">30%</td>
+			<td class="box box30">40%</td>
+			<td class="box box31">50%</td>
+			<td class="box box32">60%</td>
+			<td class="box box33">70%</td>
+			<td class="box box1">Base</td>
+		</tr>
+	</table>
+	<figure>
+		<figcaption class="code-heading">LESS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.box34</span> { <span class="prop">background-color</span>: <span class="val">fadein(@base, 10%)</span>; }
+<span class="sel">.box35</span> { <span class="prop">background-color</span>: <span class="val">fadein(@base, 20%)</span>; }
+<span class="sel">.box36</span> { <span class="prop">background-color</span>: <span class="val">fadein(@base, 30%)</span>; }
+<span class="sel">.box37</span> { <span class="prop">background-color</span>: <span class="val">fadein(@base, 40%)</span>; }
+<span class="sel">.box38</span> { <span class="prop">background-color</span>: <span class="val">fadein(@base, 50%)</span>; }
+<span class="sel">.box39</span> { <span class="prop">background-color</span>: <span class="val">fadein(@base, 60%)</span>; }
+<span class="sel">.box40</span> { <span class="prop">background-color</span>: <span class="val">fadein(@base, 70%)</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+	
+	<h2>Fade-out</h2>
+	<p>Decrease the transparency (or increase the opacity) of a color, making it more opaque.</p>
+	<table>
+		<tr>
+			<td class="box box1">Base</td>
+			<td class="box box41">10%</td>
+			<td class="box box42">20%</td>
+			<td class="box box43">30%</td>
+			<td class="box box44">40%</td>
+			<td class="box box45">50%</td>
+			<td class="box box46">60%</td>
+			<td class="box box47">70%</td>
+		</tr>
+	</table>
+	<figure>
+		<figcaption class="code-heading">LESS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.box41</span> { <span class="prop">background-color</span>: <span class="val">fadeout(@base, 10%)</span>; }
+<span class="sel">.box42</span> { <span class="prop">background-color</span>: <span class="val">fadeout(@base, 20%)</span>; }
+<span class="sel">.box43</span> { <span class="prop">background-color</span>: <span class="val">fadeout(@base, 30%)</span>; }
+<span class="sel">.box44</span> { <span class="prop">background-color</span>: <span class="val">fadeout(@base, 40%)</span>; }
+<span class="sel">.box45</span> { <span class="prop">background-color</span>: <span class="val">fadeout(@base, 50%)</span>; }
+<span class="sel">.box46</span> { <span class="prop">background-color</span>: <span class="val">fadeout(@base, 60%)</span>; }
+<span class="sel">.box47</span> { <span class="prop">background-color</span>: <span class="val">fadeout(@base, 70%)</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+
+	<h2>Greyscale</h2>
+	<p>Remove all saturation from a color in the HSL color space; the same as calling desaturate(@color, 100%).</p>
+	<table>
+		<tr>
+			<td class="box box1">Base</td>
+			<td class="box box10">High</td>
+			<td class="box box48">Low</td>
+		</tr>
+		<tr>
+			<td class="box box49">Greyscale</td>
+			<td class="box box50">Greyscale</td>
+			<td class="box box51">Greyscale</td>
+		</tr>
+	</table>
+	<figure>
+		<figcaption class="code-heading">LESS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.box49</span> { <span class="prop">background-color</span>: <span class="val">greyscale(@base)</span>; }
+<span class="sel">.box50</span> { <span class="prop">background-color</span>: <span class="val">greyscale(@highlight)</span>; }
+<span class="sel">.box51</span> { <span class="prop">background-color</span>: <span class="val">greyscale(@lowlight)</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>Contrast</h2>
+	<p>Choose which of two colors provides the greatest contrast with another.</p>
+	<table>
+		<tr>
+			<td class="box box52">Base</td>
+			<td class="box box53">Base</td>
+			<td class="box box54">Base</td>
+			<td class="box box55">Base</td>
+			<td class="box box56">Base</td>
+		</tr>
+	</table>
+	<figure>
+		<figcaption class="code-heading">LESS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.box52 </span>
+{
+	<span class="prop">color</span>: <span class="val">contrast(#ddd</span>); 
+	<span class="prop">background-color</span>: <span class="val">#ddd</span>; 
+}
+
+<span class="sel">.box53</span>
+{ 
+	 <span class="prop">color</span>: <span class="val">contrast(#6E9800)</span>; 
+	 <span class="prop">background-color</span>: <span class="val">#6E9800</span>; 
+}
+
+<span class="sel">.box54</span>
+{
+	 <span class="prop">color</span>: <span class="val">ontrast(#222222, #101010, #000, 30%)</span>;
+	 <span class="prop">background-color</span>: <span class="val">#aaa</span>;
+}
+
+<span class="sel">.box55</span>
+{
+	 <span class="prop">color</span>: <span class="val">contrast(#529FD6)</span>;
+	 <span class="prop">background-color</span>: <span class="val">#529FD6</span>;
+}
+
+<span class="sel">.box56</span>
+{
+	 <span class="prop">color</span>: <span class="val">contrast(#777)</span>;
+	 <span class="prop">background-color</span>: <span class="val">#777</span>;
+}
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS: styling the table caption</title> 
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	caption
+	{
+		margin: 0;
+		background: pink;
+		font-size: 100%;
+		font-weight: normal;
+		text-align: left;
+	}
+	
+	.one caption { padding: 10px; }
+	.two caption { margin: 10px; }
+	.three caption { border: 10px solid red; }
+	.four caption { caption-side: top; }
+	.five caption { caption-side: bottom; }
+	.six caption { text-align: right; }
+</style> 
+</head>
+<body>
+<div class="container">
+	<h1>
+		CSS: styling the table caption
+	</h1>
+	<table class="one">
+		<caption>This is a caption</caption>
+		<tr>
+			<td>row 1 - cell 1</td>
+			<td>row 1 - cell 2</td>
+			<td>row 1 - cell 3</td>
+			<td>row 1 - cell 4</td>
+		</tr>
+		<tr>
+			<td>row 2 - cell 1</td>
+			<td>row 2 - cell 2</td>
+			<td>row 2 - cell 3</td>
+			<td>row 2 - cell 4</td>
+		</tr>
+	</table>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">caption</span> { <span class="prop">padding</span>: <span class="val">10px</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<table class="two">
+		<caption>This is a caption</caption>
+		<tr>
+			<td>row 1 - cell 1</td>
+			<td>row 1 - cell 2</td>
+			<td>row 1 - cell 3</td>
+			<td>row 1 - cell 4</td>
+		</tr>
+		<tr>
+			<td>row 2 - cell 1</td>
+			<td>row 2 - cell 2</td>
+			<td>row 2 - cell 3</td>
+			<td>row 2 - cell 4</td>
+		</tr>
+	</table>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">caption</span> { <span class="prop">margin</span>: <span class="val">10px</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+	<table class="three">
+		<caption>This is a caption</caption>
+		<tr>
+			<td>row 1 - cell 1</td>
+			<td>row 1 - cell 2</td>
+			<td>row 1 - cell 3</td>
+			<td>row 1 - cell 4</td>
+		</tr>
+		<tr>
+			<td>row 2 - cell 1</td>
+			<td>row 2 - cell 2</td>
+			<td>row 2 - cell 3</td>
+			<td>row 2 - cell 4</td>
+		</tr>
+	</table>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">caption</span> { <span class="prop">border</span>: <span class="val">10px solid red</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+	<table class="four">
+		<caption>This is a caption</caption>
+		<tr>
+			<td>row 1 - cell 1</td>
+			<td>row 1 - cell 2</td>
+			<td>row 1 - cell 3</td>
+			<td>row 1 - cell 4</td>
+		</tr>
+		<tr>
+			<td>row 2 - cell 1</td>
+			<td>row 2 - cell 2</td>
+			<td>row 2 - cell 3</td>
+			<td>row 2 - cell 4</td>
+		</tr>
+	</table>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">caption</span> { <span class="prop">caption-side</span>: <span class="val">top</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+	<table class="five">
+		<caption>This is a caption</caption>
+		<tr>
+			<td>row 1 - cell 1</td>
+			<td>row 1 - cell 2</td>
+			<td>row 1 - cell 3</td>
+			<td>row 1 - cell 4</td>
+		</tr>
+		<tr>
+			<td>row 2 - cell 1</td>
+			<td>row 2 - cell 2</td>
+			<td>row 2 - cell 3</td>
+			<td>row 2 - cell 4</td>
+		</tr>
+	</table>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">caption</span> { <span class="prop">caption-side</span>: <span class="val">bottom</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<table class="six">
+		<caption>This is a caption</caption>
+		<tr>
+			<td>row 1 - cell 1</td>
+			<td>row 1 - cell 2</td>
+			<td>row 1 - cell 3</td>
+			<td>row 1 - cell 4</td>
+		</tr>
+		<tr>
+			<td>row 2 - cell 1</td>
+			<td>row 2 - cell 2</td>
+			<td>row 2 - cell 3</td>
+			<td>row 2 - cell 4</td>
+		</tr>
+	</table>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">caption</span> { <span class="prop">text-align</span>: <span class="val">right</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+</div>
+</body>
+</html>

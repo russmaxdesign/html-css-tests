@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Wrapping a parent around margins - float: right</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	.example-container
+	{
+		float: left;
+		width: 100%;
+		margin: 0 0 1em;
+	}
+	
+	.example
+	{
+		background: yellow;
+		float: right;
+	}
+	
+	p
+	{
+		margin: 1em 0;
+		background: pink;
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		Wrapping a parent around margins - float: right
+	</h1>
+	<div class="example-container">
+		<div class="example">
+			<p>
+				This is a paragraph
+			</p>
+		</div>
+	</div>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.example</span> { <span class="prop">float</span>: <span class="val">right</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,214 @@
+body
+{
+	margin: 0;
+	padding: 30px;
+	color: #000;
+	background: #fff;
+	font-size: 100%;
+	font-family: helvetica, arial, sans-serif;
+	line-height: 1.2;
+}
+
+.form { max-width: 50em; }
+
+.form fieldset
+{
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.form legend
+{
+	display: block;
+	width: 100%;
+	font-weight: bold;
+}
+
+.legend
+{
+	display: block;
+	padding: 1em 0;
+}
+
+/* ---------------------------
+.formbox (clears, overflow, margin below)
+.formbox input (defines input child)
+.formbox textarea (defined textarea child)
+.formbox select (defines select child)
+.formbox--list (for list items)
+.formbox--indent (pushes to right)
+.formbox--medium (defines width of input, textarea, select)
+.formbox--narrow (defines width of input, textarea, select)
+
+	.formbox__label
+	.formbox__required
+	.formbox__control
+	.formbox__instructions
+	.formbox__error
+	
+.formbox--file (defines file upload)
+.formbox--radio (defines radio child)
+.formbox--checkbox (defines checkbox child)
+	
+--------------------------- */
+
+.formbox,
+.formbox--list,
+.formbox--indent
+{
+	display: block;
+	overflow: hidden;
+	margin: 0 0 1em;
+	padding: 0 0 0 1px;
+	zoom: 1;
+}
+
+.formbox input,
+.formbox textarea
+{
+	-moz-boxsizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #666;
+	padding: .5em 10px;
+	margin: 0;
+	width: 100%;
+}
+
+input.formbox__file
+{
+	-moz-boxsizing: border-box;
+	box-sizing: border-box;
+	border: none;
+	padding: 0;
+	margin: 0;
+	width: auto;
+}
+
+
+.formbox textarea { height: 150px; }
+
+.formbox select
+{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.formbox--list ul
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.formbox--list li
+{
+	margin-bottom: .3em;
+}
+
+.formbox--list input
+{
+	margin-right: .3em;
+}
+
+
+.formbox__label,
+.formbox__instructions,
+.formbox__error
+{
+	display: block;
+	margin: .3em 0 0;
+}
+
+.formbox__instructions
+{
+	color: #777;
+	font-size: 90%;
+}
+
+.formbox__error
+{
+	padding: .5em;
+	color: #fff;
+	background: red;
+	font-size: 90%;
+}
+
+.formbox__required
+{
+	color: red;
+	font-size: 60%;
+	text-transform: uppercase;
+}
+
+@media (min-width: 700px)
+{
+	.formbox--indent
+	{
+		margin-left: 35%;
+		width: 60%;
+		position: relative;
+	}
+	
+	.legend { margin-left: 35%; }
+	
+	.formbox__label
+	{
+		float: left;
+		width: 30%;
+		margin-right: 5%;
+		text-align: right;
+	}
+	
+	.formbox__control
+	{
+		float: left;
+		width: 60%;
+	}
+	
+	.formbox__required { display: block; }
+	.formbox--medium input,
+	.formbox--medium textarea,
+	.formbox--medium select { width: 60%; }
+	.formbox--narrow input,
+	.formbox--narrow textarea,
+	.formbox--narrow select { width: 40%; }
+} 
+
+/* -----------------------------------
+button
+----------------------------------- */
+
+.button
+{
+	display: inline-block;
+	margin: 0;
+	padding: .5em 1em;
+	color: #fff;
+	border: 1px solid #000;
+	border-radius: 6px;
+	background-color: #333;
+	font-size: 18px;
+	text-align: center;
+	text-decoration: none;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.button:focus
+{
+	background-color: #000;
+}
+
+.button:hover
+{
+	background-color: green;
+}
+
+.button:active
+{
+	background-color: red;
+}
+
+

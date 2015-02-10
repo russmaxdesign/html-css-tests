@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>Form test</title>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="test.css">
+	<style>
+		.form-field__error { display: none; }
+	</style>
+	<!--[if lt IE 9]>
+		<script src="html5.js"></script>
+		<script src="respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+<h1>
+	Form test - test
+</h1>
+<form class="form" action="#" method="get">
+	<fieldset>
+		<legend><span class="legend">Your details</span></legend>
+		<input type="hidden" value=""> 
+		<div class="form-field">
+			<label for="firstname">	
+				<span class="form-field__label">Name 
+					<span class="form-field__required">Required</span>
+				</span>
+				<span class="form-field__control">
+					<input class="form-field__input" type="text" id="firstname" name="firstname" required aria-required="true">
+					<span class="form-field__instructions">Make sure you spell your name correctly</span>
+					<span class="form-field__error">Error: Your name must be spelled correctly</span>
+				</span>
+			</label>
+		</div>
+		<div class="form-field--medium">
+			<label for="phone">	
+				<span class="form-field__label">Phone 
+					<span class="form-field__required">Required</span>
+				</span>
+				<span class="form-field__control">
+					<input class="form-field__input" type="tel" id="phone" name="phone" required aria-required="true">
+					<span class="form-field__instructions">Add area code</span>
+					<span class="form-field__error">Error: Invalid phone number</span>
+				</span>
+			</label>
+		</div>
+		<div class="form-field--narrow">
+			<label for="email">	
+				<span class="form-field__label">Email 
+					<span class="form-field__required">Required</span>
+				</span>
+				<span class="form-field__control">
+					<input class="form-field__input" type="email" id="email" name="email" required aria-required="true">
+					<span class="form-field__instructions">Use a valid email address</span>
+					<span class="form-field__error">Error: Invalid email address</span>
+				</span>
+			</label>
+		</div>
+		<div class="form-field">
+			<label for="file">
+				<span class="form-field__label">Upload portfolio 
+					<span class="form-field__required">Required</span>
+				</span>
+				<span class="form-field__control">
+					<input class="form-field__file" type="file" id="file" name="file" required aria-required="true">
+					<span class="form-field__instructions">Maximum file size 500k</span>
+					<span class="form-field__error">Error: File exceeds 500k</span>
+				</span>
+			</label>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend><span class="legend">Your feedback</span></legend>
+		<div class="form-field">
+			<label for="comment1">
+				<span class="form-field__label">What do you think of product 1 
+					<span class="form-field__required">Required</span>
+				</span>
+				<span class="form-field__control">
+					<textarea class="form-field__textarea" id="comment1" name="comment1" required aria-required="true"></textarea>
+					<span class="form-field__instructions">Maximum of 500 characters</span>
+					<span class="form-field__error">Error: Comment exceeds 500 characters</span>
+				</span>
+			</label>
+		</div>
+		<div class="form-field--medium">
+			<label for="comment2">
+				<span class="form-field__label">What do you think of product 2
+					<span class="form-field__required">Required</span>
+				</span>
+				<span class="form-field__control">
+					<textarea class="form-field__textarea" id="comment2" name="comment2" required aria-required="true"></textarea>
+					<span class="form-field__instructions">Maximum of 200 characters</span>
+					<span class="form-field__error">Error: Comment exceeds 200 characters</span>
+				</span>
+			</label>
+		</div>
+		<div class="form-field--narrow">
+			<label for="comment3">
+				<span class="form-field__label">What do you think of product 3
+					<span class="form-field__required">Required</span>
+				</span>
+				<span class="form-field__control">
+					<textarea class="form-field__textarea" id="comment3" name="comment3" required aria-required="true"></textarea>
+					<span class="form-field__instructions">Maximum of 100 characters</span>
+					<span class="form-field__error">Error: Comment exceeds 100 characters</span>
+				</span>
+			</label>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend><span class="legend">Options</span></legend>
+		<div class="form-field">
+			<label for="payment">
+				<span class="form-field__label">Choose payment method 
+					<span class="form-field__required">Required</span>
+				</span>
+				<span class="form-field__control">
+					<select class="form-field__select" id="payment" name="payment" required aria-required="true">
+						<option value="" selected>Choose an option</option>
+						<option value="Direct">Direct</option>
+						<option value="Checque">Cheque</option>
+						<option value="BPay">BPay</option>
+					</select> 
+					<span class="form-field__error">Error: You must choose a payment method</span>
+				</span>
+			</label>
+		</div>
+		<div class="form-field--medium">
+			<label for="fruit">
+				<span class="form-field__label">Choose a fruit
+					<span class="form-field__required">Required</span>
+				</span>
+				<span class="form-field__control">
+					<select class="form-field__select" id="fruit" name="fruit" required aria-required="true">
+						<option value="" selected>Choose an option</option>
+						<option value="Apple">Apple</option>
+						<option value="Banana">Banana</option>
+						<option value="Pear">Pear</option>
+					</select> 
+					<span class="form-field__error">Error: You must choose a fruit</span>
+				</span>
+			</label>
+		</div>
+		<div class="form-field--narrow">
+			<label for="day">
+				<span class="form-field__label">Choose a day
+					<span class="form-field__required">Required</span>
+				</span>
+				<span class="form-field__control">
+					<select class="form-field__select" id="day" name="day" required aria-required="true">
+						<option value="" selected>Choose an option</option>
+						<option value="Monday">Monday</option>
+						<option value="Tuesday">Tuesday</option>
+						<option value="Wednesday">Wednesday</option>
+					</select> 
+					<span class="form-field__error">Error: You must choose a day</span>
+				</span>
+			</label>
+		</div>
+		<div class="form-field" role="radiogroup" aria-labelledby="apples-choices">
+			<p class="form-field__label" id="apples-choices">
+				Do you like apples?
+				<span class="form-field__required">Required</span>
+			</p>
+			<div class="form-field__control">
+				<ul class="check-list">
+					<li>
+						<input type="radio" id="apples-y" name="apples" required aria-required="true">
+						<label for="apples-y">Yes</label>
+					</li>
+					<li>
+						<input type="radio" id="apples-n" name="apples" required aria-required="true">
+						<label for="apples-n">No</label>
+					</li>
+				</ul>
+				<span class="form-field__error">Error: You must choose one option</span>
+			</div>
+		</div>
+		<div class="form-field" role="radiogroup" aria-labelledby="subscription">
+			<p class="form-field__label" id="subscription">
+				Pick a subscription
+				<span class="form-field__required">Required</span>
+			</p>
+			<div class="form-field__control">
+				<ul class="check-list">
+					<li>
+						<input type="checkbox" id="daily" name="daily">
+						<label for="daily">Daily</label>
+					</li>
+					<li>
+						<input type="checkbox" id="weekly" name="weekly">
+						<label for="weekly">Weekly</label>
+					</li>
+					<li>
+						<input type="checkbox" id="monthly" name="monthly">
+						<label for="monthly">Monthly</label>
+					</li>
+				</ul>
+				<span class="form-field__error">Error: You must choose one option</span>
+			</div>
+		</div>
+	</fieldset>
+	<div class="form-field--indent">
+		<button class="button" type="submit">Submit</button>
+	</div>
+</form>
+</body>
+</html>

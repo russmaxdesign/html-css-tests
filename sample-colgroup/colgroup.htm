@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>HTML element: col and colgroup</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	/* table 1 */
+	.table1-one { background: #aee; }
+	.table1-two { background: #eae; }
+	.table1-three { background: #eea; }
+	
+	/* table 2 */
+	.table2-one { width: 300px; }
+	.table2-two { width: 100px; }
+	.table2-three { width: 50px; }
+	
+	/* table 3 */
+	.table3-colgroup1 col { background: lime; }
+	.table3-colgroup2 col { background: pink; }
+</style> 
+</head>
+<body>
+<div class="container">
+	<h1>
+		HTML element: col and colgroup
+	</h1>
+	<h2>
+		The <code>&lt;col&gt;</code> element
+	</h2>
+	<p>
+		In HTML, tables are physically constructed from rows, rather than columns. Table rows contain table cells. In visual Web browsers, when cells line up beneath each other, they are perceived as columns. 
+	</p>
+	<p>
+		The <code>&lt;col&gt;</code> element  provides a mechanism to apply attributes to a logical conception of a column. The col element is most commonly used to apply table cell alignment using the align and valign attributes, to apply column width using the width attribute, and CSS formatting using the class attribute. 
+	</p>
+	<p>
+		Unlike <code>&lt;colgroup&gt;</code>, <code>&lt;col&gt;</code> does not group columns structurally; it merely defines attributes common to all cells in one or more columns. 
+	</p>
+	<p>
+		If used, <code>&lt;col&gt;</code> must be after the optional &lt;caption&gt; and before the optional &lt;thead&gt; in the &lt;table&gt;. 
+	</p>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;table&gt;</span>
+	<span class="e">&lt;caption&gt;</span>Caption<span class="e">&lt;/caption&gt;</span>
+	<span class="e">&lt;col</span> <span class="att">class</span>=<span class="val">"col1"</span><span class="e">&gt;</span>
+	<span class="e">&lt;col</span> <span class="att">class</span>=<span class="val">"col2"</span><span class="e">&gt;</span>
+	<span class="e">&lt;col</span> <span class="att">class</span>=<span class="val">"col3"</span><span class="e">&gt;</span>
+	<span class="e">&lt;thead&gt;</span>
+		...</code></pre>
+<!-- code end -->
+	</figure>
+
+	<h2>
+		The <code>&lt;colgroup&gt;</code> element
+	</h2>
+	<p>
+		The colgroup is a container for a number of col elements, and allows you to set attributes that you might otherwise set at col level on a number of col elements simultaneously—the attributes defined at this higher level apply to all of the child columns. It is important to note that if you use one or more colgroup then all cols must be enclosed in one or more colgroups 
+	</p>
+	<p>
+		If used, <code>&lt;colgroup&gt;</code> must be after the optional &lt;caption&gt; and before the optional &lt;thead&gt; in the &lt;table&gt;. 
+	</p>
+
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;table&gt;</span>
+	<span class="e">&lt;caption&gt;</span>Caption<span class="e">&lt;/caption&gt;</span>
+	<span class="e">&lt;colgroup</span> <span class="att">class</span>=<span class="val">"colgroup1"</span><span class="e">&gt;</span>
+		<span class="e">&lt;col</span> <span class="att">class</span>=<span class="val">"col1"</span><span class="e">&gt;</span>
+		<span class="e">&lt;col</span> <span class="att">class</span>=<span class="val">"col2"</span><span class="e">&gt;</span>
+		<span class="e">&lt;col</span> <span class="att">class</span>=<span class="val">"col3"</span><span class="e">&gt;</span>
+	<span class="e">&lt;/colgroup&gt;</span>
+	<span class="e">&lt;thead&gt;</span>
+		...</code></pre>
+<!-- code end -->
+	</figure>
+
+	<h2>
+		Styling the <code>&lt;col&gt;</code> element with background-color
+	</h2>
+	<table class="table1">
+		<colgroup>
+			<col class="table1-one">
+			<col class="table1-two">
+			<col class="table1-three">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>Column 1</th>
+				<th>Column 2</th>
+				<th>Column 3</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Some text</td>
+				<td>More text</td>
+				<td>Even more text</td>
+			</tr>
+			<tr>
+				<td>Another cell</td>
+				<td>Yet another cell</td>
+				<td>An another cell</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.table1-one</span> { <span class="prop">background</span>: <span class="val">#aee</span>; }
+<span class="sel">.table1-two</span> { <span class="prop">background</span>: <span class="val">#eae</span>; }
+<span class="sel">.table1-three</span> { <span class="prop">background</span>: <span class="val">#eea</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		Styling the <code>&lt;col&gt;</code> element with width
+	</h2>
+	<table class="table2">
+		<colgroup>
+			<col class="table2-one">
+			<col class="table2-two">
+			<col class="table2-three">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>Column 1</th>
+				<th>Column 2</th>
+				<th>Column 3</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Some text</td>
+				<td>More text</td>
+				<td>Even more text</td>
+			</tr>
+			<tr>
+				<td>Another cell</td>
+				<td>Yet another cell</td>
+				<td>An another cell</td>
+			</tr>
+		</tbody>
+	</table>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.table2-one</span> { <span class="prop">width</span>: <span class="val">300px</span>; }
+<span class="sel">.table2-two</span> { <span class="prop">width</span>: <span class="val">100px</span>; }
+<span class="sel">.table2-three</span> { <span class="prop">width</span>: <span class="val">50px</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+	<h2>
+		Using the <code>&lt;colgroup&gt;</code> to select specific <code>&lt;col&gt;</code> elements
+	</h2>
+	<table class="table3">
+		<colgroup class="table3-colgroup1">
+			<col class="table3-one">
+			<col class="table3-two">
+			<col class="table3-three">
+			<col class="table3-four">
+		</colgroup>
+		<colgroup class="table3-colgroup2">
+			<col class="table3-five">
+			<col class="table3-six">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>Column 1</th>
+				<th>Column 2</th>
+				<th>Column 3</th>
+				<th>Column 4</th>
+				<th>Column 5</th>
+				<th>Column 6</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Some</td>
+				<td>More</td>
+				<td>Even</td>
+				<td>Another</td>
+				<td>Yet</td>
+				<td>An</td>
+			</tr>
+			<tr>
+				<td>Every</td>
+				<td>Good</td>
+				<td>Boy</td>
+				<td>Deserves</td>
+				<td>Fruit</td>
+				<td>Now</td>
+			</tr>
+		</tbody>
+	</table>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.table3-colgroup1 col</span> { <span class="prop">background</span>: <span class="val">lime</span>; }
+<span class="sel">.table3-colgroup2 col</span> { <span class="prop">background</span>: <span class="val">pink</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+
+
+
+
+
+</div>
+</body>
+</html>

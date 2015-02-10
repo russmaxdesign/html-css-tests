@@ -1,0 +1,19 @@
+@media screen
+{
+	.a { border: 5px solid blue; }
+}
+
+@media screen and (color)
+{
+	.b { border: 5px solid blue; }
+}
+
+@media only screen and (color)
+{
+	.c { border: 5px solid blue; }
+}
+
+@media (color)
+{
+	.d { border: 5px solid blue; }
+}

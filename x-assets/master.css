@@ -1,0 +1,150 @@
+/* -----------------------------------
+general
+----------------------------------- */
+
+html,body
+{
+	color: #000;
+	background-color: #eee;
+	font: 100%/1.5 helvetica, arial, sans-serif;
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+}
+
+h1,h2,h3,h4
+{
+	clear: left;
+	line-height: 1.1;
+}
+
+h1
+{
+	margin: 0 0 .5em;
+	font-size: 200%;
+}
+
+h2
+{
+	margin: 2em 0 .3em;
+	font-size: 137.5%;
+}
+
+h3
+{
+	margin: 1em 0 .3em;
+	font-size: 112.5%;
+}
+
+p { margin: 0 0 1em; }
+
+/* -----------------------------------
+table
+----------------------------------- */
+
+.table-container
+{
+	width: 100%;
+	overflow-y: auto;
+	margin: 1em 0 2em;
+}
+
+.table-container table { margin: 0; }
+
+table
+{
+	width: 100%;
+	border-collapse: collapse;
+	margin: 1em 0 2em;
+}
+
+caption
+{
+	margin: 1em 0 .3em;
+	font-size: 137.5%;
+	font-weight: bold;
+	text-align: left;
+}
+
+th, td
+{
+	border: 1px solid #aaa;
+	padding: .5em 1em;
+	vertical-align: top;
+	text-align: left;
+}
+
+thead th { background: #ddd; }
+th.definition { width: 200px; }
+
+blockquote
+{
+	margin: 1em 0;
+	padding: 1em;
+	background: #eee;
+}
+
+/* -----------------------------------
+figure
+----------------------------------- */
+
+figure,.figure
+{
+	clear: both;
+	margin: 1em 0 2em;
+}
+
+.code-heading
+{
+	padding: .5em;
+	color: #333;
+	background-color: #ddd;
+	font-size: 112.5%;
+	font-weight: bold;
+	line-height: 20px;
+}
+
+pre
+{
+	display: block;
+	overflow: auto;
+	margin: 0;
+	padding: 0 1em 0 40px;
+	border: 1px solid #ccc;
+	border-bottom: 0;
+	color: #777;
+	background-image: url(numbers2.png);
+	background-repeat: repeat-y;
+	-moz-tab-size: 3;
+	-o-tab-size: 3;
+	tab-size: 3;
+}
+
+code
+{
+	font-size: 100%;
+	font-family: Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+
+pre code { line-height: 30px; }
+.e { color: #0000ff; }
+.att { color: #990099; }
+.val { color: #008000; }
+.sel { color: #0000ff; }
+.prop { color: #990099; }
+.med { color: #CC0000; }
+.comm { color: #FF0000; }
+
+/* -----------------------------------
+container
+----------------------------------- */
+
+.container
+{
+	max-width: 50em;
+	padding: 2em;
+	background: #fff;
+}

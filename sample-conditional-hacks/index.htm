@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>CSS: conditional comments and hacks</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+
+	.one,.two,.three,.four,.five
+	{
+		background-color: pink;
+		padding: .5em;
+	}
+	
+	.lt-ie7 .one { background-color: red; }
+	.lt-ie8 .two { background-color: red; }
+	.lt-ie9 .three { background-color: red; }
+	.four { _background-color: red; } /* ie6 hack */
+	.five { *background-color: red; } /* ie6 and ie7 hack */
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		CSS: conditional comments and hacks
+	</h1>
+	<h2>
+		Conditional comments
+	</h2>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;!DOCTYPE html&gt;</span>
+<span class="comm">&lt;!--[if lt IE 7]&gt;      &lt;html class="lt-ie9 lt-ie8 lt-ie7"&gt; &lt;![endif]--&gt;</span>
+<span class="comm">&lt;!--[if IE 7]&gt;         &lt;html class="lt-ie9 lt-ie8"&gt; &lt;![endif]--&gt;</span>
+<span class="comm">&lt;!--[if IE 8]&gt;         &lt;html class="lt-ie9"&gt; &lt;![endif]--&gt;</span>
+<span class="comm">&lt;!--[if gt IE 8]&gt;&lt;!--&gt;</span> <span class="e">&lt;html&gt;</span> <span class="comm">&lt;!--&lt;![endif]--&gt;</span>
+<span class="e">&lt;head&gt;</span></code></pre>
+<!-- code end -->
+	</figure>
+	<p>
+		The following span should be red in IE6. <span class="one">Test</span>
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.lt-ie7 .one</span> { <span class="prop">background-color</span>: <span class="val">red</span>; } <span class="comm">/* less than IE7 */</span></code></pre>
+<!-- code end -->
+	</figure>
+
+	<p>
+		The following span should be red in IE6 and IE7. <span class="two">Test</span>
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.lt-ie8 .two</span> { <span class="prop">background-color</span>: <span class="val">red</span>; }<span class="comm">/* less than IE8 */</span></code></pre>
+<!-- code end -->
+	</figure>
+	
+	<p>
+		The following span should be red in IE6, IE7 and IE8. <span class="three">Test</span>
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.lt-ie9 .three</span> { <span class="prop">background-color</span>: <span class="val">red</span>; }<span class="comm">/* less than IE9 */</span></code></pre>
+<!-- code end -->
+	</figure>
+
+	<h2>
+		Internet Explorer hacks
+	</h2>
+	<p>
+		The following span should be red in IE6. <span class="four">Test</span>
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.four</span> { <span class="comm">_</span><span class="prop">background-color</span>: <span class="val">red</span>; } <span class="comm">/* Underscore hack for ie6 hack */</span></code></pre>
+<!-- code end -->
+	</figure>
+
+	<p>
+		The following span should be red in IE6 and IE7. <span class="five">Test</span>
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.five</span> { <span class="comm">*</span><span class="prop">background-color</span>: <span class="val">red</span>; } <span class="comm">/* Star hack for ie6 and ie7 hack */</span></code></pre>
+<!-- code end -->
+	</figure>
+	
+<noscript>
+
+</noscript></div>
+</body>
+</html>

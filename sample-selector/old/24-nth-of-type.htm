@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>selector: nth-of-type</title>
+<style media="screen">
+	body
+	{
+		width: 40em;
+		margin: 20px;
+		padding: 0;
+		font: 100% arial, helvetica, sas-serif;
+	}
+	
+	pre
+	{
+		margin: 1em 0;
+		padding: 1em;
+		background: #eee;
+	}
+	
+	ul
+	{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	
+	p, div div
+	{
+		display: inline;
+		margin: 0 .5em 0 0;
+	}
+	
+	div div { background: #ddd; }
+	.one p:nth-of-type(3) { color: red; }
+	.two p:nth-of-type(3n) { color: red; }
+	.three p:nth-of-type(3n+1) { color: red; }
+	.four p:nth-of-type(3n-1) { color: red; }
+	.five p:nth-of-type(even) { color: red; }
+	.six p:nth-of-type(odd) { color: red; }
+</style>
+</head>
+<body>
+<h1>
+	Selector: nth-of-type
+</h1>
+<h2>
+	p:nth-of-type(3)
+</h2>
+<div class="one">
+	<p>item1</p>
+	<div><strong>DIV</strong></div>
+	<p>item2</p>
+	<p>item3</p>
+	<p>item4</p>
+	<p>item5</p>
+	<div><strong>DIV</strong></div>
+	<p>item7</p>
+	<p>item8</p>
+	<p>item9</p>
+	<p>item10</p>
+</div>
+<pre><code>
+.one p:nth-of-type(3) { color: red; }
+</code></pre>
+<h2>
+	p:nth-of-type(3n)
+</h2>
+<div class="two">
+	<p>item1</p>
+	<div><strong>DIV</strong></div>
+	<p>item2</p>
+	<p>item3</p>
+	<p>item4</p>
+	<p>item5</p>
+	<div><strong>DIV</strong></div>
+	<p>item7</p>
+	<p>item8</p>
+	<p>item9</p>
+	<p>item10</p>
+</div>
+<pre><code>
+.two p:nth-of-type(3n) { color: red; }
+</code></pre>
+<h2>
+	p:nth-of-type(3n+1)
+</h2>
+<div class="three">
+	<p>item1</p>
+	<div><strong>DIV</strong></div>
+	<p>item2</p>
+	<p>item3</p>
+	<p>item4</p>
+	<p>item5</p>
+	<div><strong>DIV</strong></div>
+	<p>item7</p>
+	<p>item8</p>
+	<p>item9</p>
+	<p>item10</p>
+</div>
+<pre><code>
+.three p:nth-of-type(3n+1) { color: red; }
+</code></pre>
+<h2>
+	p:nth-of-type(3n-1)
+</h2>
+<div class="four">
+	<p>item1</p>
+	<div><strong>DIV</strong></div>
+	<p>item2</p>
+	<p>item3</p>
+	<p>item4</p>
+	<p>item5</p>
+	<div><strong>DIV</strong></div>
+	<p>item7</p>
+	<p>item8</p>
+	<p>item9</p>
+	<p>item10</p>
+</div>
+<pre><code>
+.four p:nth-of-type(3n-1) { color: red; }
+</code></pre>
+<h2>
+	p:nth-of-type(even)
+</h2>
+<div class="five">
+	<p>item1</p>
+	<div><strong>DIV</strong></div>
+	<p>item2</p>
+	<p>item3</p>
+	<p>item4</p>
+	<p>item5</p>
+	<div><strong>DIV</strong></div>
+	<p>item7</p>
+	<p>item8</p>
+	<p>item9</p>
+	<p>item10</p>
+</div>
+<pre><code>
+.five p:nth-of-type(even) { color: red; }
+</code></pre>
+<h2>
+	p:nth-of-type(odd)
+</h2>
+<div class="six">
+	<p>item1</p>
+	<div><strong>DIV</strong></div>
+	<p>item2</p>
+	<p>item3</p>
+	<p>item4</p>
+	<p>item5</p>
+	<div><strong>DIV</strong></div>
+	<p>item7</p>
+	<p>item8</p>
+	<p>item9</p>
+	<p>item10</p>
+</div>
+<pre><code>
+.six p:nth-of-type(odd) { color: red; }
+</code></pre>
+</body>
+</html>

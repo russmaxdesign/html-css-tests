@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS property: display</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	em
+	{
+		border: 1px solid red;
+		background-color: pink;
+	}
+	
+	.one em { display: none; }
+	.two em { display: block; }
+	.three em { display: inline; }
+	.four em { display: inline-block; }
+	.five em { display: inline-table; }
+	.six em { display: list-item; }
+	.seven em { display: run-in; }
+	.eight em { display: table; }
+	.nine em { display: table-caption; }
+	.ten em { display: table-cell; }
+	.eleven em { display: table-column; }
+	.twelve em { display: table-column-group; }
+	.thirteen em { display: table-footer-group; }
+	.fourteen em { display: table-header-group; }
+	.fifteen em { display: table-row; }
+	.sixteen em { display: table-row-group; }
+	.seventeen em { display: inherit; }
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		CSS property: display
+	</h1> 
+	<table>
+		<tr>
+			<th class="definition">
+				Value
+			</th>
+			<th>
+				Description
+			</th>
+		</tr>
+		<tr>
+			<td>
+				none
+			</td>
+			<td>
+				The element will generate no box at all
+			</td>
+		</tr>
+		<tr>
+			<td>
+				block
+			</td>
+			<td>
+				The element will generate a block box (a line break before and after the element)
+			</td>
+		</tr>
+		<tr>
+			<td>
+				inline
+			</td>
+			<td>
+				The element will generate an inline box (no line break before or after the element). This is default
+			</td>
+		</tr>
+		<tr>
+			<td>
+				inline-block
+			</td>
+			<td>
+				The element will generate a block box, laid out as an inline box
+			</td>
+		</tr>
+		<tr>
+			<td>
+				inline-table
+			</td>
+			<td>
+				The element will generate an inline box (like &lt;table&gt;, with no line break before or after)
+			</td>
+		</tr>
+		<tr>
+			<td>
+				list-item
+			</td>
+			<td>
+				The element will generate a block box, and an inline box for the list marker
+			</td>
+		</tr>
+		<tr>
+			<td>
+				run-in
+			</td>
+			<td>
+				The element will generate a block or inline box, depending on context
+			</td>
+		</tr>
+		<tr>
+			<td>
+				table
+			</td>
+			<td>
+				The element will behave like a table (like &lt;table&gt;, with a line break before and after)
+			</td>
+		</tr>
+		<tr>
+			<td>
+				table-caption
+			</td>
+			<td>
+				The element will behave like a table caption (like &lt;caption&gt;)
+			</td>
+		</tr>
+		<tr>
+			<td>
+				table-cell
+			</td>
+			<td>
+				The element will behave like a table cell
+			</td>
+		</tr>
+		<tr>
+			<td>
+				table-column
+			</td>
+			<td>
+				The element will behave like a table column
+			</td>
+		</tr>
+		<tr>
+			<td>
+				table-column-group
+			</td>
+			<td>
+				The element will behave like a table column group (like &lt;colgroup&gt;)
+			</td>
+		</tr>
+		<tr>
+			<td>
+				table-footer-group
+			</td>
+			<td>
+				The element will behave like a table footer row group
+			</td>
+		</tr>
+		<tr>
+			<td>
+				table-header-group
+			</td>
+			<td>
+				The element will behave like a table header row group
+			</td>
+		</tr>
+		<tr>
+			<td>
+				table-row
+			</td>
+			<td>
+				The element will behave like a table row
+			</td>
+		</tr>
+		<tr>
+			<td>
+				table-row-group
+			</td>
+			<td>
+				The element will behave like a table row group
+			</td>
+		</tr>
+		<tr>
+			<td>
+				inherit
+			</td>
+			<td>
+				Specifies that the value of the display property should be inherited from the parent element
+			</td>
+		</tr>
+	</table>
+	<h1>
+		Display tests
+	</h1>
+	<h2>
+		<strong>none</strong> - The element will generate no box at all
+	</h2>
+	<p class="sample one">
+		Lorem ipsum dolor sit <em>amet consect etuer</em> adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut.
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">em</span> { <span class="prop">display</span>: <span class="val">none</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		<strong>block</strong> - The element will generate a block box (a line break before and after the element)
+	</h2>
+	<p class="sample two">
+		Lorem ipsum dolor sit <em>amet consect etuer</em> adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut.
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">em</span> { <span class="prop">display</span>: <span class="val">block</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		<strong>inline</strong> - The element will generate an inline box (no line break before or after the element). This is default
+	</h2>
+	<p class="sample three">
+		Lorem ipsum dolor sit <em>amet consect etuer</em> adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut.
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">em</span> { <span class="prop">display</span>: <span class="val">inline</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		<strong>inline-block</strong> - The element will generate a block box, laid out as an inline box
+	</h2>
+	<p class="sample four">
+		Lorem ipsum dolor sit <em>amet consect etuer</em> adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut.
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">em</span> { <span class="prop">display</span>: <span class="val">inline-block</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		<strong>inline-table</strong> - The element will generate an inline box (like &lt;table&gt;, with no line break before or after)
+	</h2>
+	<p class="five">
+		Lorem ipsum dolor sit <em>amet consect etuer</em> adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut.
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">em</span> { <span class="prop">display</span>: <span class="val">inline-table</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		<strong>list-item</strong> - The element will generate a block box, and an inline box for the list marker
+	</h2>
+	<p class="six">
+		Lorem ipsum dolor sit <em>amet consect etuer</em> adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut.
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">em</span> { <span class="prop">display</span>: <span class="val">list-item</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		<strong>run-in</strong> - The element will generate a block or inline box, depending on context
+	</h2>
+	<p class="seven">
+		Lorem ipsum dolor sit <em>amet consect etuer</em> adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut.
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">em</span> { <span class="prop">display</span>: <span class="val">run-in</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		<strong>table</strong> - The element will behave like a table (like &lt;table&gt;, with a line break before and after)
+	</h2>
+	<p class="eight">
+		Lorem ipsum dolor sit <em>amet consect etuer</em> adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut.
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">em</span> { <span class="prop">display</span>: <span class="val">table</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		<strong>table-caption</strong> - The element will behave like a table caption (like &lt;caption&gt;)
+	</h2>
+	<p class="nine">
+		Lorem ipsum dolor sit <em>amet consect etuer</em> adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut.
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">em</span> { <span class="prop">display</span>: <span class="val">table-caption</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		<strong>table-cell</strong> - The element will behave like a table cell
+	</h2>
+	<p class="ten">
+		Lorem ipsum dolor sit <em>amet consect etuer</em> adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut.
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">em</span> { <span class="prop">display</span>: <span class="val">table-cell</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		<strong>table-column</strong> - The element will behave like a table column
+	</h2>
+	<p class="eleven">
+		Lorem ipsum dolor sit <em>amet consect etuer</em> adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut.
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">em</span> { <span class="prop">display</span>: <span class="val">table-column</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		<strong>table-column-group</strong> - The element will behave like a table column group (like &lt;colgroup&gt;)
+	</h2>
+	<p class="twelve">
+		Lorem ipsum dolor sit <em>amet consect etuer</em> adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut.
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">em</span> { <span class="prop">display</span>: <span class="val">table-column-group</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		<strong>table-footer-group</strong> - The element will behave like a table footer row group
+	</h2>
+	<p class="thirteen">
+		Lorem ipsum dolor sit <em>amet consect etuer</em> adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut.
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">em</span> { <span class="prop">display</span>: <span class="val">table-footer-group</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		<strong>table-header-group</strong> - The element will behave like a table header row group
+	</h2>
+	<p class="fourteen">
+		Lorem ipsum dolor sit <em>amet consect etuer</em> adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut.
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">em</span> { <span class="prop">display</span>: <span class="val">table-header-group</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		<strong>table-row</strong> - The element will behave like a table row
+	</h2>
+	<p class="fifteen">
+		Lorem ipsum dolor sit <em>amet consect etuer</em> adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut.
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">em</span> { <span class="prop">display</span>: <span class="val">table-row</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		<strong>table-row-group</strong> - The element will behave like a table row group
+	</h2>
+	<p class="sixteen">
+		Lorem ipsum dolor sit <em>amet consect etuer</em> adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut.
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">em</span> { <span class="prop">display</span>: <span class="val">table-row-group</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		<strong>inherit</strong> - Specifies that the value of the display property should be inherited from the parent element
+	</h2>
+	<p class="seventeen">
+		Lorem ipsum dolor sit <em>amet consect etuer</em> adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut.
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">em</span> { <span class="prop">display</span>: <span class="val">inherit</span>; }
+</code></pre>
+<!-- code end -->
+	</figure>
+</div>
+</body>
+</html>

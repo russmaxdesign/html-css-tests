@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>HTML attribute: checked</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	.depricated { background: pink; }
+	.width20 { width: 30%; }
+	.pass { background-color: lime; }
+	.fail { background-color: pink; }
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		HTML attribute: checked Boolean attribute
+	</h1>
+	<h2>
+		What are boolean attributes
+	</h2>
+	<p>
+		A number of attributes are boolean attributes. The presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.
+	</p>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="comm">&lt;!-- Boolean value "selected" present --&gt;</span>
+<span class="e">&lt;option</span> <span class="att">value</span>=<span class="val">""</span> <span class="att">selected</span><span class="e">&gt;</span>
+
+<span class="comm">&lt;!-- Boolean value "selected" absent --&gt;</span>
+<span class="e">&lt;option</span> <span class="att">value</span>=<span class="val">""</span><span class="e">&gt;</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+
+	<p>
+		If the attribute is present, its value must either be the empty string or a value that is an ASCII case-insensitive match for the attribute's canonical name, with no leading or trailing whitespace.
+	</p>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="comm">&lt;!-- Quoted double --&gt;</span>
+<span class="att">checked</span>=<span class="val">"checked"</span>
+<span class="comm">&lt;!-- Quoted single --&gt;</span>
+<span class="att">checked</span>=<span class="val">'checked'</span>
+
+<span class="comm">&lt;!-- Empty double --&gt;</span>
+<span class="att">checked</span>=<span class="val">""</span>
+<span class="comm">&lt;!-- Empty single --&gt;</span>
+<span class="att">checked</span>=<span class="val">''</span>
+
+<span class="comm">&lt;!-- Minimized --&gt;</span>
+<span class="att">checked</span>
+</code></pre>
+<!-- code end -->
+	</figure>
+
+	<p>
+		The values "true" and "false" are not allowed on boolean attributes. To represent a false value, the attribute has to be omitted altogether.
+	</p>
+	<table>
+		<caption>HTML 4.01 Boolean attributes</caption>
+		<thead>
+			<tr>
+				<th class="width20">Attribute</th>
+				<th>Relevant elements</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>checked</td>
+				<td>INPUT (checkbox, radio)</td>
+			</tr>
+			<tr class="depricated">
+				<td>compact</td>
+				<td>DIR, DL, MENU, OL, UL</td>
+			</tr>
+			<tr>
+				<td>declare</td>
+				<td>OBJECT</td>
+			</tr>
+			<tr>
+				<td>defer</td>
+				<td>SCRIPT</td>
+			</tr>
+			<tr>
+				<td>disabled</td>
+				<td>BUTTON, INPUT, OPTGROUP, OPTION, SELECT, TEXTAREA</td>
+			</tr>
+			<tr>
+				<td>ismap</td>
+				<td>IMG, INPUT</td>
+			</tr>
+			<tr>
+				<td>multiple</td>
+				<td>SELECT</td>
+			</tr>
+			<tr>
+				<td>nohref</td>
+				<td>AREA</td>
+			</tr>
+			<tr>
+				<td>noresize</td>
+				<td>FRAME</td>
+			</tr>
+			<tr class="depricated">
+				<td>noshade</td>
+				<td>HR</td>
+			</tr>
+			<tr class="depricated">
+				<td>nowrap</td>
+				<td>TD, TH</td>
+			</tr>
+			<tr>
+				<td>readonly</td>
+				<td>TEXTAREA, INPUT</td>
+			</tr>
+			<tr>
+				<td>selected</td>
+				<td>OPTION</td>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>a</td>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>a</td>
+			</tr>
+		</tbody>
+	</table>	
+	
+	<table>
+		<caption>HTYML 4.01 Boolean attributes</caption>
+		<thead>
+			<tr>
+				<th class="width20">Attribute</th>
+				<th>Relevant elements</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>novalidate</td>
+				<td>FORM</td>
+			</tr>
+			<tr>
+				<td>autofocus</td>
+				<td>INPUT</td>
+			</tr>
+			<tr>
+				<td>formnovalidate</td>
+				<td>INPUT</td>
+			</tr>
+			<tr>
+				<td>multiple</td>
+				<td>INPUT</td>
+			</tr>
+			<tr>
+				<td>required</td>
+				<td>INPUT</td>
+			</tr>
+		</tbody>
+	</table>	
+	<h2>
+		Tests
+	</h2>
+	<p>
+		In HTML 4.01 and HTML5, boolean attributes can be minimised. They cannot in XHTML 1.0:
+	</p>
+	<ul>
+		<li><a href="01.htm">HTML4.01 - checked=checked</a> - <span class="pass">PASS</span></li>
+		<li><a href="02.htm">HTML4.01 - checked</a> - <span class="pass">PASS</span></li>
+		<li><a href="03.htm">XHTML 1.0 - checked=checked</a> - <span class="pass">PASS</span></li>
+		<li><a href="04.htm">XHTML 1.0 - checked</a> - <span class="fail">FAIL</span></li>
+		<li><a href="05.htm">HTML5 - checked</a> - <span class="pass">PASS</span></li>
+	</ul>
+	<h2>
+		Read more
+	</h2>
+	<ul>
+		<li><a href="http://www.w3.org/html/wg/drafts/html/master/common-microsyntaxes.html#boolean-attributes">HTML5 boolean attributes</a></li>
+		<li><a href="http://www.w3schools.com/html/html5_form_attributes.asp">HTML5 New Form Attributes</a></li>
+		<li><a href="http://www.w3.org/TR/html4/index/attributes.html">W3C list of all HTML4.01 attributes</a></li>
+	</ul>
+</div>
+</body>
+</html>

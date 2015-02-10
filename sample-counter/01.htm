@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS property: counter</title>
+	<link rel="stylesheet" href="../x-assets/master.css">	
+<style>
+	ol
+	{
+		counter-reset: list-order;
+		margin: 1em 0;
+		padding: 0;
+	}
+	
+	ol li
+	{
+		counter-increment: list-order;
+		list-style-type: none;
+		clear: left;
+	}
+	
+	ol li:before
+	{
+		content: counter(list-order) ".";
+		float: left;
+		width: 1.9em;
+	}
+	
+	ol.two { counter-reset: list-order 1; }
+	ol.three { counter-reset: list-order 2; }
+	ol.four { counter-reset: list-order 3; }
+	ol.five { counter-reset: list-order 4; }
+	ol.six { counter-reset: list-order 5; }
+	ol.seven { counter-reset: list-order 6; }
+	ol.eight { counter-reset: list-order 7; }
+	ol.nine { counter-reset: list-order 8; }
+	ol.ten { counter-reset: list-order 9; }
+</style> 
+</head>
+<body>
+<div class="container">
+	<h1>
+		CSS property: counter 
+	</h1>
+	<p>
+		The example below is based on David Storey's <a href="http://dev.opera.com/articles/view/automatic-numbering-with-css-counters/">Counters to replace the <code>start</code> attribute</a>. There are adjustments I'd like to make:
+	</p>
+	<ul>
+		<li>Using a class instead of nth-of-type gives you much more control over when numbering starts and finishes</li>
+		<li>Adding a float to the generated list number means that all list items can be forced to line up neatly at the left edge - regardless of how long the generated number is.</li>
+	</ul>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">ol</span>
+{
+	<span class="prop">counter-reset</span>: <span class="val">list-order</span>;
+	<span class="prop">margin</span>: <span class="val">1em 0</span>;
+	<span class="prop">padding</span>: <span class="val">0</span>;
+}
+
+<span class="sel">ol li</span>
+{
+	<span class="prop">counter-increment</span>: <span class="val">list-order</span>;
+	<span class="prop">list-style-type</span>: <span class="val">none</span>;
+	<span class="prop">clear</span>: <span class="val">left;
+}
+
+<span class="sel">ol li:before</span>
+{
+	<span class="prop">content</span>: <span class="val">counter(list-order) "."</span>;
+	<span class="prop">float</span>: <span class="val">left</span>;
+	<span class="prop">width</span>: <span class="val">1.9em</span>;
+}
+
+<span class="sel">ol.two</span> { <span class="prop">counter-reset</span>: <span class="val">list-order 1</span>; }
+<span class="sel">ol.three</span> { <span class="prop">counter-reset</span>: <span class="val">list-order 2</span>; }
+<span class="sel">ol.four</span> { <span class="prop">counter-reset</span>: <span class="val">list-order 3</span>; }
+<span class="sel">ol.five</span> { <span class="prop">counter-reset</span>: <span class="val">list-order 4</span>; }
+<span class="sel">ol.six</span> { <span class="prop">counter-reset</span>: <span class="val">list-order 5</span>; }
+<span class="sel">ol.seven</span> { <span class="prop">counter-reset</span>: <span class="val">list-order 6</span>; }
+<span class="sel">ol.eight</span> { <span class="prop">counter-reset</span>: <span class="val">list-order 7</span>; }
+<span class="sel">ol.nine</span> { <span class="prop">counter-reset</span>: <span class="val">list-order 8</span>; }
+<span class="sel">ol.ten</span> { <span class="prop">counter-reset</span>: <span class="val">list-order 9</span>; }</code></pre>
+
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		Example in action
+	</h2>
+	<ol>
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+	</ol>
+	<ol class="two">
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+	</ol>
+	<ol class="three">
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+	</ol>
+	<ol class="four">
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+	</ol>
+	<ol class="five">
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+	</ol>
+	<ol class="six">
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+	</ol>
+	<ol class="seven">
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+	</ol>
+	<ol class="eight">
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+	</ol>
+	<ol class="nine">
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+	</ol>
+	<ol class="ten">
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+	</ol>
+</div>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>selector: nth-child</title>
+<style media="screen">
+	body
+	{
+		width: 40em;
+		margin: 20px;
+		padding: 0;
+		font: 100% arial, helvetica, sas-serif;
+	}
+	
+	pre
+	{
+		margin: 1em 0;
+		padding: 1em;
+		background: #eee;
+	}
+	
+	ul
+	{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	
+	li
+	{
+		display: inline;
+		margin: 0 .5em 0 0;
+	}
+	
+	.one li:nth-child(3) { color: red; }
+	.two li:nth-child(3n) { color: red; }
+	.three li:nth-child(3n+1) { color: red; }
+	.four li:nth-child(3n-1) { color: red; }
+	.five li:nth-child(even) { color: red; }
+	.six li:nth-child(2n) { color: red; }
+	.seven li:nth-child(2n+1) { color: red; }
+</style>
+</head>
+<body>
+<h1>
+	Selector: nth-child
+</h1>
+<h2>
+	li:nth-child(3)
+</h2>
+<div class="one">
+	<ul>
+		<li>item1</li>
+		<li>item2</li>
+		<li>item3</li>
+		<li>item4</li>
+		<li>item5</li>
+		<li>item6</li>
+		<li>item7</li>
+		<li>item8</li>
+		<li>item9</li>
+		<li>item10</li>
+	</ul>
+</div>
+<pre><code>
+.one li:nth-child(3) { color: red; }
+</code></pre>
+<h2>
+	li:nth-child(3n)
+</h2>
+<div class="two">
+	<ul>
+		<li>item1</li>
+		<li>item2</li>
+		<li>item3</li>
+		<li>item4</li>
+		<li>item5</li>
+		<li>item6</li>
+		<li>item7</li>
+		<li>item8</li>
+		<li>item9</li>
+		<li>item10</li>
+	</ul>
+</div>
+<pre><code>
+.two li:nth-child(3n) { color: red; }
+</code></pre>
+<h2>
+	li:nth-child(3n+1)
+</h2>
+<div class="three">
+	<ul>
+		<li>item1</li>
+		<li>item2</li>
+		<li>item3</li>
+		<li>item4</li>
+		<li>item5</li>
+		<li>item6</li>
+		<li>item7</li>
+		<li>item8</li>
+		<li>item9</li>
+		<li>item10</li>
+	</ul>
+</div>
+<pre><code>
+.three li:nth-child(3n+1) { color: red; }
+</code></pre>
+<h2>
+	li:nth-child(3n-1)
+</h2>
+<div class="four">
+	<ul>
+		<li>item1</li>
+		<li>item2</li>
+		<li>item3</li>
+		<li>item4</li>
+		<li>item5</li>
+		<li>item6</li>
+		<li>item7</li>
+		<li>item8</li>
+		<li>item9</li>
+		<li>item10</li>
+	</ul>
+</div>
+<pre><code>
+.four li:nth-child(3n-1) { color: red; }
+</code></pre>
+<h2>
+	li:nth-child(even)
+</h2>
+<div class="five">
+	<ul>
+		<li>item1</li>
+		<li>item2</li>
+		<li>item3</li>
+		<li>item4</li>
+		<li>item5</li>
+		<li>item6</li>
+		<li>item7</li>
+		<li>item8</li>
+		<li>item9</li>
+		<li>item10</li>
+	</ul>
+</div>
+<pre><code>
+.five li:nth-child(even) { color: red; }
+</code></pre>
+<h2>
+	li:nth-child(2n)
+</h2>
+<div class="six">
+	<ul>
+		<li>item1</li>
+		<li>item2</li>
+		<li>item3</li>
+		<li>item4</li>
+		<li>item5</li>
+		<li>item6</li>
+		<li>item7</li>
+		<li>item8</li>
+		<li>item9</li>
+		<li>item10</li>
+	</ul>
+</div>
+<pre><code>
+.six li:nth-child(2n) { color: red; }
+</code></pre>
+<h2>
+	li:nth-child(2n+1)
+</h2>
+<div class="seven">
+	<ul>
+		<li>item1</li>
+		<li>item2</li>
+		<li>item3</li>
+		<li>item4</li>
+		<li>item5</li>
+		<li>item6</li>
+		<li>item7</li>
+		<li>item8</li>
+		<li>item9</li>
+		<li>item10</li>
+	</ul>
+</div>
+<pre><code>
+.seven li:nth-child(2n+1) { color: red; }
+</code></pre>
+
+</body>
+</html>

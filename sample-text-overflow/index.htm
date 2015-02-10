@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS: truncated text</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	.example1,.example2,.example3,.example4,.example5,.example6
+	{
+		width: 300px;
+		margin: 0 0 1em;
+		background: pink;
+	}
+	
+	.example2 { white-space: nowrap; }
+	
+	.example3
+	{
+		overflow: hidden;
+		white-space: nowrap;
+	}
+	
+	.example4
+	{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	
+	.example5
+	{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis-word;
+	}
+	
+	.example6
+	{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: clip;
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		CSS: truncated text
+	</h1>
+	<h2>
+		Example 1: nothing
+	</h2>
+	<div class="example1">
+		This is some text that may be wrapped over several lines if it is long enough.
+	</div>
+	<h2>
+		Example 2: white-space: nowrap
+	</h2>
+	<div class="example2">
+		This is some text that may be wrapped over several lines if it is long enough.
+	</div>
+	<figure>
+		<figcaption class="code-heading">CSS code: example 2</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.example2</span> { <span class="prop">white-space</span>: <span class="val">nowrap</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		Example 3: overflow: hidden and white-space: nowrap;
+	</h2>
+	<div class="example3">
+		This is some text that may be wrapped over several lines if it is long enough.
+	</div>
+	<figure>
+		<figcaption class="code-heading">CSS code: example 3</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.example3</span>
+{
+	<span class="prop">overflow</span>: <span class="val">hidden</span>;
+	<span class="prop">white-space</span>: <span class="val">nowrap</span>;
+}</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		Example 4: overflow: hidden, white-space: nowrap and text-overflow: ellipsis
+	</h2>
+	<div class="example4">
+		This is some text that may be wrapped over several lines if it is long enough.
+	</div>
+	<figure>
+		<figcaption class="code-heading">CSS code: example 4</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.example4</span>
+{
+	<span class="prop">overflow</span>: <span class="val">hidden</span>;
+	<span class="prop">white-space</span>: <span class="val">nowrap</span>;
+	<span class="prop">text-overflow</span>: <span class="val">ellipsis</span>;
+}</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		Example 5: overflow: hidden, white-space: nowrap and text-overflow: ellipsis-word
+	</h2>
+	<div class="example5">
+		This is some text that may be wrapped over several lines if it is long enough.
+	</div>
+	<figure>
+		<figcaption class="code-heading">CSS code: example 5</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.example5</span>
+{
+	<span class="prop">overflow</span>: <span class="val">hidden</span>;
+	<span class="prop">white-space</span>: <span class="val">nowrap</span>;
+	<span class="prop">text-overflow</span>: <span class="val">ellipsis-word</span>;
+}</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		Example 6: overflow: hidden, white-space: nowrap and text-overflow: clip
+	</h2>
+	<div class="example6">
+		This is some text that may be wrapped over several lines if it is long enough.
+	</div>
+	<figure>
+		<figcaption class="code-heading">CSS code: example 6</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.example6</span>
+{
+	<span class="prop">overflow</span>: <span class="val">hidden</span>;
+	<span class="prop">white-space</span>: <span class="val">nowrap</span>;
+	<span class="prop">text-overflow</span>: <span class="val">clip</span>;
+}</code></pre>
+<!-- code end -->
+	</figure>
+</div>
+</body>
+</html>

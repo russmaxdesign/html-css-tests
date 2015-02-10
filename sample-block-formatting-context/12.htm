@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Wrapping a parent around margins - inline-block</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	.example
+	{
+		background: yellow;
+		display: inline-block;
+	}
+	
+	p
+	{
+		margin: 1em 0;
+		background: pink;
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		Wrapping a parent around margins - inline-block
+	</h1>
+	<div class="example">
+		<p>
+			This is a paragraph
+		</p>
+	</div>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.example</span> { <span class="prop">display</span>: <span class="val">inline-block</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+</div>
+</body>
+</html>

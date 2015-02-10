@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS property: background-size</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	.one,.two,.three,.four
+	{
+		height: 200px;
+		width: 400px;
+		border: 1px solid red;
+		background-color: pink;
+		background-image: url(example.png);
+		background-repeat: no-repeat;
+		background-position: 0 0;
+	}
+	
+	.one { background-size: 40px 80px; }
+	.two { background-size: 40% 80%; }
+	.three { background-size: contain; }
+	.four { background-size: cover; }
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		CSS property: background-size
+	</h1>
+	<p>
+		In CSS2.1, we could apply background images to elements, but we had no way to control the size of these background images.
+	</p>
+	<p>
+		However, CSS3 allows us to set the size of our background images using the background-size property.
+	</p>
+	<p>
+		We can set the size using 
+	</p>
+	<ul>
+		<li>length values</li>
+		<li>percentage values</li>
+		<li>keyword values (contain and cover)</li>
+	</ul>
+	<h2>
+		Length values
+	</h2>
+	<p>
+		The length value sets the height and width of the background image. The first value sets the width, the second value sets the height. 
+	</p>
+	<div class="one"></div>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.one,.two,.three,.four</span>
+{
+	<span class="prop">height</span>: <span class="val">200px</span>;
+	<span class="prop">width</span>: <span class="val">400px</span>;
+	<span class="prop">border</span>: <span class="val">1px solid red</span>;
+	<span class="prop">background-color</span>: <span class="val">pink</span>;
+	<span class="prop">background-image</span>: <span class="val">url(example.png)</span>;
+	<span class="prop">background-repeat</span>: <span class="val">no-repeat</span>;
+	<span class="prop">background-position</span>: <span class="val">0 0</span>;
+}
+
+<span class="sel">.one</span> { <span class="prop">background-size</span>: <span class="val">40px 80px</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		Percentage values 
+	</h2>
+	<p>
+		The percentage value sets the height and width to a percent of the parent element. The first value sets the width, the second value sets the height. 
+	</p>
+	<div class="two"></div>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.two</span> { <span class="prop">background-size</span>: <span class="val">40% 80%</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		The ‘contain’ value 
+	</h2>
+	<p>
+		The contain value will scale the image (while keeping its aspect ratio) so that the entire image can fit inside the background area. 
+	</p>
+	<div class="three"></div>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.three</span> { <span class="prop">background-size</span>: <span class="val">contain</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+
+	<h2>
+		The ‘cover’ value 
+	</h2>
+	<p>
+		The cover value will scale the image (while keeping it’s aspect ratio) to the smallest size that will completely covered the background area. 
+	</p>
+	<div class="four"></div>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.four</span> { <span class="prop">background-size</span>: <span class="val">cover</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+
+</div>
+</body>
+</html>

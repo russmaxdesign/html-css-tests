@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS property: using background-attachment</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	body
+	{
+		background-image: url(dummy.png);
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: 5px 5px;
+	}
+	
+	.container
+	{
+		position: relative;
+		left: 120px;
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		CSS property: using background-attachment
+	</h1>
+	<p>
+		The <code>background-attachment</code> property defines whether the background-image scrolls with the document, or remains fixed to the viewing area. Its default value is <code>scroll</code>, which dictates that as the document is scrolled up or down, the image scrolls with it. 
+	</p>
+	<h2>
+		Scroll 
+	</h2>
+	<p>
+		The value <code>scroll</code> allows the background-image to scroll along with the document. When it’s used on an element that has a scrollbar—see overflow—the value scroll ensures that the background-image doesn’t move with that element’s scrolling mechanism, but instead scrolls with the document’s scrolling mechanism. 
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+	<!-- code start -->
+<pre><code><span class="sel">body</span>
+{
+	<span class="prop">background-attachment</span>: <span class="val">scroll</span>;
+}
+</code></pre>
+	<!-- code end -->
+	</figure>
+	<p>
+		<a href="example1.htm">Example of <code>background-attachment: scroll</code></a>
+	</p>
+	<h2>
+		Fixed 
+	</h2>
+	<p>
+		The value <code>fixed</code> stops the background-image from scrolling with its containing block. Note that although the fixed background-image may be applied to elements throughout the document, its background-position is always placed in relation to the viewport. This means the background-image is only visible when its background-position coincides with the content, padding, or border area of the element to which it is applied. Thus, a fixed background-image doesn’t move with elements that have a scrollbar—see overflow—because it’s placed in relation to the viewport. 
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+	<!-- code start -->
+<pre><code><span class="sel">body</span>
+{
+	<span class="prop">background-attachment</span>: <span class="val">fixed</span>;
+}
+</code></pre>
+	<!-- code end -->
+	</figure>
+	<p>
+		<a href="example2.htm">Example of <code>background-attachment: fixed</code></a>
+	</p>
+	<p>
+		All content here taken from: <a href="http://reference.sitepoint.com/css/background-attachment">http://reference.sitepoint.com/css/background-attachment </a> 
+	</p>
+</div>
+</body>
+</html>

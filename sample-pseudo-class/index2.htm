@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS: pseudo-classes and IE7/8</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	.one em:first-child { color: red; }
+	.two em:last-child { color: red; }
+	.three em:only-child { color: red; }
+	.four em:first-of-type { color: red; }
+	.five em:last-of-type { color: red; }
+	.six em:only-of-type { color: red; }
+	.seven em:nth-child(3) { color: red; }
+	.eight em:nth-last-child(3) { color: red; }
+	.nine em:nth-of-type(3) { color: red; }
+	.ten em:nth-last-of-type(3) { color: red; }
+
+
+	.eleven em:nth-of-type(3),.eleven-sample { color: red; }
+	.twelve em:nth-of-type(3),.twelve-sample { color: red; }
+	.twelve-sample { color: blue; }
+
+
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		IE7 and 8 test
+	</h1>
+	<p>
+		I was recently writing a selector to apply a background-color to ever "even" row in a table. The CSS rule was:
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">tr:nth-child(even)</span> { <span class="prop">background-color</span>: <span class="val">#E6E6E6</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+	<p>
+		As this didn't work for IE7 and 8, I decided to add a class called "even" to every even row - just as an experiment. I then added this class to the selector.
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">tr:nth-child(even)</span>,<span class="sel">.even</span> { <span class="prop">background-color</span>: <span class="val">#E6E6E6</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+	<p>
+		However, I noticed that IE8 did not apply this rule at all. However, when I moved it to a new rule, IE8 applied the styles.
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">tr:nth-child(even)</span> { <span class="prop">background-color</span>: <span class="val">#E6E6E6</span>; }
+<span class="sel">.even</span> { <span class="prop">background-color</span>: <span class="val">#E6E6E6</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+	<p>
+		It turns out that as IE8 does not support CSS3 pseudo-class selectors, it will ignore the entire rule if a one of these CSS3 pseudo-classes is used.
+	</p>
+	<p>
+		Here is a quick demo:
+	</p>
+
+	<h2>
+		Test 1
+	</h2>
+	<p class="eleven">
+	   <em>first of type</em>, <em>second of type</em>, <em class="eleven-sample">third of type</em>, <em>last of type</em>
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.eleven em:nth-of-type(3)</span>,<span class="sel">.eleven-sample</span> { <span class="prop">color</span>: <span class="val">red</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+	<h2>
+		Test 2
+	</h2>
+	<p class="twelve">
+	   <em>first of type</em>, <em>second of type</em>, <em class="twelve-sample">third of type</em>, <em>last of type</em>
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.twelve em:nth-of-type(3)</span>,<span class="sel">.twelve-sample</span> { <span class="prop">color</span>: <span class="val">red</span>; }
+<span class="sel">.twelve-sample</span> { <span class="prop">color</span>: <span class="val">blue</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+	<h2>
+		:first-child
+	</h2>
+	<p class="one">
+	   <em class="one-sample">first child</em>, <em>second child</em>
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.one em:first-child</span> { <span class="prop">color</span>: <span class="val">red</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+	<h2>
+		:last-child
+	</h2>
+	<p class="two">
+	   <em>first child</em>, <em>last child</em>
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.two em:last-child</span> { <span class="prop">color</span>: <span class="val">red</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+	<h2>
+		:only-child
+	</h2>
+	<p class="three">
+	   <em>only child</em>
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.three em:only-child</span> { <span class="prop">color</span>: <span class="val">red</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+	<h2>
+		:first-of-type
+	</h2>
+	<p class="four">
+	   <em>first of type</em>, <em>second of type</em>, <em>third of type</em>, <em>fourth of type</em>
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.four em:first-of-type</span> { <span class="prop">color</span>: <span class="val">red</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+	<h2>
+		:last-of-type
+	</h2>
+	<p class="five">
+	   <em>first of type</em>, <em>second of type</em>, <em>third of type</em>, <em>last of type</em>
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.five em:last-of-type</span> { <span class="prop">color</span>: <span class="val">red</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+	<h2>
+		:only-of-type
+	</h2>
+	<p class="six">
+	   <em>only of type</em>, <span>span</span>, <span>span</span>, <span>span</span>
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.six em:only-of-type</span> { <span class="prop">color</span>: <span class="val">red</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+	<h2>
+		:nth-child(n)
+	</h2>
+	<p class="seven">
+	   <em>first child</em>, <em>second child</em>, <em>third child</em>, <em>fourth child</em>
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.seven em:nth-child(3)</span> { <span class="prop">color</span>: <span class="val">red</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+	<h2>
+		:nth-last-child(n)
+	</h2>
+	<p class="eight">
+	   <em>fourth last child</em>, <em>third last child</em>, <em>second last child</em>, <em>last child</em>
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.eight em:nth-last-child(3)</span> { <span class="prop">color</span>: <span class="val">red</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+	<h2>
+		:nth-of-type(n)
+	</h2>
+	<p class="nine">
+	   <em>first of type</em>, <em>second of type</em>, <em>third of type</em>, <em>last of type</em>
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.nine em:nth-of-type(3)</span> { <span class="prop">color</span>: <span class="val">red</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+	<h2>
+		:nth-last-of-type(n)
+	</h2>
+	<p class="ten">
+	   <em>fourth last of type</em>, <em>third last of type</em>, <em>second last of type</em>, <em>last of type</em>
+	</p>
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.ten em:nth-last-of-type(3)</span> { <span class="prop">color</span>: <span class="val">red</span>; }</code></pre>
+<!-- code end -->
+	</figure>
+
+</div>
+</body>
+</html>

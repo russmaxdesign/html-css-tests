@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>selector: default</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	/* example 1 */
+	.example1 button:default { color: red; }
+	
+	/* example 2 */
+	.example2 input:default { color: red; }
+	
+	/* example 3 */
+	.example3 input:default { border: 2px solid red; }
+	
+	/* example 4 */
+	.example4 input:default + label { color: red; }
+		
+	/* example 5 */
+	.example5 input:default + label { color: red; }
+
+	/* example 5 */
+	.example6 option:default { color: red; }
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		Selector: :default
+	</h1>
+	<h2>Definitions</h2>
+	<p>
+		The :default pseudo-class must match any element falling into one of the following categories:
+	</p>
+	<ul>
+		<li>&lt;button&gt; elements that are their form's default button</li>
+		<li>&lt;input&gt; elements whose type attribute is in the Submit Button or Image Button state, and that are their form's default button</li>
+		<li>&lt;input&gt; elements to which the checked attribute applies and that have a checked attribute</li>
+		<li>&lt;option&gt; elements that have a selected attribute</li>
+	</ul>
+	<p>
+		Source: <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting.html#selector-default">http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting.html#selector-default</a>
+	</p>
+	<p>
+		A form element's default button is the first submit button in tree order whose form owner is that form element.
+	</p>
+	<p>
+		Source: <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#default-button">http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#default-button</a>
+	</p>
+	<h2>Example 1 - button elements</h2>
+	<p>
+		The first submit &lt;button&gt; is the default element, and should have red text.
+	</p>
+	<form class="example1" method="get">
+		<button type="reset">Reset</button>
+		<button type="submit">Submit1</button>
+		<button type="submit">Submit2</button>
+	</form>
+	<h2>Example 2 - input type="submit"</h2>
+	<p>
+		The first input type="submit" is the default element, and should have red text.
+	</p>
+	 - default element should be red text
+	<form class="example2" method="get">
+		<input type="reset" value="Reset">
+		<input type="submit" value="Submit1">
+		<input type="submit" value="Submit2">
+	</form>
+	<h2>Example 3 - input type="image"</h2>
+	<p>
+		The first input type="image" is the default element, and should have a red border.
+	</p>
+	<form class="example3" method="get">
+		<input type="image" src="x-submit.png" alt="Submit1">
+		<input type="image" src="x-reset.png" alt="Reset">
+	</form>
+
+
+	<h2>Example 4 - radio - checked - default element should be red text</h2>
+	<form class="example4" method="get">
+		<input id="r1" name="choice" type="radio" checked>
+		<label for="r1">checked</label><br>
+		<input id="r2" name="choice" type="radio">
+		<label for="r2">not checked</label>
+	</form>
+	<h2>Example 5 - checkbox - checked - default element should be red text</h2>
+	<form class="example5" method="get">
+		<input id="c1" name="choice" type="checkbox" checked>
+		<label for="c1">checked</label><br>
+		<input id="c2" name="choice" type="checkbox">
+		<label for="c2">not checked</label>
+	</form>
+	<h2>Example 6 - option - selected - default element should be red text</h2>
+	<form class="example6" method="get">
+		<label for="sl">Choose an option</label>
+		<select id="s1" name="s1">
+			<option value="one">One</option>
+			<option value="two" selected>Two</option>
+			<option value="three">Three</option>
+		</select>
+	</form>
+</div>
+</body>
+</html>
+

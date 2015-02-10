@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>HTML: syntax coloring</title>
+<style type="text/css">
+	body
+	{
+		margin: 0;
+		padding: 20px;
+		color: #000;
+		background: #fff;
+		font: 100%/1.2 helvetica, arial, sans-serif;
+	}
+	
+	h1 { margin: 0 0 1em; }
+	.container { max-width: 1000px; }
+	figure { margin: 1em 0 2em; }
+	
+	.code-heading
+	{
+		padding: .5em;
+		color: #555;
+		background-color: #ddd;
+		font-size: 20px;
+		line-height: 20px;
+		font-weight: bold;
+	}
+	
+	pre
+	{
+		display: block;
+		overflow: auto;
+		margin: 0;
+		padding: 0 1em 0 40px;
+		border: 1px solid #ccc;
+		border-bottom: 0;
+		background-image: url(numbers2.png);
+		background-repeat: repeat-y;
+		/* reduce the tab-size */
+		-moz-tab-size: 3;
+		-o-tab-size: 3;
+		tab-size: 3;
+	}
+	
+	code
+	{
+		font-size: 18px;
+		line-height: 30px;
+		font-family: Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+	}
+	
+	.e { color: #0000ff; }
+	.att { color: #990099; }
+	.val { color: #008000; }
+	.sel { color: #0000ff; }
+	.prop { color: #990099; }
+	.med { color: #CC0000; }
+	.comm { color: #FF0000; }
+	
+	/* specific */
+	.container { max-width: 1000px; }
+	
+	.container ul
+	{
+		clear: left;
+		overflow: hidden;
+		zoom: 1;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		background-color: #000;
+	}
+	
+	.container a
+	{
+		display: block;
+		padding: .5em;
+		border-bottom: 1px solid #fff;
+		color: #fff;
+		background-color: #000;
+		text-decoration: none;
+	}
+	
+	@media (min-width: 800px)
+	{
+		.container a
+		{
+			float: left;
+			padding: .5em 1em;
+			border-right: 1px solid #999;
+			border-bottom: 0;
+			color: #fff;
+			background-color: #000;
+			text-decoration: none;
+		}
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		HTML: syntax coloring
+	</h1>
+	<h2>
+		Here is the sample:
+	</h2>
+	<p>
+		This is some text about the sample.
+	</p>
+	<div class="container">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Team</a></li>
+			<li><a href="#">How to find us</a></li>
+			<li><a href="#">Our Clients</a></li>
+		</ul>
+	</div>
+	<figure>
+		<figcaption class="code-heading">HTML markup</figcaption>
+<!-- code start -->
+<pre><code><span class="e">&lt;div</span> <span class="att">class=</span><span class="val">&quot;container&quot;</span><span class="e">&gt;</span>
+	<span class="e">&lt;ul&gt;</span>
+		<span class="e">&lt;li&gt;&lt;a</span> <span class="att">href=</span><span class="val">&quot;#&quot;</span><span class="e">&gt;</span>Home<span class="e">&lt;/a&gt;&lt;/li&gt;</span>
+		<span class="e">&lt;li&gt;&lt;a</span> <span class="att">href=</span><span class="val">&quot;#&quot;</span><span class="e">&gt;</span>About<span class="e">&lt;/a&gt;&lt;/li&gt;</span>
+		<span class="e">&lt;li&gt;&lt;a</span> <span class="att">href=</span><span class="val">&quot;#&quot;</span><span class="e">&gt;</span>Team<span class="e">&lt;/a&gt;&lt;/li&gt;</span>
+		<span class="e">&lt;li&gt;&lt;a</span> <span class="att">href=</span><span class="val">&quot;#&quot;</span><span class="e">&gt;</span>How to find us<span class="e">&lt;/a&gt;&lt;/li&gt;</span>
+		<span class="e">&lt;li&gt;&lt;a</span> <span class="att">href=</span><span class="val">&quot;#&quot;</span><span class="e">&gt;</span>Our Clients<span class="e">&lt;/a&gt;&lt;/li&gt;</span>
+	<span class="e">&lt;/ul&gt;</span>
+<span class="e">&lt;/div&gt;</span>
+<span class="comm">&lt;!-- example comment --&gt;</span></code></pre>
+<!-- code end -->
+	</figure>
+
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">.container</span> { <span class="prop">max-width</span>: <span class="val">1000px</span>; }
+
+<span class="sel">.container ul</span>
+{
+	<span class="prop">clear</span>: <span class="val">left</span>;
+	<span class="prop">overflow</span>: <span class="val">hidden</span>;
+	<span class="prop">zoom</span>: <span class="val">1</span>;
+	<span class="prop">margin</span>: <span class="val">0</span>;
+	<span class="prop">padding</span>: <span class="val">0</span>;
+	<span class="prop">list-style</span>: <span class="val">none</span>;
+	<span class="prop">background-color</span>: <span class="val">#000</span>;
+}
+
+<span class="sel">.container a</span>
+{
+	<span class="prop">display</span>: <span class="prop">block</span>;
+	<span class="prop">padding</span>: <span class="val">.5em</span>;
+	<span class="prop">border-bottom</span>: <span class="val">1px solid #fff</span>;
+	<span class="prop">color</span>: <span class="val">#fff</span>;
+	<span class="prop">background-color</span>: <span class="val">#000</span>;
+	<span class="prop">text-decoration</span>: <span class="val">none</span>;
+}
+
+<span class="med">@media (min-width: 800px)</span>
+{
+	<span class="sel">.container a</span>
+	{
+		<span class="prop">float</span>: <span class="val">left</span>;
+		<span class="prop">padding</span>: <span class="val">.5em</span> <span class="val">1em</span>;
+		<span class="prop">border-right</span>: <span class="val">1px solid #999</span>;
+		<span class="prop">border-bottom</span>: <span class="val">0</span>;
+		<span class="prop">color</span>: <span class="val">#fff</span>;
+		<span class="prop">background-color</span>: <span class="val">#000</span>;
+		<span class="prop">text-decoration</span>: <span class="val">none</span>;
+	}
+}
+
+<span class="sel">.e</span> { <span class="prop">color</span>: <span class="val">#0000ff</span>; } <span class="comm">/* HTML element */</span>
+<span class="sel">.att</span> { <span class="prop">color</span>: <span class="val">#990099</span>; } <span class="comm">/* HTML attribute */</span>
+<span class="sel">.val</span> { <span class="prop">color</span>: <span class="val">#008000</span>; } <span class="comm">/* HTML/CSS value */</span>
+<span class="sel">.sel</span> { <span class="prop">color</span>: <span class="val">#0000ff</span>; } <span class="comm">/* CSS selector */</span>
+<span class="sel">.prop</span> { <span class="prop">color</span>: <span class="val">#990099</span>; } <span class="comm">/* CSS property */</span>
+<span class="sel">.med</span> { <span class="prop">color</span>: <span class="val">#CC0000</span>; } <span class="comm">/* CSS media query */</span>
+<span class="sel">.comm</span> { <span class="prop">color</span>: <span class="val">#FF0000</span>; } <span class="comm">/* Comment */</span></code></pre>
+<!-- code end -->
+	</figure>
+</div>
+</body>
+</html>

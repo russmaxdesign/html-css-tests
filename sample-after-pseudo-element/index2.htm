@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Generating a visible title using :after</title>
+	<link rel="stylesheet" href="../x-assets/master.css">
+<style>
+	a { position: relative; }
+	a:link { color: blue; }
+	a:visited { color: purple; }
+	
+	a:focus
+	{
+		color: green;
+		outline: none;
+		text-decoration: none;
+	}
+	
+	a:hover
+	{
+		color: red;
+		text-decoration: none;
+	}
+	
+	a:active { color: black; }
+	
+	a:hover:after, a:focus:after
+	{
+		position: absolute;
+		z-index: 200;
+		left: 2em;
+		top: 2em;
+		display: block;
+		width: 10em;
+		margin: 0;
+		padding: 1em;
+		color: #fff;
+		background: #333;
+		content: attr(title);
+		box-shadow: .2em .2em .2em #bbb;
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		Generating a visible title using :after
+	</h1>
+	<p>
+		Lorem ipsum dolor sit amet consect etuer adipi lorem ipsum dolor sit amet consect etuer adipi scing <a href="#" title="This is a long title for link - probably some kind of detailed description">a link here</a> elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut.
+	</p>
+	<ul>
+		<li><a href="#" title="Additional information on peanut butter">Peanut butter</a></li>
+		<li><a href="#" title="A description of the American Civil War">Politics of the American Civil War</a></li>
+		<li><a href="#" title="British Parliament transcript">The PM's address to Parliament - June 1962</a></li>
+		<li><a href="#" title="How to make bread at home">Break making at home</a></li>
+		<li><a href="#" title="How fast do hummingbird's wings beat?">More on hummingbirds</a></li>
+	</ul>
+
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">a:hover:after, a:focus:after</span>
+{
+	<span class="prop">position</span>: <span class="val">absolute</span>;
+	<span class="prop">z-index</span>: <span class="val">200</span>;
+	<span class="prop">left</span>: <span class="val">2em</span>;
+	<span class="prop">top</span>: <span class="val">2em</span>;
+	<span class="prop">display</span>: <span class="val">block</span>;
+	<span class="prop">width</span>: <span class="val">10em</span>;
+	<span class="prop">margin</span>: <span class="val">0</span>;
+	<span class="prop">padding</span>: <span class="val">1em</span>;
+	<span class="prop">color</span>: <span class="val">#fff</span>;
+	<span class="prop">background</span>: <span class="val">#333</span>;
+	<span class="prop">content</span>: <span class="val">attr(title)</span>;
+	<span class="prop">box-shadow</span>: <span class="val">.2em .2em .2em #bbb</span>;
+}</code></pre>
+<!-- code end -->
+	</figure>
+
+</div>
+</body>
+</html>

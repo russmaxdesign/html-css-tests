@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS: fixed table header</title>
+<style>
+	/* general */
+	body
+	{
+		margin: 0;
+		padding: 0;
+		color: #000;
+		background: #eee;
+		font: 100%/1.5 helvetica, arial, sans-serif;
+	}
+	
+	h1,h2,h3,h4
+	{
+		clear: left;
+		line-height: 1.1;
+	}
+	
+	h1
+	{
+		margin: 0 0 .5em;
+		font-size: 200%;
+	}
+	
+	h2
+	{
+		margin: 2em 0 .3em;
+		font-size: 137.5%;
+	}
+	
+	h3
+	{
+		margin: 1em 0 .3em;
+		font-size: 112.5%;
+	}
+	
+	p { margin: 0 0 1em; }
+	
+	/* figure */
+	figure,.figure
+	{
+		clear: both;
+		margin: 1em 0 2em;
+	}
+	
+	.code-heading
+	{
+		padding: .5em;
+		color: #333;
+		background-color: #ddd;
+		font-size: 112.5%;
+		font-weight: bold;
+		line-height: 20px;
+	}
+	
+	pre
+	{
+		display: block;
+		overflow: auto;
+		margin: 0;
+		padding: 0 1em 0 40px;
+		border: 1px solid #ccc;
+		border-bottom: 0;
+		color: #777;
+		background-image: url(../x-assets/numbers2.png);
+		background-repeat: repeat-y;
+		-moz-tab-size: 3;
+		-o-tab-size: 3;
+		tab-size: 3;
+	}
+	
+	code
+	{
+		font-size: 100%;
+		line-height: 30px;
+		font-family: Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+	}
+	
+	.e { color: #0000ff; }
+	.att { color: #990099; }
+	.val { color: #008000; }
+	.sel { color: #0000ff; }
+	.prop { color: #990099; }
+	.med { color: #CC0000; }
+	.comm { color: #FF0000; }
+	
+	/* container */
+	.container
+	{
+		max-width: 50em;
+		padding: 2em;
+		background: #fff;
+	}
+	
+	/* table */
+	table
+	{
+		width: 500px;
+		border-collapse: collapse;
+	}
+	
+	thead
+	{
+		display: block;
+		width: 500px;
+		overflow: auto;
+		color: #fff;
+		background: #000;
+	}
+	
+	tbody
+	{
+		display: block;
+		width: 500px;
+		height: 200px;
+		background: pink;
+		overflow: auto;
+	}
+	
+	th,td
+	{
+		padding: .5em 1em;
+		text-align: left;
+		vertical-align: top;
+		border-left: 1px solid #fff;
+	}
+	
+	.width200 { width: 200px; }
+</style>
+</head>
+<body>
+<div class="container">
+	<h1>
+		CSS: fixed table header
+	</h1>
+	<table>
+		<thead>
+			<tr>
+				<th class="width200">Header 1</th>
+				<th class="width200">Header 2</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="width200">Cell 1, Row 1</td>
+				<td class="width200">Cell 2, Row 1</td>
+			</tr>
+			<tr>
+				<td>Cell 1, Row 2</td>
+				<td>Cell 2, Row 2</td>
+			</tr>
+			<tr>
+				<td>Cell 1, Row 3</td>
+				<td>Cell 2, Row 3</td>
+			</tr>
+			<tr>
+				<td>Cell 1, Row 4</td>
+				<td>Cell 2, Row 4</td>
+			</tr>
+			<tr>
+				<td>Cell 1, Row 5</td>
+				<td>Cell 2, Row 5</td>
+			</tr>
+			<tr>
+				<td>Cell 1, Row 6</td>
+				<td>Cell 2, Row 6</td>
+			</tr>
+			<tr>
+				<td>Cell 1, Row 7</td>
+				<td>Cell 2, Row 7</td>
+			</tr>
+			<tr>
+				<td>Cell 1, Row 8</td>
+				<td>Cell 2, Row 8</td>
+			</tr>
+			<tr>
+				<td>Cell 1, Row 9</td>
+				<td>Cell 2, Row 9</td>
+			</tr>
+			<tr>
+				<td>Cell 1, Row 10</td>
+				<td>Cell 2, Row 10</td>
+			</tr>
+			<tr>
+				<td>Cell 1, Row 11</td>
+				<td>Cell 2, Row 11</td>
+			</tr>
+			<tr>
+				<td>Cell 1, Row 12</td>
+				<td>Cell 2, Row 12</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<figure>
+		<figcaption class="code-heading">CSS code</figcaption>
+<!-- code start -->
+<pre><code><span class="sel">table</span>
+{
+	<span class="prop">width</span>: <span class="val">500px</span>;
+	<span class="prop">border-collapse</span>: <span class="val">collapse</span>;
+}
+
+<span class="sel">thead</span>
+{
+	<span class="prop">display</span>: <span class="val">block</span>;
+	<span class="prop">width</span>: <span class="val">500px</span>;
+	<span class="prop">overflow</span>: <span class="val">auto</span>;
+	<span class="prop">color</span>: <span class="val">#fff</span>;
+	<span class="prop">background</span>: <span class="val">#000</span>;
+}
+
+<span class="sel">tbody</span>
+{
+	<span class="prop">display</span>: <span class="val">block</span>;
+	<span class="prop">width</span>: <span class="val">500px</span>;
+	<span class="prop">height</span>: <span class="val">200px</span>;
+	<span class="prop">background</span>: <span class="val">pink</span>;
+	<span class="prop">overflow</span>: <span class="val">auto</span>;
+}
+
+<span class="sel">th,td</span>
+{
+	<span class="prop">padding</span>: <span class="val">.5em 1em</span>;
+	<span class="prop">text-align</span>: <span class="val">left</span>;
+	<span class="prop">vertical-align</span>: <span class="val">top</span>;
+	<span class="prop">border-left</span>: <span class="val">1px solid #fff</span>;
+}</code></pre>
+<!-- code end -->
+	</figure>
+
+</div>
+</body>
+</html>
